@@ -1,0 +1,11 @@
+{
+	"name": "mainPage",
+	"html": "mainPage.html",
+	"scripts": [
+		"mainPage.js"
+	],
+	"styles": [
+		"mainPage.css",
+		"/application.css"
+	]
+}

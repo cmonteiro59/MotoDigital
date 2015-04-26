@@ -1,0 +1,41 @@
+{
+	"name": "MotoDigital/components/mainPage.waComponent",
+	"version": "1.0.0",
+	"webComponent": "components/mainPage.waComponent/mainPage.js",
+	"loadDependencies": [
+		{
+			"id": "Widget/container",
+			"type": "widget"
+		},
+		{
+			"id": "components/mainPage.waComponent/mainPage.html",
+			"path": "WEBFOLDER",
+			"type": "html"
+		},
+		{
+			"id": "components/profile.waComponent/profile.package.json",
+			"path": "WEBFOLDER",
+			"type": "component"
+		},
+		{
+			"id": "components/header.waComponent/header.package.json",
+			"path": "WEBFOLDER",
+			"type": "component"
+		},
+		{
+			"id": "components/mainPage.waComponent/mainPage.css",
+			"path": "WEBFOLDER",
+			"type": "style"
+		},
+		{
+			"id": "application.css",
+			"path": "WEBFOLDER",
+			"type": "style"
+		},
+		{
+			"id": "components/mainPage.waComponent/mainPage.js",
+			"path": "WEBFOLDER",
+			"type": "script"
+		}
+	]
+}

@@ -1,0 +1,19 @@
+{
+    "name": "FacebookLike",
+    "author": "Redwan Hilali",
+    "version": "1.0.0",
+    "copyright": "(c) 2013 Redwan Hilali",
+	"repository": {
+	    "type": "git",
+	    "url": "https://github.com/developer/wakandawidgets.git"
+	},
+	"keywords": ["wakanda", "widget", "facebook", "likebox"],
+	"engines": {"wakanda" : ">= 6"},
+	"license": "MIT", 
+    "loadDependencies": [
+    	{"id": "Widget_V2"},
+        {"id": "FacebookLike/widget.js", "version": "1.0.0", "path": "WIDGETS_CUSTOM"},
+        {"id": "FacebookLike/css/widget.css", "version": "1.0.0", "path": "WIDGETS_CUSTOM"},
+        {"id": "FacebookLike/designer.js", "studioOnly": true, "version": "1.0.0", "path": "WIDGETS_CUSTOM"}
+    ]
+}

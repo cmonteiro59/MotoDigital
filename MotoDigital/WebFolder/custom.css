@@ -1,0 +1,22 @@
+body {
+	
+	
+#centeredContainer {
+    margin: 0px auto;
+    min-width: 900px;
+    max-width: 1500px;
+    width: 100%;
+    right: 0px;
+    height: 100%;
+}
+
+#centeredComponent {
+    margin: 0px auto;
+    min-width: 900px;
+    max-width: 1500px;
+    width: 100%;
+    right: 0px;
+    height: 100%;
+}
+
+}

@@ -1,0 +1,10 @@
+{
+	"name": "prodDetails",
+	"html": "prodDetails.html",
+	"scripts": [
+		"prodDetails.js"
+	],
+	"styles": [
+		"prodDetails.css"
+	]
+}

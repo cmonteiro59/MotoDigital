@@ -1,0 +1,10 @@
+{
+	"name": "profile",
+	"html": "profile.html",
+	"scripts": [
+		"profile.js"
+	],
+	"styles": [
+		"profile.css"
+	]
+}

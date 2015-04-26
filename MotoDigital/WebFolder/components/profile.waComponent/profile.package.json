@@ -1,0 +1,55 @@
+{
+	"name": "MotoDigital/components/profile.waComponent",
+	"version": "1.0.0",
+	"webComponent": "components/profile.waComponent/profile.js",
+	"loadDependencies": [
+		{
+			"id": "Widget/container",
+			"type": "widget"
+		},
+		{
+			"id": "Widget/label",
+			"type": "widget"
+		},
+		{
+			"id": "Widget/buttonImage",
+			"type": "widget"
+		},
+		{
+			"id": "Widget/icon",
+			"type": "widget"
+		},
+		{
+			"id": "Widget/errorDiv",
+			"type": "widget"
+		},
+		{
+			"id": "Widget/textField",
+			"type": "widget"
+		},
+		{
+			"id": "Widget/richText",
+			"type": "widget"
+		},
+		{
+			"id": "components/profile.waComponent/profile.html",
+			"path": "WEBFOLDER",
+			"type": "html"
+		},
+		{
+			"id": "components/profile.waComponent/profile.css",
+			"path": "WEBFOLDER",
+			"type": "style"
+		},
+		{
+			"id": "components/profile.waComponent/styles/profile.css",
+			"path": "WEBFOLDER",
+			"type": "style"
+		},
+		{
+			"id": "components/profile.waComponent/profile.js",
+			"path": "WEBFOLDER",
+			"type": "script"
+		}
+	]
+}

@@ -1,0 +1,11 @@
+{
+	"name": "header",
+	"html": "header.html",
+	"scripts": [
+		"header.js"
+	],
+	"styles": [
+		"header.css",
+		"custom.css"
+	]
+}
