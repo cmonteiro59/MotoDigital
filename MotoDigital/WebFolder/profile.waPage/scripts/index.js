@@ -2,24 +2,34 @@
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
+	var customer1Event = {};	// @dataSource
 	var imageButton1 = {};	// @buttonImage
-	var password = {};	// @textField
+	var passwordInput = {};	// @textField
 	var confirmPassword = {};	// @textField
 // @endregion// @endlock
-
+	var vDatasourceInit = false;
+	var okToSave = true;
 // eventHandlers// @lock
+
+	customer1Event.onCollectionChange = function customer1Event_onCollectionChange (event)// @startlock
+	{// @endlock
+		if(vDatasourceInit == false){
+			sources.customer1.addNewElement();
+       	 	sources.customer1.serverRefresh(); //optional
+        	vDatasourceInit = true;
+		}
+	};// @lock
 
 	imageButton1.click = function imageButton1_click (event)// @startlock
 	{// @endlock
-		if($$('login').getValue() == "")
+		
+		if($$('userNameInput').getValue() == "")
 			okToSave = false;
-		if($$('password').getValue() == "")
+		if($$('passwordInput').getValue() == "")
 			okToSave = false;
 		if($$('confirmPassword').getValue() == "")
 			okToSave = false;
-		if($$('eMail').getValue() == "")
-			okToSave = false;
-		if($$('fullName').getValue() == "")
+		if($$('fullNameInput').getValue() == "")
 			okToSave = false;
 		if($$('nif').getValue() == "")
 			okToSave = false;
@@ -32,53 +42,60 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			alert("Todos os campos são de preenchimento obrigatório");
 			event.preventDefault();
 		}else{
-			
-			window.location = "/index.waPage/";
+			var selection = ds.Customer.query('email==:1', $$('userNameInput').getValue());if(selection.email == "");
+			if(selection.email ==""){
+				ds.Settings.addUser($$('userNameInput').getValue(), $$('passwordInput').getValue(), $$('fullNameInput').getValue(),
+				{
+					onSuccess: function(e){
+						if(e.result.success){
+							alert('Utilizador criado com sucesso !');
+							window.location = "/index.waPage/";
+						} else {
+							alert('Houve um problema ao criar o Utilizador. Por favor contacte');
+							event.preventDefault();
+						}
+					}
+				});
+			}else {
+				
+				alert("Já existe");
+				return;
+				event.preventDefault();
+			}
 		}
 			
 	};// @lock
 
-	password.change = function password_change (event)// @startlock
+	passwordInput.change = function passwordInput_change (event)// @startlock
 	{// @endlock
-		var pass1 = $$('password').getValue();
+		var pass1 = $$('passwordInput').getValue();
 		var pass2 = $$('confirmPassword').getValue();
 		if((pass1 != pass2) && (pass2 != "") ){
-			if(!passMsg){
-				$$('errorDiv3').setErrorMessage( { message: "As passwords não são iguais." } );
-				passMsg = true;
-			}
-			
-		}else{
-			
-			passMsg = false;
+			alert("As passwords não são iguais.") ;
 		}
-		if($$('password').getValue() == "")
+		if($$('passwordInput').getValue() == "")
 			okToSave = false;
 	};// @lock
 
 	confirmPassword.change = function confirmPassword_change (event)// @startlock
 	{// @endlock
 		// Add your code here
-		var pass1 = $$('password').getValue();
+		var pass1 = $$('passwordInput').getValue();
 		var pass2 = $$('confirmPassword').getValue();
 		if((pass1 != pass2) && (pass1 != "") ){
-			$$('errorDiv3').setErrorMessage( { message: "As passwords não são iguais." } );
-			passMsg = true;
-			$$('password').setValue("");
+			//alert("As passwords não são iguais.");
+			$$('passwordInput').setValue("");
 			$$('confirmPassword').setValue("");
-			$$('password').focus();
-		}
-		else{
-			
-			passMsg = false;
+			$$('passwordInput').focus();
 		}
 		if($$('confirmPassword').getValue() == "")
 			okToSave = false;
 	};// @lock
 
 // @region eventManager// @startlock
+	WAF.addListener("customer1", "onCollectionChange", customer1Event.onCollectionChange, "WAF");
 	WAF.addListener("imageButton1", "click", imageButton1.click, "WAF");
-	WAF.addListener("password", "change", password.change, "WAF");
+	WAF.addListener("passwordInput", "change", passwordInput.change, "WAF");
 	WAF.addListener("confirmPassword", "change", confirmPassword.change, "WAF");
 // @endregion
 };// @endlock

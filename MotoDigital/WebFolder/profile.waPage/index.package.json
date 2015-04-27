@@ -24,10 +24,6 @@
 			"type": "widget"
 		},
 		{
-			"id": "Widget/errorDiv",
-			"type": "widget"
-		},
-		{
 			"id": "Widget/textField",
 			"type": "widget"
 		},
