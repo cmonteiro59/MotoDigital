@@ -3,166 +3,175 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
+#htmlTag2 {
+	position: absolute;
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
+}
+
 #container5 {
+	z-index: 5;
 	width: 260px;
 	height: 50px;
 	top: 35px;
 	left: -1px;
 	position: absolute;
-	z-index: 5;
 }
 
 #button16 {
+	z-index: 4;
 	width: 20px;
 	height: 22px;
 	top: 3px;
 	right: 80px;
 	position: absolute;
-	z-index: 4;
 }
 
 #button15 {
+	z-index: 3;
 	width: 20px;
 	height: 22px;
 	top: 3px;
 	right: 57px;
 	position: absolute;
-	z-index: 3;
 }
 
 #button14 {
+	z-index: 2;
 	width: 25px;
 	height: 22px;
 	top: 3px;
 	right: 29px;
 	position: absolute;
-	z-index: 2;
 }
 
 #button13 {
+	z-index: 1;
 	width: 23px;
 	height: 22px;
 	top: 3px;
 	right: 3px;
 	position: absolute;
-	z-index: 1;
 }
 
 #fileUpload4 {
+	z-index: 30;
 	width: 260px;
 	height: 35px;
 	top: 349px;
 	left: 485px;
 	position: absolute;
-	z-index: 30;
 }
 
 #container2 {
+	z-index: 5;
 	width: 260px;
 	height: 50px;
 	top: 35px;
 	left: -1px;
 	position: absolute;
-	z-index: 5;
 }
 
 #button12 {
+	z-index: 4;
 	width: 20px;
 	height: 22px;
 	top: 3px;
 	right: 80px;
 	position: absolute;
-	z-index: 4;
 }
 
 #button11 {
+	z-index: 3;
 	width: 20px;
 	height: 22px;
 	top: 3px;
 	right: 57px;
 	position: absolute;
-	z-index: 3;
 }
 
 #button10 {
+	z-index: 2;
 	width: 25px;
 	height: 22px;
 	top: 3px;
 	right: 29px;
 	position: absolute;
-	z-index: 2;
 }
 
 #button9 {
+	z-index: 1;
 	width: 23px;
 	height: 22px;
 	top: 3px;
 	right: 3px;
 	position: absolute;
-	z-index: 1;
 }
 
 #fileUpload3 {
+	z-index: 29;
 	width: 260px;
 	height: 35px;
 	top: 257px;
 	left: 489px;
 	position: absolute;
-	z-index: 29;
 }
 
 #container1 {
+	z-index: 5;
 	width: 260px;
 	height: 50px;
 	top: 35px;
 	left: -1px;
 	position: absolute;
-	z-index: 5;
 }
 
 #button4 {
+	z-index: 4;
 	width: 20px;
 	height: 22px;
 	top: 3px;
 	right: 80px;
 	position: absolute;
-	z-index: 4;
 }
 
 #button3 {
+	z-index: 3;
 	width: 20px;
 	height: 22px;
 	top: 3px;
 	right: 57px;
 	position: absolute;
-	z-index: 3;
 }
 
 #button2 {
+	z-index: 2;
 	width: 25px;
 	height: 22px;
 	top: 3px;
 	right: 29px;
 	position: absolute;
-	z-index: 2;
 }
 
 #button1 {
+	z-index: 1;
 	width: 23px;
 	height: 22px;
 	top: 3px;
 	right: 3px;
 	position: absolute;
-	z-index: 1;
 }
 
 #fileUpload2 {
+	z-index: 28;
 	width: 260px;
 	height: 35px;
 	top: 146px;
 	left: 485px;
 	position: absolute;
-	z-index: 28;
 }
 
 #label2 {
@@ -182,10 +191,6 @@
 	top: 116px;
 	left: 92px;
 	position: absolute;
-}
-
-#dataGrid1 .waf-widget-body .waf-dataGrid-col-image1 {
-	line-height: 5px;
 }
 
 #dataGrid1 .waf-dataGrid-row {
@@ -742,10 +747,10 @@
 
 #dataGrid1 {
 	z-index: 3;
-	width: 769px;
+	width: 886px;
 	height: 524px;
 	top: 149px;
-	left: 310px;
+	left: 193px;
 	position: absolute;
 	color: rgb(0, 0, 0);
 }
@@ -766,5 +771,9 @@
 	bottom: 1px;
 	left: 1px;
 	position: absolute;
+}
+
+#dataGrid1 .waf-widget-body .waf-dataGrid-col-ID {
+	line-height: 5px;
 }
 

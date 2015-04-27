@@ -1,1 +1,39 @@
-﻿{"name":"MotoDigital/components/footer.waComponent","version":"1.0.0","webComponent":"components/footer.waComponent/footer.js","loadDependencies":[{"id":"Widget/container","type":"widget"},{"id":"Widget/image","type":"widget"},{"id":"Widget/richText","type":"widget"},{"id":"components/footer.waComponent/footer.html","path":"WEBFOLDER","type":"html"},{"id":"components/footer.waComponent/footer.css","path":"WEBFOLDER","type":"style"},{"id":"components/footer.waComponent/footer.js","path":"WEBFOLDER","type":"script"}]}
+{
+	"name": "MotoDigital/components/footer.waComponent",
+	"version": "1.0.0",
+	"webComponent": "components/footer.waComponent/footer.js",
+	"loadDependencies": [
+		{
+			"id": "Widget/container",
+			"type": "widget"
+		},
+		{
+			"id": "Widget/image",
+			"type": "widget"
+		},
+		{
+			"id": "Widget/richText",
+			"type": "widget"
+		},
+		{
+			"id": "components/footer.waComponent/footer.html",
+			"path": "WEBFOLDER",
+			"type": "html"
+		},
+		{
+			"id": "components/footer.waComponent/footer.css",
+			"path": "WEBFOLDER",
+			"type": "style"
+		},
+		{
+			"id": "components/footer.waComponent/styles/footer.css",
+			"path": "WEBFOLDER",
+			"type": "style"
+		},
+		{
+			"id": "components/footer.waComponent/footer.js",
+			"path": "WEBFOLDER",
+			"type": "script"
+		}
+	]
+}

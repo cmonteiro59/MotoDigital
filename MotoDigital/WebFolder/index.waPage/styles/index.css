@@ -5,6 +5,10 @@
 
 .waf-widget.waf-clone-textField11 {
 	position: absolute;
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
 }
 
 .waf-widget.waf-clone-image2 {
@@ -13,6 +17,12 @@
 
 .waf-widget.waf-clone-textField12 {
 	position: absolute;
+	color: rgb(63, 127, 0);
+	font-weight: bold;
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
 }
 
 #matrix3 .waf-widget.waf-clone-container2 {
@@ -32,42 +42,62 @@
 
 #image2 {
 	z-index: 8;
-	width: 152px;
-	height: 124px;
-	top: 26px;
-	left: 140px;
+	width: 256px;
+	height: 128px;
+	top: 25px;
+	left: 13px;
 	position: absolute;
 }
 
 #matrix3 .waf-widget.waf-clone-textField12 {
 	position: absolute;
+	color: rgb(63, 127, 0);
+	font-weight: bold;
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
 }
 
 #matrix3 .waf-widget.waf-clone-textField11 {
 	position: absolute;
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
 }
 
 #textField12 {
 	z-index: 4;
-	width: 107px;
+	width: 88px;
 	height: 22px;
-	top: 31px;
-	left: 17px;
+	top: 4px;
+	left: 13px;
 	position: absolute;
+	color: rgb(63, 127, 0);
+	font-weight: bold;
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
 }
 
 #textField11 {
 	z-index: 2;
 	width: 189px;
 	height: 22px;
-	top: 0px;
-	left: 12px;
+	top: 4px;
+	left: 101px;
 	position: absolute;
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
 }
 
 #container2 {
 	z-index: 1;
-	width: 299px;
+	width: 306px;
 	height: 153px;
 	top: 10px;
 	left: 10px;
@@ -85,21 +115,22 @@
 #matrix3 {
 	z-index: 44;
 	width: 964px;
-	height: 172px;
+	height: 177px;
 	top: 136px;
 	left: 335px;
 	position: absolute;
-}
-
-#richText4 {
-	z-index: 2;
-	width: 128px;
-	height: 16px;
-	top: 50px;
-	left: 1038px;
-	position: absolute;
-	color: rgb(255, 255, 255);
-	font-size: 14px;
+	border-top-color: rgb(127, 127, 127);
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-left-color: rgb(127, 127, 127);
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-right-color: rgb(127, 127, 127);
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-bottom-color: rgb(127, 127, 127);
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
 }
 
 #htmlTag2 {
@@ -129,9 +160,9 @@
 
 #image3 {
 	z-index: 40;
-	width: 258px;
-	height: 580px;
-	top: 223px;
+	width: 240px;
+	height: 619px;
+	top: 150px;
 	left: 91px;
 	position: absolute;
 }
@@ -662,7 +693,7 @@
 
 #component3 {
 	z-index: 1;
-	width: 1229px;
+	width: 1235px;
 	height: 130px;
 	top: 5px;
 	left: -14px;
@@ -1605,7 +1636,7 @@
 #headerComponent {
 	z-index: 2;
 	width: 1300px;
-	height: 130px;
+	height: 136px;
 	top: 5px;
 	left: 46px;
 	position: absolute;
