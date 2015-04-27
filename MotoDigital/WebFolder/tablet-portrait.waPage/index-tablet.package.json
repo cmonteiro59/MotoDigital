@@ -28,6 +28,11 @@
 			"id": "application.css",
 			"path": "WEBFOLDER",
 			"type": "style"
+		},
+		{
+			"id": "tablet-portrait.waPage/styles/index-tablet.css",
+			"path": "WEBFOLDER",
+			"type": "style"
 		}
 	]
 }
