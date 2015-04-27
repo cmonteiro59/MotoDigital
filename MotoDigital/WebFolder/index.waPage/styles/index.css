@@ -3,6 +3,18 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
+.waf-widget.waf-clone-textField11 {
+	position: absolute;
+}
+
+.waf-widget.waf-clone-image2 {
+	position: absolute;
+}
+
+.waf-widget.waf-clone-textField12 {
+	position: absolute;
+}
+
 #matrix3 .waf-widget.waf-clone-container2 {
 	border-top-style: none;
 	border-top-width: 0px;
@@ -20,10 +32,10 @@
 
 #image2 {
 	z-index: 8;
-	width: 147px;
-	height: 135px;
-	top: 7px;
-	left: 212px;
+	width: 152px;
+	height: 124px;
+	top: 26px;
+	left: 140px;
 	position: absolute;
 }
 
@@ -39,8 +51,8 @@
 	z-index: 4;
 	width: 107px;
 	height: 22px;
-	top: 52px;
-	left: 9px;
+	top: 31px;
+	left: 17px;
 	position: absolute;
 }
 
@@ -48,14 +60,14 @@
 	z-index: 2;
 	width: 189px;
 	height: 22px;
-	top: 20px;
-	left: 9px;
+	top: 0px;
+	left: 12px;
 	position: absolute;
 }
 
 #container2 {
 	z-index: 1;
-	width: 356px;
+	width: 299px;
 	height: 153px;
 	top: 10px;
 	left: 10px;
@@ -72,10 +84,10 @@
 
 #matrix3 {
 	z-index: 44;
-	width: 1165px;
+	width: 964px;
 	height: 172px;
 	top: 136px;
-	left: 279px;
+	left: 335px;
 	position: absolute;
 }
 
@@ -100,11 +112,10 @@
 }
 
 #container11 {
-	z-index: 42;
-	width: 1379px;
+	width: 1297px;
 	height: 136px;
-	top: 812px;
-	left: 108px;
+	top: 799px;
+	left: 78px;
 	position: absolute;
 	border-top-style: none;
 	border-top-width: 0px;
@@ -121,7 +132,7 @@
 	width: 258px;
 	height: 580px;
 	top: 223px;
-	left: 51px;
+	left: 91px;
 	position: absolute;
 }
 
@@ -651,10 +662,10 @@
 
 #component3 {
 	z-index: 1;
-	width: 1317px;
+	width: 1229px;
 	height: 130px;
 	top: 5px;
-	left: 48px;
+	left: -14px;
 	position: absolute;
 }
 
@@ -1446,6 +1457,7 @@
 	top: 8px;
 	left: 8px;
 	position: absolute;
+	background-color: rgb(255, 255, 255);
 }
 
 #checkbox5 {
@@ -1500,6 +1512,7 @@
 	top: 24px;
 	left: 553px;
 	position: absolute;
+	background-color: rgb(255, 255, 255);
 }
 
 #claImage12 {
@@ -1509,6 +1522,7 @@
 	top: 8px;
 	left: 10px;
 	position: absolute;
+	background-color: rgb(255, 255, 255);
 }
 
 #claImage13 {
@@ -1518,6 +1532,7 @@
 	top: 8px;
 	left: 9px;
 	position: absolute;
+	background-color: rgb(255, 255, 255);
 }
 
 #claImage14 {
@@ -1527,6 +1542,7 @@
 	top: 7px;
 	left: 9px;
 	position: absolute;
+	background-color: rgb(255, 255, 255);
 }
 
 #claImage11 {
@@ -1536,6 +1552,7 @@
 	top: 8px;
 	left: 8px;
 	position: absolute;
+	background-color: rgb(255, 255, 255);
 }
 
 #image12 {
@@ -1545,6 +1562,7 @@
 	top: 9px;
 	left: 9px;
 	position: absolute;
+	background-color: rgb(255, 255, 255);
 }
 
 #image13 {
@@ -1554,6 +1572,7 @@
 	top: 8px;
 	left: 8px;
 	position: absolute;
+	background-color: rgb(255, 255, 255);
 }
 
 #image14 {
@@ -1563,6 +1582,7 @@
 	top: 7px;
 	left: 9px;
 	position: absolute;
+	background-color: rgb(255, 255, 255);
 }
 
 #headerContainer {
@@ -1587,7 +1607,7 @@
 	width: 1300px;
 	height: 130px;
 	top: 5px;
-	left: 49px;
+	left: 46px;
 	position: absolute;
 }
 

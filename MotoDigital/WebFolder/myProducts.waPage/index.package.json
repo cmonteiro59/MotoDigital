@@ -56,6 +56,10 @@
 			"type": "widget"
 		},
 		{
+			"id": "Widget/combobox",
+			"type": "widget"
+		},
+		{
 			"id": "components/header.waComponent/header.package.json",
 			"path": "WEBFOLDER",
 			"type": "component"

@@ -3,7 +3,197 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
+#container5 {
+	width: 260px;
+	height: 50px;
+	top: 35px;
+	left: -1px;
+	position: absolute;
+	z-index: 5;
+}
+
+#button16 {
+	width: 20px;
+	height: 22px;
+	top: 3px;
+	right: 80px;
+	position: absolute;
+	z-index: 4;
+}
+
+#button15 {
+	width: 20px;
+	height: 22px;
+	top: 3px;
+	right: 57px;
+	position: absolute;
+	z-index: 3;
+}
+
+#button14 {
+	width: 25px;
+	height: 22px;
+	top: 3px;
+	right: 29px;
+	position: absolute;
+	z-index: 2;
+}
+
+#button13 {
+	width: 23px;
+	height: 22px;
+	top: 3px;
+	right: 3px;
+	position: absolute;
+	z-index: 1;
+}
+
+#fileUpload4 {
+	width: 260px;
+	height: 35px;
+	top: 349px;
+	left: 485px;
+	position: absolute;
+	z-index: 30;
+}
+
+#container2 {
+	width: 260px;
+	height: 50px;
+	top: 35px;
+	left: -1px;
+	position: absolute;
+	z-index: 5;
+}
+
+#button12 {
+	width: 20px;
+	height: 22px;
+	top: 3px;
+	right: 80px;
+	position: absolute;
+	z-index: 4;
+}
+
+#button11 {
+	width: 20px;
+	height: 22px;
+	top: 3px;
+	right: 57px;
+	position: absolute;
+	z-index: 3;
+}
+
+#button10 {
+	width: 25px;
+	height: 22px;
+	top: 3px;
+	right: 29px;
+	position: absolute;
+	z-index: 2;
+}
+
+#button9 {
+	width: 23px;
+	height: 22px;
+	top: 3px;
+	right: 3px;
+	position: absolute;
+	z-index: 1;
+}
+
+#fileUpload3 {
+	width: 260px;
+	height: 35px;
+	top: 257px;
+	left: 489px;
+	position: absolute;
+	z-index: 29;
+}
+
+#container1 {
+	width: 260px;
+	height: 50px;
+	top: 35px;
+	left: -1px;
+	position: absolute;
+	z-index: 5;
+}
+
+#button4 {
+	width: 20px;
+	height: 22px;
+	top: 3px;
+	right: 80px;
+	position: absolute;
+	z-index: 4;
+}
+
+#button3 {
+	width: 20px;
+	height: 22px;
+	top: 3px;
+	right: 57px;
+	position: absolute;
+	z-index: 3;
+}
+
+#button2 {
+	width: 25px;
+	height: 22px;
+	top: 3px;
+	right: 29px;
+	position: absolute;
+	z-index: 2;
+}
+
+#button1 {
+	width: 23px;
+	height: 22px;
+	top: 3px;
+	right: 3px;
+	position: absolute;
+	z-index: 1;
+}
+
+#fileUpload2 {
+	width: 260px;
+	height: 35px;
+	top: 146px;
+	left: 485px;
+	position: absolute;
+	z-index: 28;
+}
+
+#label2 {
+	z-index: 26;
+	width: 75px;
+	height: 15px;
+	top: 120px;
+	left: 12px;
+	position: absolute;
+	min-width: 75px;
+}
+
+#combobox2 {
+	z-index: 27;
+	width: 164px;
+	height: 24px;
+	top: 116px;
+	left: 92px;
+	position: absolute;
+}
+
+#dataGrid1 .waf-widget-body .waf-dataGrid-col-image1 {
+	line-height: 5px;
+}
+
+#dataGrid1 .waf-dataGrid-row {
+	line-height: 5px;
+}
+
 #label58 {
+	z-index: 2;
 	width: 42px;
 	height: 16px;
 	top: 7px;
@@ -14,22 +204,22 @@
 	font-size: 14px;
 	text-shadow: rgb(255, 255, 255) 0px 0px 0px;
 	font-weight: normal;
-	z-index: 2;
 }
 
 #icon8 {
+	z-index: 2;
 	width: 24px;
 	height: 24px;
 	top: 3px;
 	left: 29px;
 	position: absolute;
-	z-index: 2;
 }
 
 #imageButton8 {
+	z-index: 24;
 	width: 130px;
 	height: 30px;
-	top: 446px;
+	top: 456px;
 	left: 655px;
 	position: absolute;
 	border-top-style: none;
@@ -54,7 +244,6 @@
 	 -moz-box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px inset, rgba(0, 0, 0, 0.148438) 0px 0px 0px 0px;
 	 box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px inset, rgba(0, 0, 0, 0.148438) 0px 0px 0px 0px;
 	box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px inset, rgba(0, 0, 0, 0.148438) 0px 0px 0px 0px;
-	z-index: 30;
 	background-repeat: no-repeat;
 }
 
@@ -108,24 +297,25 @@
 }
 
 #fileUpload1 {
-	z-index: 29;
+	z-index: 24;
 	width: 260px;
 	height: 35px;
-	top: 42px;
+	top: 32px;
 	left: 484px;
 	position: absolute;
 }
 
 #icon7 {
+	z-index: 1;
 	width: 24px;
 	height: 24px;
 	top: -1px;
 	left: -1px;
 	position: absolute;
-	z-index: 1;
 }
 
 #imageButton7 {
+	z-index: 3;
 	width: 22px;
 	height: 22px;
 	top: 3px;
@@ -139,7 +329,6 @@
 	border-right-width: 0px;
 	border-bottom-style: none;
 	border-bottom-width: 0px;
-	z-index: 3;
 }
 
 #imageButton7.waf-state-hover {
@@ -165,7 +354,7 @@
 }
 
 #label32 {
-	z-index: 20;
+	z-index: 19;
 	width: 75px;
 	height: 15px;
 	top: 15px;
@@ -175,57 +364,57 @@
 }
 
 #label41 {
-	z-index: 19;
+	z-index: 18;
 	width: 75px;
 	height: 15px;
-	top: 206px;
+	top: 246px;
 	left: 12px;
 	position: absolute;
 	min-width: 75px;
 }
 
 #label40 {
-	z-index: 18;
+	z-index: 17;
 	width: 75px;
 	height: 15px;
-	top: 175px;
+	top: 215px;
 	left: 12px;
 	position: absolute;
 	min-width: 75px;
 }
 
 #label39 {
-	z-index: 17;
+	z-index: 16;
 	width: 75px;
 	height: 15px;
-	top: 146px;
+	top: 186px;
 	left: 12px;
 	position: absolute;
 	min-width: 75px;
 }
 
 #label38 {
-	z-index: 16;
+	z-index: 15;
 	width: 75px;
 	height: 15px;
-	top: 116px;
+	top: 156px;
 	left: 12px;
 	position: absolute;
 	min-width: 75px;
 }
 
 #label37 {
-	z-index: 15;
+	z-index: 14;
 	width: 75px;
 	height: 15px;
-	top: 278px;
+	top: 288px;
 	left: 12px;
 	position: absolute;
 	min-width: 75px;
 }
 
 #label36 {
-	z-index: 14;
+	z-index: 13;
 	width: 75px;
 	height: 15px;
 	top: 46px;
@@ -235,7 +424,7 @@
 }
 
 #label35 {
-	z-index: 13;
+	z-index: 12;
 	width: 31px;
 	height: 15px;
 	top: 79px;
@@ -244,7 +433,7 @@
 }
 
 #label34 {
-	z-index: 12;
+	z-index: 11;
 	width: 35px;
 	height: 15px;
 	top: 78px;
@@ -253,7 +442,7 @@
 }
 
 #label33 {
-	z-index: 11;
+	z-index: 10;
 	width: 75px;
 	height: 15px;
 	top: 48px;
@@ -263,43 +452,47 @@
 }
 
 #image14 {
-	z-index: 24;
+	z-index: 34;
 	width: 536px;
 	height: 471px;
 	top: 7px;
 	left: 9px;
 	position: absolute;
+	background-color: rgb(255, 255, 255);
 }
 
 #image13 {
-	z-index: 23;
+	z-index: 33;
 	width: 536px;
 	height: 471px;
 	top: 8px;
 	left: 8px;
 	position: absolute;
+	background-color: rgb(255, 255, 255);
 }
 
 #image12 {
-	z-index: 22;
+	z-index: 32;
 	width: 536px;
 	height: 471px;
 	top: 9px;
 	left: 9px;
 	position: absolute;
+	background-color: rgb(255, 255, 255);
 }
 
 #image11 {
-	z-index: 21;
+	z-index: 31;
 	width: 536px;
 	height: 471px;
 	top: 8px;
 	left: 8px;
 	position: absolute;
+	background-color: rgb(255, 255, 255);
 }
 
 #textField22 {
-	z-index: 20;
+	z-index: 19;
 	width: 279px;
 	height: 22px;
 	top: 12px;
@@ -308,52 +501,52 @@
 }
 
 #textField28 {
-	z-index: 19;
+	z-index: 18;
 	width: 104px;
 	height: 22px;
-	top: 203px;
+	top: 243px;
 	left: 92px;
 	position: absolute;
 }
 
 #textField27 {
-	z-index: 18;
+	z-index: 17;
 	width: 200px;
 	height: 22px;
-	top: 172px;
+	top: 212px;
 	left: 92px;
 	position: absolute;
 }
 
 #textField26 {
-	z-index: 17;
+	z-index: 16;
 	width: 200px;
 	height: 22px;
-	top: 143px;
+	top: 183px;
 	left: 92px;
 	position: absolute;
 }
 
 #textField25 {
-	z-index: 16;
+	z-index: 15;
 	width: 289px;
 	height: 22px;
-	top: 113px;
+	top: 153px;
 	left: 92px;
 	position: absolute;
 }
 
 #textField24 {
-	z-index: 15;
+	z-index: 14;
 	width: 281px;
 	height: 107px;
-	top: 278px;
+	top: 288px;
 	left: 92px;
 	position: absolute;
 }
 
 #textField23 {
-	z-index: 14;
+	z-index: 13;
 	width: 124px;
 	height: 22px;
 	top: 43px;
@@ -362,7 +555,7 @@
 }
 
 #checkbox12 {
-	z-index: 13;
+	z-index: 12;
 	width: 16px;
 	height: 16px;
 	top: 79px;
@@ -371,7 +564,7 @@
 }
 
 #checkbox11 {
-	z-index: 12;
+	z-index: 11;
 	width: 16px;
 	height: 16px;
 	top: 78px;
@@ -380,7 +573,7 @@
 }
 
 #checkbox10 {
-	z-index: 11;
+	z-index: 10;
 	width: 16px;
 	height: 16px;
 	top: 48px;
@@ -389,7 +582,7 @@
 }
 
 #image10 {
-	z-index: 28;
+	z-index: 23;
 	width: 85px;
 	height: 80px;
 	top: 350px;
@@ -398,7 +591,7 @@
 }
 
 #image9 {
-	z-index: 27;
+	z-index: 22;
 	width: 85px;
 	height: 80px;
 	top: 253px;
@@ -407,7 +600,7 @@
 }
 
 #image8 {
-	z-index: 26;
+	z-index: 21;
 	width: 85px;
 	height: 80px;
 	top: 146px;
@@ -416,7 +609,7 @@
 }
 
 #image7 {
-	z-index: 25;
+	z-index: 20;
 	width: 85px;
 	height: 80px;
 	top: 33px;
@@ -549,10 +742,10 @@
 
 #dataGrid1 {
 	z-index: 3;
-	width: 655px;
+	width: 769px;
 	height: 524px;
 	top: 149px;
-	left: 475px;
+	left: 310px;
 	position: absolute;
 	color: rgb(0, 0, 0);
 }
