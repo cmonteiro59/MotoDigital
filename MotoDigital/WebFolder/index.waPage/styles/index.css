@@ -3,6 +3,82 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
+#matrix3 .waf-widget.waf-clone-container2 {
+	border-top-style: none;
+	border-top-width: 0px;
+	border-left-style: none;
+	border-left-width: 0px;
+	border-right-style: none;
+	border-right-width: 0px;
+	border-bottom-style: none;
+	border-bottom-width: 0px;
+}
+
+#matrix3 .waf-widget.waf-clone-image2 {
+	position: absolute;
+}
+
+#image2 {
+	z-index: 8;
+	width: 147px;
+	height: 135px;
+	top: 7px;
+	left: 212px;
+	position: absolute;
+}
+
+#matrix3 .waf-widget.waf-clone-textField12 {
+	position: absolute;
+}
+
+#matrix3 .waf-widget.waf-clone-textField11 {
+	position: absolute;
+}
+
+#textField12 {
+	z-index: 4;
+	width: 107px;
+	height: 22px;
+	top: 52px;
+	left: 9px;
+	position: absolute;
+}
+
+#textField11 {
+	z-index: 2;
+	width: 189px;
+	height: 22px;
+	top: 20px;
+	left: 9px;
+	position: absolute;
+}
+
+#container2 {
+	z-index: 1;
+	width: 356px;
+	height: 153px;
+	top: 10px;
+	left: 10px;
+	position: absolute;
+	border-top-style: none;
+	border-top-width: 0px;
+	border-left-style: none;
+	border-left-width: 0px;
+	border-right-style: none;
+	border-right-width: 0px;
+	border-bottom-style: none;
+	border-bottom-width: 0px;
+}
+
+#matrix3 {
+	z-index: 44;
+	width: 1165px;
+	height: 172px;
+	top: 136px;
+	left: 279px;
+	position: absolute;
+}
+
 #richText4 {
 	z-index: 2;
 	width: 128px;
@@ -27,8 +103,8 @@
 	z-index: 42;
 	width: 1379px;
 	height: 136px;
-	top: 808px;
-	left: 25px;
+	top: 812px;
+	left: 108px;
 	position: absolute;
 	border-top-style: none;
 	border-top-width: 0px;
@@ -340,7 +416,7 @@
 	width: 658px;
 	height: 536px;
 	top: 352px;
-	left: 364px;
+	left: 361px;
 	position: absolute;
 }
 
@@ -358,7 +434,7 @@
 }
 
 #label10 {
-	z-index: 16;
+	z-index: 15;
 	width: 28px;
 	height: 14px;
 	top: 78px;
@@ -384,12 +460,6 @@
 	left: 154px;
 	position: absolute;
 	font-size: 11px;
-}
-
-#matrix2 .waf-widget.waf-clone-checkbox7 {
-	font-size: 10px;
-	z-index: 11;
-	position: absolute;
 }
 
 #matrix2 .waf-widget.waf-clone-label5 {
@@ -422,17 +492,6 @@
 
 #checkbox1.waf-state-disabled .waf-checkbox-box {
 	background-color: rgb(204, 204, 204);
-}
-
-#button2 {
-	z-index: 38;
-	width: 172px;
-	height: 22px;
-	top: 322px;
-	left: 1051px;
-	position: absolute;
-	font-size: 12px;
-	color: rgb(127, 0, 0);
 }
 
 .waf-widget.waf-clone-richText2 {
@@ -478,7 +537,7 @@
 }
 
 #richText3 {
-	z-index: 3;
+	z-index: 16;
 	width: 209px;
 	height: 21px;
 	top: 7px;
@@ -1399,7 +1458,7 @@
 }
 
 #checkbox6 {
-	z-index: 16;
+	z-index: 15;
 	width: 16px;
 	height: 16px;
 	top: 77px;

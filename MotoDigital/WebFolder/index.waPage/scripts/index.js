@@ -8,7 +8,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	var claImage2 = {};	// @image
 	var imageButton1 = {};	// @buttonImage
 	var productClassifiedEvent = {};	// @dataSource
-	var button2 = {};	// @button
 	var productEvent = {};	// @dataSource
 	var container14 = {};	// @container
 	var container7 = {};	// @container
@@ -79,21 +78,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		$$('checkbox14').disable();
 	};// @lock
 
-	button2.click = function button2_click (event)// @startlock
-	{// @endlock
-		var title =  $$('textFieldQuery').getValue();
-		if(title == ""){
-			title = "*";
-		}else{
-			title = "*" +title+"*";
-		}
-		
-		var cat = $$('combobox3').getValue();
-		//alert(title, cat);
-		WAF.sources.productClassified.query('title = :1 and categoria = :2 ', title, cat);
-		//WAF.sources.product.query('classified < 1');
-	};// @lock
-
 	productEvent.onCollectionChange = function productEvent_onCollectionChange (event)// @startlock
 	{// @endlock
 		$$('checkbox1').disable();
@@ -126,7 +110,8 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		var cat = $$('combobox3').getValue();
 		//alert(title, cat);
 		WAF.sources.product.query('title = :1 and categoria = :2 ', title, cat);
-		//WAF.sources.product.query('classified < 1');
+		WAF.sources.productClassified.query('title = :1 and categoria = :2 ', title, cat);
+		WAF.sources.productTop.query('title = :1 and categoria = :2 ', title, cat);
 	};// @lock
 
 	image10.mouseout = function image10_mouseout (event)// @startlock
@@ -195,7 +180,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	WAF.addListener("claImage2", "mouseout", claImage2.mouseout, "WAF");
 	WAF.addListener("imageButton1", "click", imageButton1.click, "WAF");
 	WAF.addListener("productClassified", "onCollectionChange", productClassifiedEvent.onCollectionChange, "WAF");
-	WAF.addListener("button2", "click", button2.click, "WAF");
 	WAF.addListener("product", "onCollectionChange", productEvent.onCollectionChange, "WAF");
 	WAF.addListener("container14", "click", container14.click, "WAF");
 	WAF.addListener("container7", "click", container7.click, "WAF");

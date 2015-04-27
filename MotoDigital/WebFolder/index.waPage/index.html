@@ -40,11 +40,12 @@
 		
 		<meta name="WAF.config.loadJS" id="waf-script" content="scripts/index.js"/>
 
-		<meta name="WAF.config.datasources" data-type="dataSource" data-source-type="dataClass" data-source="Product" data-lib="WAF" data-initialQueryString="classified &gt; 0" data-initialOrderBy="'classified ASC'" data-id="productClassified" data-dataType="string" data-autoLoad="true" content="productClassified"/>
+		<meta name="WAF.config.datasources" data-type="dataSource" data-source-type="dataClass" data-source="Product" data-lib="WAF" data-initialQueryString="classified &gt; 1" data-initialOrderBy="'classified ASC'" data-id="productClassified" data-dataType="string" data-autoLoad="true" content="productClassified"/>
 				<meta name="WAF.config.loadCSS" id="waf-interface-css" content="styles/index.css"/>
 		<meta name="WAF.config.loadCSS" id="waf-project-css" content="/application.css"/>
 		<meta name="WAF.config.loadCSS" content="/resourcesstyles/custom.css"/>
-</head>
+
+		<meta name="WAF.config.datasources" data-type="dataSource" data-source-type="dataClass" data-source="Product" data-lib="WAF" data-initialQueryString="classified = 1" data-id="productTop" data-dataType="string" data-autoLoad="true" content="productTop"/></head>
 	<body id="waf-body" data-workspace-width="0" data-workspace-orientation="portrait" data-workspace-height="0" data-workspace-device="desktop" data-viewport-width="device-width" data-viewport-minimum-scale="1.0" data-viewport-maximum-scale="1.0" data-viewport-initial-scale="1.0" data-type="document" data-title="Main Page" data-theme="softGray" data-rpc-validation="false" data-rpc-namespace="rpc" data-rpc-activate="false" data-platform="desktop" data-lib="WAF" data-group="[['container3','container6','richText8'],['imageButton3','icon3'],['container5','container8','richText1']]" data-entire-model="false" data-apple-meta-tags-status-bar="default" class="waf-widget waf-document waf-theme softGray" style="bottom:;right:;visibility:hidden;">
 			<div id="component2" data-type="component" data-path="/components/footer.waComponent" data-lib="WAF" data-constraint-top="false" data-constraint-right="true" data-constraint-left="true" data-constraint-bottom="true" class="waf-widget waf-component"></div>
 		<div id="matrix1" data-type="matrix" data-scrolling="vertical" data-scrollbar="true" data-margin="3" data-lib="WAF" data-fit="true" data-constraint-top="true" data-constraint-left="true" data-autosave="false" class="waf-widget waf-matrix">
@@ -105,7 +106,6 @@
 		<div id="matrix2" data-type="matrix" data-scrolling="vertical" data-scrollbar="true" data-margin="3" data-lib="WAF" data-fit="false" data-constraint-top="true" data-constraint-left="true" data-autosave="true" class="waf-widget waf-matrix">
  	 		<div id="container14" data-type="container" data-lib="WAF" data-label-position="top" data-label="" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" class="waf-widget waf-container waf-container-level-0 waf-level-0">
  	 	 		<div id="image6" data-type="image" data-target="_blank" data-lib="WAF" data-label-position="left" data-label="" data-fit="4" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-binding="productClassified.image1" class="waf-widget waf-image"></div>
- 	 	 			<div id="richText3" data-type="richText" data-target="_blank" data-plainText="true" data-overflow="Hidden" data-lib="WAF" data-label-position="left" data-label="" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-binding="productClassified.title" data-autoWidth="false" class="waf-widget waf-richText"></div>
  	 	 		<div id="richText2" data-type="richText" data-target="_blank" data-plainText="true" data-overflow="Hidden" data-lib="WAF" data-label-position="left" data-label="" data-format="###,###.00" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-binding="productClassified.price" data-autoWidth="false" class="waf-widget waf-richText"></div>
 		<div type="checkbox" id="checkbox4" data-type="checkbox" data-lib="WAF" data-label-position="right" data-label="Negociável" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-binding="productClassified.negociable" class="waf-widget waf-checkbox"></div>
  	 	 		<label id="label5" for="checkbox4" data-valign="middle" data-type="label" data-margin="5" data-lib="WAF" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" class="waf-widget waf-label waf-label-checkbox">Negociável</label>
@@ -113,9 +113,9 @@
  	 	 		<label id="label9" for="checkbox5" data-valign="middle" data-type="label" data-margin="5" data-lib="WAF" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" class="waf-widget waf-label waf-label-checkbox">Vendo</label>
  	 	 		<div type="checkbox" id="checkbox6" data-type="checkbox" data-lib="WAF" data-label-position="right" data-label="Troco" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-binding="productClassified.tradeOff" class="waf-widget waf-checkbox"></div>
  	 	 		<label id="label10" for="checkbox6" data-valign="middle" data-type="label" data-margin="5" data-lib="WAF" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" class="waf-widget waf-label waf-label-checkbox">Troco</label>
+ 	 	 		<div id="richText3" data-type="richText" data-target="_blank" data-plainText="true" data-overflow="Hidden" data-lib="WAF" data-label-position="left" data-label="" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-binding="productClassified.title" data-autoWidth="false" class="waf-widget waf-richText"></div>
  	 	 	</div>
  	 	</div>
-		<button id="button2" data-type="button" data-text="Pesquisar Destaques" data-target="_blank" data-lib="WAF" data-constraint-top="true" data-constraint-left="true" data-action="simple" class="waf-widget waf-button"></button>
 		<div id="container5" data-type="container" data-lib="WAF" data-label-position="top" data-label="" data-hideonload="true" data-draggable="true" data-constraint-top="true" data-constraint-left="true" class="waf-widget waf-container waf-container-level-0 waf-level-0">
  	 		<div id="container8" data-type="container" data-lib="WAF" data-label-position="top" data-label="" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" class="waf-widget waf-container waf-container-level-1 waf-level-1">
 		<div id="richText1" data-type="richText" data-target="_blank" data-plainText="true" data-overflow="Hidden" data-lib="WAF" data-label-position="left" data-label="" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-autoWidth="false" class="waf-widget waf-richText">Detalhes do Anúncio</div>
@@ -155,13 +155,20 @@
  	 	</div>
 				<div id="image3" data-type="image" data-target="_blank" data-src="/images/left-banner.jpg" data-link="http://www.moto-digital.com" data-lib="WAF" data-label-position="left" data-label="" data-fit="4" data-constraint-top="true" data-constraint-left="true" class="waf-widget waf-image"></div>
  		<div id="headerContainer" data-type="container" data-lib="WAF" data-label-position="top" data-label="" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" class="waf-widget waf-container waf-container-level-0 waf-level-0">		<div id="headerComponent" data-type="component" data-path="/components/header.waComponent" data-lib="WAF" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" class="waf-widget waf-component"></div>
- 	 	</div>
+ 	 		</div>
 		<div id="container11" data-type="container" data-lib="WAF" data-label-position="top" data-label="" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" class="waf-widget waf-container waf-container-level-0 waf-level-0">
 	 	 	<div id="component3" data-type="component" data-path="/components/footer.waComponent" data-lib="WAF" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" class="waf-widget waf-component"></div>
  	 		<div id="richText4" data-type="richText" data-target="_blank" data-plainText="true" data-overflow="Hidden" data-lib="WAF" data-label-position="left" data-label="" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-autoWidth="true" class="waf-widget waf-richText">Termos e condições</div>
  	 	</div>
-	
- 	
+		
+				<div id="matrix3" data-type="matrix" data-lib="WAF" class="waf-widget waf-matrix" data-fit="false" data-scrolling="vertical" data-autosave="true" data-scrollbar="true" data-constraint-left="true" data-constraint-top="true">
+	 	 	<div id="container2" data-type="container" data-lib="WAF" class="waf-widget waf-container waf-container-level-0 waf-level-0" data-label="" data-label-position="top" data-constraint-left="true" data-constraint-top="true" data-constraint-bottom="false" data-constraint-right="false">
+ 	 	 		<input id="textField11" data-type="textField" data-lib="WAF" type="text" data-binding="productTop.title" class="waf-widget waf-textField" data-label="" data-label-position="left" data-multiline="false" data-readOnly="true" data-password="false" data-datapicker-on="true" data-datapicker-icon-only="false" data-constraint-left="true" data-constraint-top="true" data-constraint-bottom="false" data-constraint-right="false"/>
+ 	 	 			<input id="textField12" data-type="textField" data-lib="WAF" type="text" data-binding="productTop.price" class="waf-widget waf-textField" data-label="" data-label-position="left" data-multiline="false" data-readOnly="true" data-password="false" data-datapicker-on="true" data-datapicker-icon-only="false" data-constraint-left="true" data-constraint-top="true" data-constraint-bottom="false" data-constraint-right="false"/>
+ 	 	 		
+ 	 	 		<div id="image2" data-type="image" data-lib="WAF" data-binding="productTop.image1" class="waf-widget waf-image" data-target="_blank" data-label="" data-label-position="left" data-fit="0" data-constraint-left="true" data-constraint-top="true" data-constraint-bottom="false" data-constraint-right="false"></div>
+ 	 	 		</div>
+ 	 	</div>
 		<script type="text/javascript" src="/waLib/WAF/Loader.js"></script>
- 	</body>
+	</body>
 </html>
