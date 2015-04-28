@@ -2,6 +2,7 @@
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
+	var userNameInput = {};	// @textField
 	var customer1Event = {};	// @dataSource
 	var imageButton1 = {};	// @buttonImage
 	var passwordInput = {};	// @textField
@@ -10,6 +11,23 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	var vDatasourceInit = false;
 	var okToSave = true;
 // eventHandlers// @lock
+
+	userNameInput.change = function userNameInput_change (event)// @startlock
+	{// @endlock
+		var user = $$('userNameInput').getValue();
+		if (user == ""){
+			okToSave = false;
+		}else {
+				var exists = ds.Customer.findUser($$('userNameInput').getValue());
+				if(exists != null)
+				{
+					okToSave = false;
+					alert ("O email " + user + " já existe!!");
+					$$('userNameInput').setValue("");
+				}
+			}
+			
+	};// @lock
 
 	customer1Event.onCollectionChange = function customer1Event_onCollectionChange (event)// @startlock
 	{// @endlock
@@ -40,30 +58,31 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			
 		if(!okToSave){
 			alert("Todos os campos são de preenchimento obrigatório");
-			event.preventDefault();
+			//event.preventDefault();
 		}else{
-			var selection = ds.Customer.query('email==:1', $$('userNameInput').getValue());if(selection.email == "");
-			if(selection.email ==""){
 				ds.Settings.addUser($$('userNameInput').getValue(), $$('passwordInput').getValue(), $$('fullNameInput').getValue(),
 				{
 					onSuccess: function(e){
-						if(e.result.success){
-							alert('Utilizador criado com sucesso !');
-							window.location = "/index.waPage/";
-						} else {
-							alert('Houve um problema ao criar o Utilizador. Por favor contacte');
-							event.preventDefault();
+						if(!e.result.success){
+							okToSave = false;
 						}
 					}
 				});
-			}else {
-				
-				alert("Já existe");
-				return;
-				event.preventDefault();
-			}
 		}
-			
+		if(okToSave){
+			 sources.customer1.save(
+			 {
+       			onSuccess: function(event) {
+            		alert("Utilizador criado com sucesso.");
+       			 },
+        		onError: function(error) {
+                	alert("Ocurreu um erro.Tente de novo!");
+       		 	}
+    		});
+		
+		}
+		
+
 	};// @lock
 
 	passwordInput.change = function passwordInput_change (event)// @startlock
@@ -93,6 +112,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	};// @lock
 
 // @region eventManager// @startlock
+	WAF.addListener("userNameInput", "change", userNameInput.change, "WAF");
 	WAF.addListener("customer1", "onCollectionChange", customer1Event.onCollectionChange, "WAF");
 	WAF.addListener("imageButton1", "click", imageButton1.click, "WAF");
 	WAF.addListener("passwordInput", "change", passwordInput.change, "WAF");

@@ -207,21 +207,6 @@
 					"type" : "string"
 				},
 				{
-					"name" : "ha1key",
-					"kind" : "storage",
-					"scope" : "publicOnServer",
-					"type" : "string"
-				},
-				{
-					"name" : "userName",
-					"kind" : "storage",
-					"matchColumn" : "login",
-					"scope" : "public",
-					"indexed" : true,
-					"type" : "string",
-					"indexKind" : "auto"
-				},
-				{
 					"name" : "email",
 					"kind" : "storage",
 					"scope" : "public",
@@ -264,6 +249,16 @@
 					"type" : "Products",
 					"reversePath" : true,
 					"path" : "customer"
+				}
+			],
+			"methods" : 
+			[
+				{
+					"name" : "findUser",
+					"applyTo" : "dataClass",
+					"scope" : "public",
+					"from" : "$mainModel.Customer.methods.findUser",
+					"userDefined" : true
 				}
 			],
 			"key" : 

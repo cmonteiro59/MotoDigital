@@ -3,21 +3,200 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
+.waf-widget.waf-clone-container12 {
+	position: absolute;
+}
+
+.waf-widget.waf-clone-label8 {
+	position: absolute;
+	min-width: 75px;
+}
+
+.waf-widget.waf-clone-richText7 {
+	position: absolute;
+}
+
+.waf-widget.waf-clone-image5 {
+	position: absolute;
+}
+
+.waf-widget.waf-clone-label23 {
+	position: absolute;
+	min-width: 75px;
+}
+
+.waf-widget.waf-clone-image2 {
+	position: absolute;
+}
+
+.waf-widget.waf-clone-label22 {
+	position: absolute;
+	min-width: 75px;
+}
+
+.waf-widget.waf-clone-richText6 {
+	position: absolute;
+}
+
+.waf-widget.waf-clone-label7 {
+	position: absolute;
+	min-width: 75px;
+}
+
+#matrix4 .waf-widget.waf-clone-image5 {
+	position: absolute;
+}
+
+#matrix4 .waf-widget.waf-clone-label23 {
+	position: absolute;
+	min-width: 75px;
+}
+
+#label23 {
+	z-index: 10;
+	width: 75px;
+	height: 15px;
+	top: 258px;
+	left: 15px;
+	position: absolute;
+	min-width: 75px;
+}
+
+#image5 {
+	z-index: 10;
+	width: 85px;
+	height: 80px;
+	top: 226px;
+	left: 95px;
+	position: absolute;
+}
+
+#matrix4 .waf-widget.waf-clone-image2 {
+	position: absolute;
+}
+
+#matrix4 .waf-widget.waf-clone-label22 {
+	position: absolute;
+	min-width: 75px;
+}
+
+#label22 {
+	z-index: 8;
+	width: 75px;
+	height: 15px;
+	top: 88px;
+	left: 15px;
+	position: absolute;
+	min-width: 75px;
+}
+
+#image2 {
+	z-index: 8;
+	width: 85px;
+	height: 80px;
+	top: 56px;
+	left: 95px;
+	position: absolute;
+}
+
+#matrix4 .waf-widget.waf-clone-richText7 {
+	position: absolute;
+}
+
+#matrix4 .waf-widget.waf-clone-label8 {
+	position: absolute;
+	min-width: 75px;
+}
+
+#label8 {
+	z-index: 4;
+	width: 75px;
+	height: 15px;
+	top: 55px;
+	left: 15px;
+	position: absolute;
+	min-width: 75px;
+}
+
+#richText7 {
+	z-index: 4;
+	width: 98px;
+	height: 15px;
+	top: 55px;
+	left: 95px;
+	position: absolute;
+}
+
+#matrix4 .waf-widget.waf-clone-richText6 {
+	position: absolute;
+}
+
+#matrix4 .waf-widget.waf-clone-label7 {
+	position: absolute;
+	min-width: 75px;
+}
+
+#label7 {
+	z-index: 2;
+	width: 75px;
+	height: 15px;
+	top: 0px;
+	left: 15px;
+	position: absolute;
+	min-width: 75px;
+}
+
+#richText6 {
+	z-index: 2;
+	width: 90px;
+	height: 15px;
+	top: 0px;
+	left: 95px;
+	position: absolute;
+}
+
+#container12 {
+	z-index: 1;
+	width: 218px;
+	height: 147px;
+	top: 12px;
+	left: 23px;
+	position: absolute;
+}
+
+#container10 {
+	z-index: 1;
+	width: 253px;
+	height: 173px;
+	top: 10px;
+	left: 10px;
+	position: absolute;
+}
+
+#matrix4 {
+	z-index: 45;
+	width: 953px;
+	height: 194px;
+	top: 128px;
+	left: 345px;
+	position: absolute;
+}
+
 #richText5 {
+	z-index: 3;
 	width: 221px;
-	height: 21px;
-	top: 111px;
-	left: 496px;
+	height: 22px;
+	top: 116px;
+	left: 281px;
 	position: absolute;
 	font-size: 14px;
 	text-align: center;
 	font-weight: bold;
-	color: rgb(127, 0, 0);
-	z-index: 3;
+	color: rgb(63, 127, 0);
 }
 
 #richText4 {
-	z-index: 45;
+	z-index: 43;
 	width: 221px;
 	height: 21px;
 	top: 327px;
@@ -27,136 +206,6 @@
 	text-align: center;
 	font-weight: bold;
 	color: rgb(127, 0, 0);
-}
-
-.waf-widget.waf-clone-textField11 {
-	position: absolute;
-	border-top-width: 0px;
-	border-left-width: 0px;
-	border-right-width: 0px;
-	border-bottom-width: 0px;
-}
-
-.waf-widget.waf-clone-image2 {
-	position: absolute;
-}
-
-.waf-widget.waf-clone-textField12 {
-	position: absolute;
-	color: rgb(63, 127, 0);
-	font-weight: bold;
-	border-top-width: 0px;
-	border-left-width: 0px;
-	border-right-width: 0px;
-	border-bottom-width: 0px;
-}
-
-#matrix3 .waf-widget.waf-clone-container2 {
-	border-top-style: none;
-	border-top-width: 0px;
-	border-left-style: none;
-	border-left-width: 0px;
-	border-right-style: none;
-	border-right-width: 0px;
-	border-bottom-style: none;
-	border-bottom-width: 0px;
-}
-
-#matrix3 .waf-widget.waf-clone-image2 {
-	position: absolute;
-}
-
-#image2 {
-	z-index: 8;
-	width: 256px;
-	height: 128px;
-	top: 25px;
-	left: 13px;
-	position: absolute;
-}
-
-#matrix3 .waf-widget.waf-clone-textField12 {
-	position: absolute;
-	color: rgb(63, 127, 0);
-	font-weight: bold;
-	border-top-width: 0px;
-	border-left-width: 0px;
-	border-right-width: 0px;
-	border-bottom-width: 0px;
-}
-
-#matrix3 .waf-widget.waf-clone-textField11 {
-	position: absolute;
-	border-top-width: 0px;
-	border-left-width: 0px;
-	border-right-width: 0px;
-	border-bottom-width: 0px;
-}
-
-#textField12 {
-	z-index: 4;
-	width: 88px;
-	height: 22px;
-	top: 4px;
-	left: 13px;
-	position: absolute;
-	color: rgb(63, 127, 0);
-	font-weight: bold;
-	border-top-width: 0px;
-	border-left-width: 0px;
-	border-right-width: 0px;
-	border-bottom-width: 0px;
-}
-
-#textField11 {
-	z-index: 2;
-	width: 189px;
-	height: 22px;
-	top: 4px;
-	left: 101px;
-	position: absolute;
-	border-top-width: 0px;
-	border-left-width: 0px;
-	border-right-width: 0px;
-	border-bottom-width: 0px;
-}
-
-#container2 {
-	z-index: 1;
-	width: 306px;
-	height: 153px;
-	top: 10px;
-	left: 10px;
-	position: absolute;
-	border-top-style: none;
-	border-top-width: 0px;
-	border-left-style: none;
-	border-left-width: 0px;
-	border-right-style: none;
-	border-right-width: 0px;
-	border-bottom-style: none;
-	border-bottom-width: 0px;
-}
-
-#matrix3 {
-	z-index: 44;
-	width: 964px;
-	height: 177px;
-	top: 136px;
-	left: 335px;
-	position: absolute;
-	border-top-color: rgb(127, 127, 127);
-	border-top-style: solid;
-	border-top-width: 1px;
-	border-left-color: rgb(127, 127, 127);
-	border-left-style: solid;
-	border-left-width: 1px;
-	border-right-color: rgb(127, 127, 127);
-	border-right-style: solid;
-	border-right-width: 1px;
-	border-bottom-color: rgb(127, 127, 127);
-	border-bottom-style: solid;
-	border-bottom-width: 1px;
 }
 
 #htmlTag2 {
@@ -185,7 +234,7 @@
 }
 
 #image3 {
-	z-index: 40;
+	z-index: 39;
 	width: 240px;
 	height: 619px;
 	top: 150px;
@@ -480,7 +529,7 @@
 }
 
 #container5 {
-	z-index: 43;
+	z-index: 41;
 	width: 658px;
 	height: 536px;
 	top: 352px;
@@ -1645,9 +1694,9 @@
 }
 
 #headerContainer {
-	z-index: 41;
+	z-index: 40;
 	width: 1400px;
-	height: 157px;
+	height: 139px;
 	top: 1px;
 	left: 10px;
 	position: absolute;
