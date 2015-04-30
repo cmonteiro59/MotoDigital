@@ -7,3 +7,11 @@ model.Settings.methods.addUser = function(userName, password, fullName) {
 	return {success: true};
 };
 model.Settings.methods.addUser.scope = 'public';
+
+
+model.Settings.methods.getCurrentUser = function(){
+    var result = directory.currentUser();
+    return result.fullName;
+};
+model.Settings.methods.addUser.scope = 'public';
+

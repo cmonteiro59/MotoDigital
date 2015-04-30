@@ -13,6 +13,7 @@ function constructor (id) {
 	this.load = function (data) {// @lock
 
 	// @region namespaceDeclaration// @startlock
+	var imageButton3 = {};	// @buttonImage
 	var imageButton5 = {};	// @buttonImage
 	var login1 = {};	// @login
 	var imageButton6 = {};	// @buttonImage
@@ -20,6 +21,12 @@ function constructor (id) {
 	// @endregion// @endlock
 
 	// eventHandlers// @lock
+
+	imageButton3.click = function imageButton3_click (event)// @startlock
+	{// @endlock
+		var myUser = ds.Settings.getCurrentUser();
+		alert(myUser.fullNmae);
+	};// @lock
 
 	imageButton5.click = function imageButton5_click (event)// @startlock
 	{// @endlock
@@ -52,6 +59,7 @@ function constructor (id) {
 	};// @lock
 
 	// @region eventManager// @startlock
+	WAF.addListener(this.id + "_imageButton3", "click", imageButton3.click, "WAF");
 	WAF.addListener(this.id + "_imageButton5", "click", imageButton5.click, "WAF");
 	WAF.addListener(this.id + "_login1", "logout", login1.logout, "WAF");
 	WAF.addListener(this.id + "_imageButton6", "click", imageButton6.click, "WAF");

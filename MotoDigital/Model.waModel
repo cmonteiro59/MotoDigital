@@ -623,6 +623,13 @@
 					"scope" : "public",
 					"from" : "$mainModel.Settings.methods.addUser",
 					"userDefined" : true
+				},
+				{
+					"name" : "getCurrentUser",
+					"applyTo" : "dataClass",
+					"scope" : "publicOnServer",
+					"from" : "$mainModel.Settings.methods.getCurrentUser",
+					"userDefined" : true
 				}
 			],
 			"key" : 
