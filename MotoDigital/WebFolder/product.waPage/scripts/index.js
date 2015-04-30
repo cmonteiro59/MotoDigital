@@ -21,7 +21,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			sources.order.addNewElement();
        	 	sources.order.serverRefresh(); //optional
         	vOrderInit = true;
-    	}
+	    }
 	};// @lock
 
 	imageButton1.click = function imageButton1_click (event)// @startlock

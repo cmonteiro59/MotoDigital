@@ -1415,13 +1415,13 @@
 	border-left-style: none;
 	border-right-style: none;
 	border-bottom-style: none;
-	position: absolute;
 	color: rgb(63, 127, 0);
 	font-weight: bold;
 	border-top-width: 0px;
 	border-left-width: 0px;
 	border-right-width: 0px;
 	border-bottom-width: 0px;
+	position: absolute;
 }
 
 #matrix1 .waf-widget.waf-clone-label3 {
@@ -1713,7 +1713,7 @@
 #headerComponent {
 	z-index: 2;
 	width: 1300px;
-	height: 136px;
+	height: 113px;
 	top: 5px;
 	left: 46px;
 	position: absolute;

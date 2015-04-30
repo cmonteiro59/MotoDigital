@@ -32,6 +32,10 @@
 			"type": "widget"
 		},
 		{
+			"id": "Widget/button",
+			"type": "widget"
+		},
+		{
 			"id": "components/header.waComponent/header.html",
 			"path": "WEBFOLDER",
 			"type": "html"
