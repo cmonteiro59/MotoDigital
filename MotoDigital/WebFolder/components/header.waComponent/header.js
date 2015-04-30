@@ -59,7 +59,7 @@ function constructor (id) {
 	{// @endlock
 		var username = WAF.directory.currentUser();
 		if(username != null){
-			window.location = "/profile.waPage/index.html";
+			window.location = "/myProfile.waPage/index.html";
 		}else{
 			alert("Faça Login ou Registe-se por favor!");
 		}
@@ -89,10 +89,13 @@ function constructor (id) {
 	{// @endlock
 		var username = WAF.directory.currentUser();
 		if(username != null){
-			alert(username.userName);
-			window.location = "/product.waPage/index.html";
+			if(username.userName == "admin"){
+				window.location = "/controlPanel.waPage/index.html";
+			}else{
+				alert("Esta área é reservada aos Administradores!");
+		}
 		}else{
-			alert("Faça Login ou Registe-se por favor!");
+			alert("Faça Login como Administrador!");
 		}
 		
 	};// @lock

@@ -47,16 +47,24 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		sources.product.categoria = cat;
 	};// @lock
 
+	productEvent.ontitleAttributeChange = function productEvent_ontitleAttributeChange (event)// @startlock
+	{// @endlock
+		var username = WAF.directory.currentUser();
+			sources.product.publisher = username.UserName;
+	};// @lock
+
 	productEvent.onCollectionChange = function productEvent_onCollectionChange (event)// @startlock
 	{// @endlock
 		if(vProductInit == false){
 			sources.product.addNewElement();
        	 	sources.product.serverRefresh(); //optional
         	vProductInit = true;
+        	
     	}
 	};// @lock
 
 // @region eventManager// @startlock
+	WAF.addListener("product", "ontitleAttributeChange", productEvent.ontitleAttributeChange, "WAF", "title");
 	WAF.addListener("order", "onCollectionChange", orderEvent.onCollectionChange, "WAF");
 	WAF.addListener("imageButton1", "click", imageButton1.click, "WAF");
 	WAF.addListener("document", "onLoad", documentEvent.onLoad, "WAF");

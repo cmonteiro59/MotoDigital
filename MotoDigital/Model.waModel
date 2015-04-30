@@ -587,6 +587,12 @@
 					"indexed" : true,
 					"type" : "string",
 					"indexKind" : "auto"
+				},
+				{
+					"name" : "publisher",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
 				}
 			],
 			"key" : 

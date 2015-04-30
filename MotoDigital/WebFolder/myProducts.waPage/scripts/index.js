@@ -2,6 +2,7 @@
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
+	var productEvent = {};	// @dataSource
 	var imageButton7 = {};	// @buttonImage
 	var dataGrid1 = {};	// @dataGrid
 	var image10 = {};	// @image
@@ -11,6 +12,15 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 // @endregion// @endlock
 
 // eventHandlers// @lock
+
+	productEvent.onCollectionChange = function productEvent_onCollectionChange (event)// @startlock
+	{// @endlock
+		var username = WAF.directory.currentUser();
+		alert(username.UserName);
+		if(username != null){
+			sources.product.query('publisher == :1',username.UserName);
+		}
+	};// @lock
 
 	imageButton7.click = function imageButton7_click (event)// @startlock
 	{// @endlock
@@ -63,6 +73,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	};// @lock
 
 // @region eventManager// @startlock
+	WAF.addListener("product", "onCollectionChange", productEvent.onCollectionChange, "WAF");
 	WAF.addListener("imageButton7", "click", imageButton7.click, "WAF");
 	WAF.addListener("dataGrid1", "onCellClick", dataGrid1.onCellClick, "WAF");
 	WAF.addListener("image10", "mouseover", image10.mouseover, "WAF");
