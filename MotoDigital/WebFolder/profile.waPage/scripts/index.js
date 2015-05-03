@@ -31,11 +31,12 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	customer1Event.onCollectionChange = function customer1Event_onCollectionChange (event)// @startlock
 	{// @endlock
+		
 		if(vDatasourceInit == false){
 			sources.customer1.addNewElement();
        	 	sources.customer1.serverRefresh(); //optional
         	vDatasourceInit = true;
-		}
+        }
 	};// @lock
 
 	imageButton1.click = function imageButton1_click (event)// @startlock

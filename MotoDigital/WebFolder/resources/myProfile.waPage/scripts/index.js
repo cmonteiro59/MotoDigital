@@ -2,24 +2,50 @@
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
+	var documentEvent = {};	// @document
+	var userNameInput = {};	// @textField
 	var customer1Event = {};	// @dataSource
 	var imageButton1 = {};	// @buttonImage
 	var passwordInput = {};	// @textField
 	var confirmPassword = {};	// @textField
-	var userNameInput = {};	// @textField
 // @endregion// @endlock
 	var vDatasourceInit = false;
 	var okToSave = true;
 // eventHandlers// @lock
 
+	documentEvent.onLoad = function documentEvent_onLoad (event)// @startlock
+	{// @endlock
+		username = WAF.directory.currentUser().userName;
+		alert(username);
+	};// @lock
+
+	userNameInput.change = function userNameInput_change (event)// @startlock
+	{// @endlock
+		var user = $$('userNameInput').getValue();
+		if (user == ""){
+			okToSave = false;
+		}else {
+				var exists = ds.Customer.findUser($$('userNameInput').getValue());
+				if(exists != null)
+				{
+					okToSave = false;
+					alert ("O email " + user + " já existe!!");
+					$$('userNameInput').setValue("");
+				}
+			}
+			
+	};// @lock
+
 	customer1Event.onCollectionChange = function customer1Event_onCollectionChange (event)// @startlock
 	{// @endlock
 		if(vDatasourceInit == false){
-			var username = WAF.directory.currentUser().userName;
-			if(username != null){
-				sources.customer1.query('email == :1',username);
-			}
-        }
+			//sources.customer1.query('email == :1', username);
+       	 	//sources.customer1.serverRefresh(); //optional
+        	vDatasourceInit = true;
+		}else {
+			
+		}
+		
 	};// @lock
 
 	imageButton1.click = function imageButton1_click (event)// @startlock
@@ -95,28 +121,12 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			okToSave = false;
 	};// @lock
 
-	userNameInput.change = function userNameInput_change (event)// @startlock
-	{// @endlock
-		var user = $$('userNameInput').getValue();
-		if (user == ""){
-			okToSave = false;
-		}else {
-				var exists = ds.Customer.findUser($$('userNameInput').getValue());
-				if(exists != null)
-				{
-					okToSave = false;
-					alert ("O email " + user + " já existe!!");
-					$$('userNameInput').setValue("");
-				}
-			}
-			
-	};// @lock
-
 // @region eventManager// @startlock
+	WAF.addListener("document", "onLoad", documentEvent.onLoad, "WAF");
+	WAF.addListener("userNameInput", "change", userNameInput.change, "WAF");
 	WAF.addListener("customer1", "onCollectionChange", customer1Event.onCollectionChange, "WAF");
 	WAF.addListener("imageButton1", "click", imageButton1.click, "WAF");
 	WAF.addListener("passwordInput", "change", passwordInput.change, "WAF");
 	WAF.addListener("confirmPassword", "change", confirmPassword.change, "WAF");
-	WAF.addListener("userNameInput", "change", userNameInput.change, "WAF");
 // @endregion
 };// @endlock

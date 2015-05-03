@@ -16,9 +16,8 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	productEvent.onCollectionChange = function productEvent_onCollectionChange (event)// @startlock
 	{// @endlock
 		var username = WAF.directory.currentUser();
-		alert(username.UserName);
 		if(username != null){
-			sources.product.query('publisher == :1',username.UserName);
+			sources.product.query('publisher == :1',username.userName);
 		}
 	};// @lock
 

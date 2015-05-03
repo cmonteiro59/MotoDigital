@@ -375,16 +375,20 @@
 	position: absolute;
 	color: rgb(255, 255, 255);
 	background-color: rgb(127, 127, 127);
-	border-top-width: 0px;
-	border-left-width: 0px;
-	border-right-width: 0px;
-	border-bottom-width: 0px;
 	-webkit-box-shadow: rgba(0, 0, 0, 0.199219) 0px 0px 0px 0px;
 	 -moz-box-shadow: rgba(0, 0, 0, 0.199219) 0px 0px 0px 0px;
 	 box-shadow: rgba(0, 0, 0, 0.199219) 0px 0px 0px 0px;
 	box-shadow: rgba(0, 0, 0, 0.199219) 0px 0px 0px 0px;
 	font-size: 13px;
 	text-decoration: none;
+	border-top-width: 1px;
+	border-top-color: rgb(255, 255, 255);
+	border-left-width: 1px;
+	border-left-color: rgb(255, 255, 255);
+	border-right-width: 1px;
+	border-right-color: rgb(255, 255, 255);
+	border-bottom-width: 1px;
+	border-bottom-color: rgb(255, 255, 255);
 }
 
 #{id}imageButton3.waf-state-hover {
