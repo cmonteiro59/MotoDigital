@@ -3,20 +3,22 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
-#dataGrid1 .waf-widget-body .waf-dataGrid-col-price {
-	text-align: right;
+#dataGrid2 .waf-widget-body .waf-dataGrid-col-image1 {
+	color: rgb(255, 255, 255);
 }
 
-#dataGrid1 .waf-widget-header .waf-dataGrid-col-price {
-	text-align: right;
+#dataGrid2 .waf-dataGrid-header {
+	background-color: rgb(127, 127, 127);
+	color: rgb(102, 102, 102);
 }
 
-#dataGrid1 .waf-dataGrid-row.waf-widget-odd {
-	color: rgb(153, 153, 153);
-}
-
-#dataGrid1 .waf-dataGrid-row.waf-widget-even {
-	color: rgb(178, 178, 178);
+#dataGrid2 {
+	z-index: 4;
+	width: 919px;
+	height: 553px;
+	top: 149px;
+	left: 191px;
+	position: absolute;
 }
 
 #htmlTag2 {
@@ -207,11 +209,6 @@
 	top: 116px;
 	left: 92px;
 	position: absolute;
-}
-
-#dataGrid1 .waf-dataGrid-row {
-	line-height: 5px;
-	color: rgb(51, 51, 51);
 }
 
 #label58 {
@@ -695,82 +692,12 @@
 }
 
 #container3 {
-	z-index: 4;
+	z-index: 5;
 	width: 916px;
 	height: 536px;
 	top: 151px;
 	left: 194px;
 	position: absolute;
-}
-
-#dataGrid1 .waf-dataGrid-row.waf-state-active {
-	 background-image:url("data:image/svg+xml;base64, PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMSAxIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9IndhZi1pZS1ncmFkaWVudCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHg9IjAiIHk9IjAiIHgyPSIwIiB5Mj0iMTAwJSI+PHN0b3Agc3RvcC1jb2xvcj0iIzdmN2Y3ZiIgb2Zmc2V0PSIxMDAlIiBzdG9wLW9wYWNpdHk9IjEiIC8+PHN0b3Agc3RvcC1jb2xvcj0iIzAwNzQ4YyIgb2Zmc2V0PSIxMDAlIiBzdG9wLW9wYWNpdHk9IjEiIC8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI3dhZi1pZS1ncmFkaWVudCkiIC8+PC9zdmc+");
-	 background-image:-webkit-gradient(linear,0% 0%, 0% 100%,color-stop(1, rgb(127, 127, 127)),color-stop(1, rgb(0, 116, 140)));
-	 background-image:-webkit-linear-gradient(bottom, rgb(127, 127, 127) 100%,rgb(0, 116, 140) 100%);
-	 background-image:-moz-linear-gradient(bottom, rgb(127, 127, 127) 100%,rgb(0, 116, 140) 100%);
-	 background-image:-ms-linear-gradient(bottom, rgb(127, 127, 127) 100%,rgb(0, 116, 140) 100%);
-	 background-image:-o-linear-gradient(bottom, rgb(127, 127, 127) 100%,rgb(0, 116, 140) 100%);
-	 background-image:linear-gradient(bottom, rgb(127, 127, 127) 100%,rgb(0, 116, 140) 100%);
-}
-
-#dataGrid1 .waf-dataGrid-row.waf-state-hover {
-	color: rgb(255, 255, 255);
-	 background-image:url("data:image/svg+xml;base64, PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMSAxIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9IndhZi1pZS1ncmFkaWVudCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHg9IjAiIHk9IjAiIHgyPSIwIiB5Mj0iMTAwJSI+PHN0b3Agc3RvcC1jb2xvcj0iI2IyYjJiMiIgb2Zmc2V0PSI5OCUiIHN0b3Atb3BhY2l0eT0iMSIgLz48c3RvcCBzdG9wLWNvbG9yPSIjY2NmYWZjIiBvZmZzZXQ9IjEwMCUiIHN0b3Atb3BhY2l0eT0iMSIgLz48L2xpbmVhckdyYWRpZW50PjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjd2FmLWllLWdyYWRpZW50KSIgLz48L3N2Zz4=");
-	 background-image:-webkit-gradient(linear,0% 0%, 0% 100%,color-stop(0.98, rgb(178, 178, 178)),color-stop(1, rgb(204, 250, 252)));
-	 background-image:-webkit-linear-gradient(top, rgb(178, 178, 178) 98%,rgb(204, 250, 252) 100%);
-	 background-image:-moz-linear-gradient(top, rgb(178, 178, 178) 98%,rgb(204, 250, 252) 100%);
-	 background-image:-ms-linear-gradient(top, rgb(178, 178, 178) 98%,rgb(204, 250, 252) 100%);
-	 background-image:-o-linear-gradient(top, rgb(178, 178, 178) 98%,rgb(204, 250, 252) 100%);
-	 background-image:linear-gradient(top, rgb(178, 178, 178) 98%,rgb(204, 250, 252) 100%);
-}
-
-#dataGrid1 .waf-dataGrid-row.waf-state-selected {
-	color: rgb(127, 0, 0);
-}
-
-#dataGrid1 .waf-dataGrid-header .waf-dataGrid-cell {
-	background-color: rgb(127, 127, 127);
-	color: rgb(255, 255, 255);
-	text-shadow: rgb(255, 255, 255) 0px 0px 0px;
-	font-weight: normal;
-	border-top-style: none;
-	border-top-width: 0px;
-	border-left-style: none;
-	border-left-width: 0px;
-	border-right-style: none;
-	border-right-width: 0px;
-	border-bottom-style: none;
-	border-bottom-width: 0px;
-}
-
-#dataGrid1 .waf-dataGrid-header {
-	font-weight: normal;
-	background-color: rgb(127, 127, 127);
-	border-top-style: none;
-	border-top-width: 0px;
-	border-left-style: none;
-	border-left-width: 0px;
-	border-right-style: none;
-	border-right-width: 0px;
-	border-bottom-style: none;
-	border-bottom-width: 0px;
-	 background-image:url("data:image/svg+xml;base64, PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMSAxIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9IndhZi1pZS1ncmFkaWVudCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHg9IjAiIHk9IjAiIHgyPSIwIiB5Mj0iMTAwJSI+PHN0b3Agc3RvcC1jb2xvcj0iIzdmN2Y3ZiIgb2Zmc2V0PSIxMDAlIiBzdG9wLW9wYWNpdHk9IjEiIC8+PHN0b3Agc3RvcC1jb2xvcj0iI2ZmZmZmZiIgb2Zmc2V0PSIxMDAlIiBzdG9wLW9wYWNpdHk9IjEiIC8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI3dhZi1pZS1ncmFkaWVudCkiIC8+PC9zdmc+");
-	 background-image:-webkit-gradient(linear,0% 0%, 0% 100%,color-stop(1, rgb(127, 127, 127)),color-stop(1, rgb(255, 255, 255)));
-	 background-image:-webkit-linear-gradient(bottom, rgb(127, 127, 127) 100%,rgb(255, 255, 255) 100%);
-	 background-image:-moz-linear-gradient(bottom, rgb(127, 127, 127) 100%,rgb(255, 255, 255) 100%);
-	 background-image:-ms-linear-gradient(bottom, rgb(127, 127, 127) 100%,rgb(255, 255, 255) 100%);
-	 background-image:-o-linear-gradient(bottom, rgb(127, 127, 127) 100%,rgb(255, 255, 255) 100%);
-	 background-image:linear-gradient(bottom, rgb(127, 127, 127) 100%,rgb(255, 255, 255) 100%);
-}
-
-#dataGrid1 {
-	z-index: 3;
-	width: 886px;
-	height: 524px;
-	top: 149px;
-	left: 193px;
-	position: absolute;
-	color: rgb(0, 0, 0);
 }
 
 #component1 {
@@ -789,9 +716,5 @@
 	bottom: 1px;
 	left: 1px;
 	position: absolute;
-}
-
-#dataGrid1 .waf-widget-body .waf-dataGrid-col-ID {
-	line-height: 5px;
 }
 
