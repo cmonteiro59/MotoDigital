@@ -2,9 +2,9 @@
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
+	var dataGrid1 = {};	// @dataGrid
 	var productEvent = {};	// @dataSource
 	var imageButton7 = {};	// @buttonImage
-	var dataGrid1 = {};	// @dataGrid
 	var image10 = {};	// @image
 	var image9 = {};	// @image
 	var image8 = {};	// @image
@@ -12,6 +12,11 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 // @endregion// @endlock
 
 // eventHandlers// @lock
+
+	dataGrid1.onRowClick = function dataGrid1_onRowClick (event)// @startlock
+	{// @endlock
+		$$("container3").show();
+	};// @lock
 
 	productEvent.onCollectionChange = function productEvent_onCollectionChange (event)// @startlock
 	{// @endlock
@@ -24,11 +29,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	imageButton7.click = function imageButton7_click (event)// @startlock
 	{// @endlock
 		$$("container3").hide();
-	};// @lock
-
-	dataGrid1.onCellClick = function dataGrid1_onCellClick (event)// @startlock
-	{// @endlock
-		$$("container3").show();
 	};// @lock
 
 	image10.mouseover = function image10_mouseover (event)// @startlock
@@ -72,9 +72,9 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	};// @lock
 
 // @region eventManager// @startlock
+	WAF.addListener("dataGrid1", "onRowClick", dataGrid1.onRowClick, "WAF");
 	WAF.addListener("product", "onCollectionChange", productEvent.onCollectionChange, "WAF");
 	WAF.addListener("imageButton7", "click", imageButton7.click, "WAF");
-	WAF.addListener("dataGrid1", "onCellClick", dataGrid1.onCellClick, "WAF");
 	WAF.addListener("image10", "mouseover", image10.mouseover, "WAF");
 	WAF.addListener("image10", "mouseout", image10.mouseout, "WAF");
 	WAF.addListener("image9", "mouseover", image9.mouseover, "WAF");

@@ -3,6 +3,14 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
+#dataGrid1 .waf-widget-body .waf-dataGrid-col-price {
+	text-align: right;
+}
+
+#dataGrid1 .waf-widget-header .waf-dataGrid-col-price {
+	text-align: right;
+}
+
 #dataGrid1 .waf-dataGrid-row.waf-widget-odd {
 	color: rgb(153, 153, 153);
 }
