@@ -2,27 +2,17 @@
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
-	var customer1Event = {};	// @dataSource
-	var imageButton1 = {};	// @buttonImage
-	var passwordInput = {};	// @textField
-	var confirmPassword = {};	// @textField
-	var userNameInput = {};	// @textField
+	var imageButton6 = {};	// @buttonImage
+	var customerEvent = {};	// @dataSource
+	var textField13 = {};	// @textField
+	var textField11 = {};	// @textField
+	var textField8 = {};	// @textField
 // @endregion// @endlock
 	var vDatasourceInit = false;
 	var okToSave = true;
 // eventHandlers// @lock
 
-	customer1Event.onCollectionChange = function customer1Event_onCollectionChange (event)// @startlock
-	{// @endlock
-		if(vDatasourceInit == false){
-			var username = WAF.directory.currentUser().userName;
-			if(username != null){
-				sources.customer1.query('email == :1',username);
-			}
-        }
-	};// @lock
-
-	imageButton1.click = function imageButton1_click (event)// @startlock
+	imageButton6.click = function imageButton6_click (event)// @startlock
 	{// @endlock
 		
 		if($$('userNameInput').getValue() == "")
@@ -69,7 +59,16 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	};// @lock
 
-	passwordInput.change = function passwordInput_change (event)// @startlock
+	customerEvent.onCollectionChange = function customerEvent_onCollectionChange (event)// @startlock
+	{// @endlock
+		var username = WAF.directory.currentUser();
+		if(username != null){
+			debugger;
+			sources.customer.query('email == :1',username.userName);
+		}
+	};// @lock
+
+	textField13.change = function textField13_change (event)// @startlock
 	{// @endlock
 		var pass1 = $$('passwordInput').getValue();
 		var pass2 = $$('confirmPassword').getValue();
@@ -80,7 +79,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			okToSave = false;
 	};// @lock
 
-	confirmPassword.change = function confirmPassword_change (event)// @startlock
+	textField11.change = function textField11_change (event)// @startlock
 	{// @endlock
 		// Add your code here
 		var pass1 = $$('passwordInput').getValue();
@@ -95,7 +94,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			okToSave = false;
 	};// @lock
 
-	userNameInput.change = function userNameInput_change (event)// @startlock
+	textField8.change = function textField8_change (event)// @startlock
 	{// @endlock
 		var user = $$('userNameInput').getValue();
 		if (user == ""){
@@ -113,10 +112,10 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	};// @lock
 
 // @region eventManager// @startlock
-	WAF.addListener("customer1", "onCollectionChange", customer1Event.onCollectionChange, "WAF");
-	WAF.addListener("imageButton1", "click", imageButton1.click, "WAF");
-	WAF.addListener("passwordInput", "change", passwordInput.change, "WAF");
-	WAF.addListener("confirmPassword", "change", confirmPassword.change, "WAF");
-	WAF.addListener("userNameInput", "change", userNameInput.change, "WAF");
+	WAF.addListener("imageButton6", "click", imageButton6.click, "WAF");
+	WAF.addListener("customer", "onCollectionChange", customerEvent.onCollectionChange, "WAF");
+	WAF.addListener("textField13", "change", textField13.change, "WAF");
+	WAF.addListener("textField11", "change", textField11.change, "WAF");
+	WAF.addListener("textField8", "change", textField8.change, "WAF");
 // @endregion
 };// @endlock

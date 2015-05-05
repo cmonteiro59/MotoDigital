@@ -2,6 +2,13 @@
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
+	var container12 = {};	// @container
+	var image17 = {};	// @image
+	var image16 = {};	// @image
+	var image15 = {};	// @image
+	var image4 = {};	// @image
+	var imageButton2 = {};	// @buttonImage
+	var productTopEvent = {};	// @dataSource
 	var claImage1 = {};	// @image
 	var claImage4 = {};	// @image
 	var claImage3 = {};	// @image
@@ -22,6 +29,63 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 // @endregion// @endlock
 
 // eventHandlers// @lock
+
+	container12.click = function container12_click (event)// @startlock
+	{// @endlock
+		$$('container2').show();
+	};// @lock
+
+	image17.mouseover = function image17_mouseover (event)// @startlock
+	{// @endlock
+		$$("image21").show();
+	};// @lock
+
+	image17.mouseout = function image17_mouseout (event)// @startlock
+	{// @endlock
+		$$("image21").hide();
+	};// @lock
+
+	image16.mouseover = function image16_mouseover (event)// @startlock
+	{// @endlock
+		$$("image20").show();
+	};// @lock
+
+	image16.mouseout = function image16_mouseout (event)// @startlock
+	{// @endlock
+		$$("image20").hide();
+	};// @lock
+
+	image15.mouseover = function image15_mouseover (event)// @startlock
+	{// @endlock
+		$$("image19").show();
+	};// @lock
+
+	image15.mouseout = function image15_mouseout (event)// @startlock
+	{// @endlock
+		$$("image19").hide();
+	};// @lock
+
+	image4.mouseover = function image4_mouseover (event)// @startlock
+	{// @endlock
+		$$("image18").show();
+	};// @lock
+
+	image4.mouseout = function image4_mouseout (event)// @startlock
+	{// @endlock
+		$$("image18").hide();
+	};// @lock
+
+	imageButton2.click = function imageButton2_click (event)// @startlock
+	{// @endlock
+		$$("container2").hide();
+	};// @lock
+
+	productTopEvent.onCollectionChange = function productTopEvent_onCollectionChange (event)// @startlock
+	{// @endlock
+		$$('checkbox7').disable();
+		$$('checkbox8').disable();
+		$$('checkbox15').disable();
+	};// @lock
 
 	claImage1.mouseover = function claImage1_mouseover (event)// @startlock
 	{// @endlock
@@ -76,6 +140,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		$$('checkbox9').disable();
 		$$('checkbox13').disable();
 		$$('checkbox14').disable();
+		
 	};// @lock
 
 	productEvent.onCollectionChange = function productEvent_onCollectionChange (event)// @startlock
@@ -170,6 +235,17 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	};// @lock
 
 // @region eventManager// @startlock
+	WAF.addListener("container12", "click", container12.click, "WAF");
+	WAF.addListener("image17", "mouseover", image17.mouseover, "WAF");
+	WAF.addListener("image17", "mouseout", image17.mouseout, "WAF");
+	WAF.addListener("image16", "mouseover", image16.mouseover, "WAF");
+	WAF.addListener("image16", "mouseout", image16.mouseout, "WAF");
+	WAF.addListener("image15", "mouseover", image15.mouseover, "WAF");
+	WAF.addListener("image15", "mouseout", image15.mouseout, "WAF");
+	WAF.addListener("image4", "mouseover", image4.mouseover, "WAF");
+	WAF.addListener("image4", "mouseout", image4.mouseout, "WAF");
+	WAF.addListener("imageButton2", "click", imageButton2.click, "WAF");
+	WAF.addListener("productTop", "onCollectionChange", productTopEvent.onCollectionChange, "WAF");
 	WAF.addListener("claImage1", "mouseover", claImage1.mouseover, "WAF");
 	WAF.addListener("claImage1", "mouseout", claImage1.mouseout, "WAF");
 	WAF.addListener("claImage4", "mouseover", claImage4.mouseover, "WAF");

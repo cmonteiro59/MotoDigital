@@ -12,15 +12,11 @@
 			"type": "widget"
 		},
 		{
+			"id": "Widget/component",
+			"type": "widget"
+		},
+		{
 			"id": "Widget/label",
-			"type": "widget"
-		},
-		{
-			"id": "Widget/buttonImage",
-			"type": "widget"
-		},
-		{
-			"id": "Widget/icon",
 			"type": "widget"
 		},
 		{
@@ -32,7 +28,11 @@
 			"type": "widget"
 		},
 		{
-			"id": "Widget/component",
+			"id": "Widget/buttonImage",
+			"type": "widget"
+		},
+		{
+			"id": "Widget/icon",
 			"type": "widget"
 		},
 		{

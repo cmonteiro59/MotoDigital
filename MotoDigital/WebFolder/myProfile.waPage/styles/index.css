@@ -3,16 +3,12 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
-#waf-body {
-	background-color: rgb(255, 255, 255);
-}
-
-#label3 {
+#label27 {
 	z-index: 2;
 	width: 44px;
 	height: 16px;
 	top: 6px;
-	left: 58px;
+	left: 57px;
 	text-align: center;
 	position: absolute;
 	color: rgb(255, 255, 255);
@@ -21,162 +17,17 @@
 	font-weight: normal;
 }
 
-#label6 {
-	z-index: 15;
-	width: 75px;
-	height: 15px;
-	top: 169px;
-	left: 15px;
-	position: absolute;
-	min-width: 75px;
-}
-
-#label1 {
-	z-index: 14;
-	width: 75px;
-	height: 15px;
-	top: 61px;
-	left: 14px;
-	position: absolute;
-	min-width: 75px;
-}
-
-#label25 {
-	z-index: 13;
-	width: 75px;
-	height: 15px;
-	top: 284px;
-	left: 15px;
-	position: absolute;
-	min-width: 75px;
-}
-
-#label24 {
-	z-index: 12;
-	width: 75px;
-	height: 15px;
-	top: 98px;
-	left: 15px;
-	position: absolute;
-	min-width: 75px;
-}
-
-#label7 {
-	z-index: 11;
-	width: 75px;
-	height: 15px;
-	top: 204px;
-	left: 14px;
-	position: absolute;
-	min-width: 75px;
-}
-
-#label22 {
-	z-index: 10;
-	width: 75px;
-	height: 15px;
-	top: 245px;
-	left: 13px;
-	position: absolute;
-	min-width: 75px;
-}
-
-#label8 {
-	z-index: 9;
-	width: 75px;
-	height: 15px;
-	top: 25px;
-	left: 15px;
-	position: absolute;
-	min-width: 75px;
-}
-
-#label12 {
-	z-index: 2;
-	width: 75px;
-	height: 16px;
-	top: 7px;
-	left: 42px;
-	text-align: center;
-	position: absolute;
-	color: rgb(255, 255, 255);
-	font-size: 14px;
-	text-shadow: rgb(255, 255, 255) 0px 0px 0px;
-	font-weight: normal;
-	min-width: 75px;
-}
-
-#component2 {
-	z-index: 3;
-	width: 1302px;
-	height: 130px;
-	top: 671px;
-	left: 1px;
-	position: absolute;
-}
-
-#component1 {
-	z-index: 2;
-	width: 1302px;
-	height: 136px;
-	top: 4px;
-	left: 1px;
-	position: absolute;
-}
-
-#richText3 {
-	z-index: 1;
-	width: 103px;
-	height: 16px;
-	top: 7px;
-	left: 22px;
-	position: absolute;
-	color: rgb(255, 255, 255);
-	font-size: 14px;
-}
-
-#container5 {
-	z-index: 2;
-	width: 665px;
-	height: 32px;
-	top: 0px;
-	left: -1px;
-	position: absolute;
-	-webkit-box-shadow: rgba(0, 0, 0, 0.199219) 0px 0px 0px 0px;
-	 -moz-box-shadow: rgba(0, 0, 0, 0.199219) 0px 0px 0px 0px;
-	 box-shadow: rgba(0, 0, 0, 0.199219) 0px 0px 0px 0px;
-	box-shadow: rgba(0, 0, 0, 0.199219) 0px 0px 0px 0px;
-	border-top-left-radius: 6px;
-	-moz-border-radius-topleft: 6px;
-	border-top-right-radius: 6px;
-	-moz-border-radius-topright: 6px;
-	border-bottom-left-radius: 6px;
-	-moz-border-radius-bottomleft: 6px;
-	border-bottom-right-radius: 6px;
-	-moz-border-radius-bottomright: 6px;
-	background-color: rgb(102, 102, 102);
-}
-
-#richText2 {
-	z-index: 18;
-	width: 105px;
-	height: 15px;
-	top: 25px;
-	left: 420px;
-	position: absolute;
-}
-
-#icon1 {
+#icon6 {
 	z-index: 2;
 	width: 24px;
 	height: 24px;
 	top: 2px;
-	left: 29px;
+	left: 28px;
 	position: absolute;
 }
 
-#imageButton1 {
-	z-index: 17;
+#imageButton6 {
+	z-index: 20;
 	width: 130px;
 	height: 29px;
 	top: 378px;
@@ -207,88 +58,27 @@
 	background-repeat: no-repeat;
 }
 
-#imageButton1.waf-state-hover {
+#imageButton6.waf-state-hover {
 	background-color: rgb(102, 102, 102);
 	background-repeat: no-repeat;
 }
 
-#richText4 {
-	z-index: 16;
-	width: 170px;
-	height: 41px;
-	top: 63px;
-	left: 419px;
+#label26 {
+	z-index: 2;
+	width: 75px;
+	height: 16px;
+	top: 7px;
+	left: 42px;
+	text-align: center;
 	position: absolute;
-	color: rgb(127, 0, 0);
-	font-size: 12px;
-	font-weight: bold;
-	text-align: left;
+	color: rgb(255, 255, 255);
+	font-size: 14px;
+	text-shadow: rgb(255, 255, 255) 0px 0px 0px;
+	font-weight: normal;
+	min-width: 75px;
 }
 
-#fullNameInput {
-	z-index: 15;
-	width: 288px;
-	height: 22px;
-	top: 166px;
-	left: 95px;
-	position: absolute;
-}
-
-#passwordInput {
-	z-index: 14;
-	width: 174px;
-	height: 22px;
-	top: 58px;
-	left: 94px;
-	position: absolute;
-}
-
-#address {
-	z-index: 13;
-	width: 286px;
-	height: 78px;
-	top: 284px;
-	left: 95px;
-	position: absolute;
-}
-
-#confirmPassword {
-	z-index: 12;
-	width: 172px;
-	height: 22px;
-	top: 95px;
-	left: 95px;
-	position: absolute;
-}
-
-#nif {
-	z-index: 11;
-	width: 288px;
-	height: 22px;
-	top: 201px;
-	left: 94px;
-	position: absolute;
-}
-
-#phone {
-	z-index: 10;
-	width: 288px;
-	height: 22px;
-	top: 242px;
-	left: 93px;
-	position: absolute;
-}
-
-#userNameInput {
-	z-index: 9;
-	width: 286px;
-	height: 22px;
-	top: 22px;
-	left: 95px;
-	position: absolute;
-}
-
-#icon3 {
+#icon5 {
 	z-index: 2;
 	width: 24px;
 	height: 24px;
@@ -297,8 +87,8 @@
 	position: absolute;
 }
 
-#imageButton3 {
-	z-index: 8;
+#imageButton5 {
+	z-index: 19;
 	width: 130px;
 	height: 30px;
 	top: 379px;
@@ -325,7 +115,186 @@
 	background-repeat: no-repeat;
 }
 
-#container3 {
+#label15 {
+	z-index: 15;
+	width: 75px;
+	height: 15px;
+	top: 169px;
+	left: 15px;
+	position: absolute;
+	min-width: 75px;
+}
+
+#label21 {
+	z-index: 14;
+	width: 75px;
+	height: 15px;
+	top: 61px;
+	left: 14px;
+	position: absolute;
+	min-width: 75px;
+}
+
+#label20 {
+	z-index: 13;
+	width: 75px;
+	height: 15px;
+	top: 284px;
+	left: 15px;
+	position: absolute;
+	min-width: 75px;
+}
+
+#label19 {
+	z-index: 12;
+	width: 75px;
+	height: 15px;
+	top: 98px;
+	left: 15px;
+	position: absolute;
+	min-width: 75px;
+}
+
+#label16 {
+	z-index: 11;
+	width: 75px;
+	height: 15px;
+	top: 204px;
+	left: 14px;
+	position: absolute;
+	min-width: 75px;
+}
+
+#label18 {
+	z-index: 10;
+	width: 75px;
+	height: 15px;
+	top: 245px;
+	left: 13px;
+	position: absolute;
+	min-width: 75px;
+}
+
+#label17 {
+	z-index: 9;
+	width: 75px;
+	height: 15px;
+	top: 25px;
+	left: 15px;
+	position: absolute;
+	min-width: 75px;
+}
+
+#richText7 {
+	z-index: 1;
+	width: 103px;
+	height: 16px;
+	top: 7px;
+	left: 22px;
+	position: absolute;
+	color: rgb(255, 255, 255);
+	font-size: 14px;
+}
+
+#container9 {
+	z-index: 2;
+	width: 665px;
+	height: 32px;
+	top: 0px;
+	left: -1px;
+	position: absolute;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.199219) 0px 0px 0px 0px;
+	 -moz-box-shadow: rgba(0, 0, 0, 0.199219) 0px 0px 0px 0px;
+	 box-shadow: rgba(0, 0, 0, 0.199219) 0px 0px 0px 0px;
+	box-shadow: rgba(0, 0, 0, 0.199219) 0px 0px 0px 0px;
+	border-top-left-radius: 6px;
+	-moz-border-radius-topleft: 6px;
+	border-top-right-radius: 6px;
+	-moz-border-radius-topright: 6px;
+	border-bottom-left-radius: 6px;
+	-moz-border-radius-bottomleft: 6px;
+	border-bottom-right-radius: 6px;
+	-moz-border-radius-bottomright: 6px;
+	background-color: rgb(102, 102, 102);
+}
+
+#richText5 {
+	z-index: 16;
+	width: 170px;
+	height: 41px;
+	top: 23px;
+	left: 419px;
+	position: absolute;
+	color: rgb(127, 0, 0);
+	font-size: 12px;
+	font-weight: bold;
+	text-align: left;
+}
+
+#textField14 {
+	z-index: 15;
+	width: 288px;
+	height: 22px;
+	top: 166px;
+	left: 95px;
+	position: absolute;
+}
+
+#textField13 {
+	z-index: 14;
+	width: 174px;
+	height: 22px;
+	top: 58px;
+	left: 94px;
+	position: absolute;
+}
+
+#textField12 {
+	z-index: 13;
+	width: 286px;
+	height: 78px;
+	top: 284px;
+	left: 95px;
+	position: absolute;
+}
+
+#textField11 {
+	z-index: 12;
+	width: 172px;
+	height: 22px;
+	top: 95px;
+	left: 95px;
+	position: absolute;
+}
+
+#textField10 {
+	z-index: 11;
+	width: 288px;
+	height: 22px;
+	top: 201px;
+	left: 94px;
+	position: absolute;
+}
+
+#textField9 {
+	z-index: 10;
+	width: 288px;
+	height: 22px;
+	top: 242px;
+	left: 93px;
+	position: absolute;
+}
+
+#textField8 {
+	z-index: 9;
+	width: 286px;
+	height: 22px;
+	top: 22px;
+	left: 95px;
+	position: absolute;
+}
+
+#container8 {
 	z-index: 1;
 	width: 662px;
 	height: 430px;
@@ -334,8 +303,8 @@
 	position: absolute;
 }
 
-#profileContainer {
-	z-index: 1;
+#container7 {
+	z-index: 6;
 	width: 684px;
 	height: 479px;
 	top: 192px;
@@ -366,6 +335,28 @@
 	 box-shadow: rgba(0, 0, 0, 0.199219) 0px 0px 0px 0px;
 	box-shadow: rgba(0, 0, 0, 0.199219) 0px 0px 0px 0px;
 	background-color: transparent;
+}
+
+#waf-body {
+	background-color: rgb(255, 255, 255);
+}
+
+#component2 {
+	z-index: 3;
+	width: 1302px;
+	height: 130px;
+	top: 671px;
+	left: 1px;
+	position: absolute;
+}
+
+#component1 {
+	z-index: 2;
+	width: 1302px;
+	height: 136px;
+	top: 4px;
+	left: 1px;
+	position: absolute;
 }
 
 #container1 {

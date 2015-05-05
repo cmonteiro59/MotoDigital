@@ -12,7 +12,7 @@
 	width: 161px;
 	height: 22px;
 	top: 23px;
-	left: 562px;
+	left: 563px;
 	position: absolute;
 	color: rgb(255, 255, 255);
 	background-color: rgb(102, 102, 102);
@@ -65,7 +65,7 @@
 	width: 92px;
 	height: 22px;
 	top: 23px;
-	left: 452px;
+	left: 442px;
 	position: absolute;
 	color: rgb(255, 255, 255);
 	background-color: rgb(102, 102, 102);
@@ -143,8 +143,8 @@
 #{id}image2 {
 	z-index: 1;
 	width: 387px;
-	height: 100px;
-	top: 2px;
+	height: 99px;
+	top: 3px;
 	left: 122px;
 	position: absolute;
 	border-top-style: solid;
@@ -360,7 +360,7 @@
 	width: 104px;
 	height: 21px;
 	top: 27px;
-	left: 358px;
+	left: 348px;
 	position: absolute;
 	color: rgb(255, 255, 255);
 	font-size: 13px;
@@ -371,7 +371,7 @@
 	width: 261px;
 	height: 29px;
 	top: 23px;
-	left: 11px;
+	left: 20px;
 	position: absolute;
 	color: rgb(255, 255, 255);
 	background-color: rgb(127, 127, 127);
