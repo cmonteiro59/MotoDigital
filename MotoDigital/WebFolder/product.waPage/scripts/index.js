@@ -2,6 +2,9 @@
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
+	var categoryComboBox = {};	// @combobox
+	var clientComboBox = {};	// @combobox
+	var category1Event = {};	// @dataSource
 	var orderEvent = {};	// @dataSource
 	var imageButton1 = {};	// @buttonImage
 	var documentEvent = {};	// @document
@@ -15,12 +18,44 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	
 // eventHandlers// @lock
 
+	categoryComboBox.change = function categoryComboBox_change (event)// @startlock
+	{// @endlock
+		var option = $$('categoryComboBox').getValue();
+		if( option != "Motos"){
+			$$('textField2').hide();
+			$$('textField3').hide();
+		}else {
+			$$('textField2').show();
+			$$('textField3').show();
+		}
+	};// @lock
+
+	clientComboBox.change = function clientComboBox_change (event)// @startlock
+	{// @endlock
+		var option = $$('clientComboBox').getValue();
+		if( option == "Profissionais"){
+			$$('textField2').hide();
+			$$('textField3').hide();
+		}else if(option == "Particulares"){
+			$$('textField2').show();
+			$$('textField3').show();
+		}
+	};// @lock
+
+	category1Event.onCollectionChange = function category1Event_onCollectionChange (event)// @startlock
+	{// @endlock
+		
+		
+	};// @lock
+
 	orderEvent.onCollectionChange = function orderEvent_onCollectionChange (event)// @startlock
 	{// @endlock
 		if(vOrderInit == false){
 			sources.order.addNewElement();
        	 	sources.order.serverRefresh(); //optional
         	vOrderInit = true;
+        	
+        	WAF.widgets.clientComboBox.source.select(1);
 	    }
 	};// @lock
 
@@ -33,6 +68,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	documentEvent.onLoad = function documentEvent_onLoad (event)// @startlock
 	{// @endlock
 		$$('container4').hide();
+		
 	};// @lock
 
 	imageButton2.click = function imageButton2_click (event)// @startlock
@@ -64,6 +100,9 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	};// @lock
 
 // @region eventManager// @startlock
+	WAF.addListener("categoryComboBox", "change", categoryComboBox.change, "WAF");
+	WAF.addListener("clientComboBox", "change", clientComboBox.change, "WAF");
+	WAF.addListener("category1", "onCollectionChange", category1Event.onCollectionChange, "WAF");
 	WAF.addListener("product", "ontitleAttributeChange", productEvent.ontitleAttributeChange, "WAF", "title");
 	WAF.addListener("order", "onCollectionChange", orderEvent.onCollectionChange, "WAF");
 	WAF.addListener("imageButton1", "click", imageButton1.click, "WAF");

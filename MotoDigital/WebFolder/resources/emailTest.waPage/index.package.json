@@ -1,0 +1,20 @@
+{
+	"name": "MotoDigital/resources/emailTest.waPage/index.html",
+	"version": "1.0.0",
+	"loadDependencies": [
+		{
+			"id": "default",
+			"type": "theme"
+		},
+		{
+			"id": "resources/emailTest.waPage/styles/index.css",
+			"path": "WEBFOLDER",
+			"type": "style"
+		},
+		{
+			"id": "application.css",
+			"path": "WEBFOLDER",
+			"type": "style"
+		}
+	]
+}
