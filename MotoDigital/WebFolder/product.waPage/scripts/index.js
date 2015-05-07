@@ -24,9 +24,28 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		if( option != "Motos"){
 			$$('textField2').hide();
 			$$('textField3').hide();
+			
+			var pro = $$('clientComboBox').getValue();
+			if(pro == "Profissionais"){
+				$$('weeksComboBox').removeOption(3);
+				$$('weeksComboBox').removeOption(2);
+				$$('weeksComboBox').removeOption(1);
+				$$('weeksComboBox').addOption("3","3",true);
+				$$('weeksComboBox').addOption("6","6",false);
+				$$('weeksComboBox').addOption("9","9",false);
+			}else{
+				$$('weeksComboBox').removeOption(3);
+				$$('weeksComboBox').removeOption(2);
+				$$('weeksComboBox').removeOption(1);
+				$$('weeksComboBox').addOption("2","2",true);
+				$$('weeksComboBox').addOption("4","4",false);
+				$$('weeksComboBox').addOption("6","6",false);
+			}
+			
 		}else {
 			$$('textField2').show();
 			$$('textField3').show();
+			
 		}
 	};// @lock
 
@@ -36,9 +55,13 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		if( option == "Profissionais"){
 			$$('textField2').hide();
 			$$('textField3').hide();
+			$$('weeksComboBox').removeOption(3);
+			$$('weeksComboBox').removeOption(2);
 		}else if(option == "Particulares"){
 			$$('textField2').show();
 			$$('textField3').show();
+			$$('weeksComboBox').addOption("4","4",false);
+			$$('weeksComboBox').addOption("6","6",false);
 		}
 	};// @lock
 
@@ -54,8 +77,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			sources.order.addNewElement();
        	 	sources.order.serverRefresh(); //optional
         	vOrderInit = true;
-        	
-        	WAF.widgets.clientComboBox.source.select(1);
 	    }
 	};// @lock
 
