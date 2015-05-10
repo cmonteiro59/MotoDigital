@@ -433,10 +433,12 @@
 					"type" : "string"
 				},
 				{
-					"name" : "products",
+					"name" : "date",
 					"kind" : "storage",
+					"matchColumn" : "products",
 					"scope" : "public",
-					"type" : "long"
+					"type" : "date",
+					"simpleDate" : true
 				},
 				{
 					"name" : "price",

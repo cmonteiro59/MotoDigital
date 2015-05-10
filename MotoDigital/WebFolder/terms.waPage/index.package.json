@@ -24,6 +24,10 @@
 			"type": "widget"
 		},
 		{
+			"id": "Widget/image",
+			"type": "widget"
+		},
+		{
 			"id": "default",
 			"type": "theme"
 		},

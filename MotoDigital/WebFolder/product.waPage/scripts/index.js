@@ -2,65 +2,107 @@
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
+	var ibPaypal = {};	// @buttonImage
+	var ibTransfer = {};	// @buttonImage
+	var categoryComboBox = {};	// @combobox
+	var featuredComboBox = {};	// @combobox
 	var order2Event = {};	// @dataSource
 	var imageButton4 = {};	// @buttonImage
 	var weeksComboBox = {};	// @combobox
-	var categoryComboBox = {};	// @combobox
 	var clientComboBox = {};	// @combobox
 	var imageButton1 = {};	// @buttonImage
 	var documentEvent = {};	// @document
 	var imageButton2 = {};	// @buttonImage
-	var combobox1 = {};	// @combobox
 	var productEvent = {};	// @dataSource
 // @endregion// @endlock
 
 	var vProductInit = false;
 	var vOrderInit = false;
 	var username = WAF.directory.currentUser().userName;
-	
-	
+	var today = new Date();
+
 	//Init price table...Temporary
  	var parMotosPrice = 1.50;
 	var parEquipPrice = 0.75;
 	var proMotosPrice = 1.25;
 	var proEquipPrice = 0.50;
+	var subTotal = 0;
+	var total = 0;
+	var discount = 0;
 	
 	
-	function calculatePrice ()
+	function calculatePrice()
 	{
 		var numWeeks = $$('weeksComboBox').getValue();
 		var cli = $$('clientComboBox').getValue();
 		var cat = $$('categoryComboBox').getValue();
-		var subTotal = 0;
-		var total = 0;
-		var discount = 0;
+		subTotal = 0;
+		total = 0;
+		discount = 0;
 		
-		switch(cli) {
-		case "1": //Private
-			if(cat == "Motos"){
-				subTotal += parMotosPrice;
-				discount = sources.priceList.discountLesserThan+1;
-			}else {
-				subTotal += parEquipPrice;
-			}
+		switch(cli) 
+		{
+			case "1": //Private
+				if(cat == "Motos"){
+					subTotal += parMotosPrice; //motos
+					//discount = sources.priceList.discount;
+					discount = 0.50;
+				}else {
+					subTotal += parEquipPrice; // Acessórios
+				}
 			break;
-		case "2": //Professional
-			if(cat == "Motos"){
-				subTotal += proMotosPrice;
-			}else {
-				subTotal += proEquipPrice;
-			}
+			case "2": //Professional
+				if(cat == "Motos"){
+					subTotal += proMotosPrice;
+				}else {
+					subTotal += proEquipPrice;
+				}
 			break;
 		}
-				subTotal = subTotal * numWeeks;
+		
+		subTotal = subTotal * numWeeks;
 		if(discount > 0){
-			subTotal = subTotal / discount;
+			subTotal = subTotal * discount;
 		}
-		//$$('itsubTotal').setValue(subTotal);
-		total = subTotal * 1.23;
-		$$('itTotal').setValue(total);
-		sources.order2.total = total;
 		
+		var featured = $$('featuredComboBox').getValue();
+		switch(featured)
+		{
+			
+			case "1": //Sobressaído
+				if(cat == "Motos"){
+					subTotal = 15.00;
+				}else{
+					subTotal = 10.00;
+				}
+			break;
+			case "2": //Em primeiro Lugar
+				if(cat == "Motos"){
+					subTotal = 10.00;
+				}else{
+					subTotal = 8.00;
+				}
+			break;
+			case "3": //Top
+				if(cat == "Motos"){
+					subTotal = 5.00;
+				}else{
+					subTotal = 4.00;
+				}
+			break;
+			case "4": //Oportunidade
+				subTotal = 6.00;
+			break;
+			case "5": //Pull to Top só profissionais
+				subTotal += 1.25;
+			break;
+		}
+		
+		$$('itDiscount').setValue(discount * 100);
+		$$('itsubTotal').setValue(subTotal);
+		total = subTotal * 1.23; //Tax 23 %
+		$$('itTotal').setValue(total);
+	
 	};
 	
 	function weeks (custType,catType ) 
@@ -68,13 +110,10 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		$$('weeksComboBox').removeOption(3);
 		$$('weeksComboBox').removeOption(2);
 		$$('weeksComboBox').removeOption(1);
-		
-		if(custType == "Profissionais") {
+		if(custType == "2") { //Profissionais
 			$$('weeksComboBox').addOption("2","2",true);
-			$$('textField2').hide();
-			$$('textField3').hide();
 		
-		}else {
+		}else { // Particular
 			if(catType != "Motos"){
 				$$('weeksComboBox').addOption("3","3",true);
 				$$('weeksComboBox').addOption("6","6",false);
@@ -84,48 +123,25 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 				$$('weeksComboBox').addOption("4","4",false);
 				$$('weeksComboBox').addOption("6","6",false);
 			}
-			if(catType == "Motos"){
-				$$('textField2').show();
-				$$('textField3').show();
-			}
 		}
-		
 	};
 			
 			
 // eventHandlers// @lock
 
-	order2Event.onCollectionChange = function order2Event_onCollectionChange (event)// @startlock
+	ibPaypal.click = function ibPaypal_click (event)// @startlock
 	{// @endlock
-		if(vOrderInit == false){
-			sources.order2.addNewElement();
-       	 	sources.order2.serverRefresh(); //optional
-        	vOrderInit = true;
-        	
-    	}
+			$$('tfNib').hide();
+		$$('tfInstructions').hide();
 	};// @lock
 
-	imageButton4.click = function imageButton4_click (event)// @startlock
+	ibTransfer.click = function ibTransfer_click (event)// @startlock
 	{// @endlock
+		// Bank Transfer
 		
-		//var username = WAF.directory.currentUser().userName;
-		//sources.order2.publisher = username;
-		sources.order2.date = new Date();
-		sources.order2.save({
-        onSuccess: function(event) {
-                // displays success message in a DisplayError area
-            alert("O número do seu pagamento é:  ", order2.ID);
-        },
-        onError: function(error) {
-                // displays error message in a DisplayError area
-            alert("Error");
-        }
-    	});
-	};// @lock
-
-	weeksComboBox.change = function weeksComboBox_change (event)// @startlock
-	{// @endlock
-		calculatePrice ();
+		$$('tfNib').show();
+		$$('tfInstructions').show();
+		
 	};// @lock
 
 	categoryComboBox.change = function categoryComboBox_change (event)// @startlock
@@ -133,6 +149,50 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		var cli = $$('clientComboBox').getValue();
 		var cat = $$('categoryComboBox').getValue();
 		weeks(cli, cat);
+		calculatePrice ();
+	};// @lock
+
+	featuredComboBox.change = function featuredComboBox_change (event)// @startlock
+	{// @endlock
+		calculatePrice ();
+	};// @lock
+
+	order2Event.onCollectionChange = function order2Event_onCollectionChange (event)// @startlock
+	{// @endlock
+		if(vOrderInit == false){
+			sources.order2.addNewElement();
+       	 	sources.order2.serverRefresh(); //optional
+        	vOrderInit = true;
+        	calculatePrice();
+        	
+    	}
+	};// @lock
+
+	imageButton4.click = function imageButton4_click (event)// @startlock
+	{// @endlock
+		
+		sources.order2.total = total;
+		sources.order2.date = today;
+		sources.order2.publisher = username;
+		sources.order2.save({
+        onSuccess: function(event) {
+                // displays success message in a DisplayError area
+            alert("O número do seu pagamento é:  " + order2.ID);
+            
+        },
+        onError: function(error) {
+                // displays error message in a DisplayError area
+            alert("Erro ao gravar o pagamento. Por favor contacte o Departamento de suporte.");
+        }
+    	});
+    	alert(sources.product.title); // It WORKS The record is still in memory
+    	window.location = "/product.waPage/";
+    	
+		
+	};// @lock
+
+	weeksComboBox.change = function weeksComboBox_change (event)// @startlock
+	{// @endlock
 		calculatePrice ();
 	};// @lock
 
@@ -148,15 +208,15 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	{// @endlock
 		
 		sources.product.publisher = username;
-		sources.product.save();
+		sources.product.categoria = $$('combobox2').getValue();
 		sources.product.save({
         onSuccess: function(event) {
                 // displays success message in a DisplayError area
-           alert("O número do seu anúncio é:  ", product.ID);
+           alert("O número do seu anúncio é:  " + product.ID);
         },
         onError: function(error) {
                 // displays error message in a DisplayError area
-            alert("Error");
+             alert("Erro ao gravar o anúncio. Por favor contacte o Departamento de suporte.");
         }
     	});
 		$$('container4').show();
@@ -175,12 +235,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		$$('container8').show();
 	};// @lock
 
-	combobox1.change = function combobox1_change (event)// @startlock
-	{// @endlock
-		var cat = $$('combobox1').sourceAtt.getValue();
-		sources.product.categoria = cat;
-	};// @lock
-
 	productEvent.onCollectionChange = function productEvent_onCollectionChange (event)// @startlock
 	{// @endlock
 		if(vProductInit == false){
@@ -192,15 +246,17 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	};// @lock
 
 // @region eventManager// @startlock
+	WAF.addListener("ibPaypal", "click", ibPaypal.click, "WAF");
+	WAF.addListener("ibTransfer", "click", ibTransfer.click, "WAF");
+	WAF.addListener("categoryComboBox", "change", categoryComboBox.change, "WAF");
+	WAF.addListener("featuredComboBox", "change", featuredComboBox.change, "WAF");
 	WAF.addListener("order2", "onCollectionChange", order2Event.onCollectionChange, "WAF");
 	WAF.addListener("imageButton4", "click", imageButton4.click, "WAF");
 	WAF.addListener("weeksComboBox", "change", weeksComboBox.change, "WAF");
-	WAF.addListener("categoryComboBox", "change", categoryComboBox.change, "WAF");
 	WAF.addListener("clientComboBox", "change", clientComboBox.change, "WAF");
 	WAF.addListener("imageButton1", "click", imageButton1.click, "WAF");
 	WAF.addListener("document", "onLoad", documentEvent.onLoad, "WAF");
 	WAF.addListener("imageButton2", "click", imageButton2.click, "WAF");
-	WAF.addListener("combobox1", "change", combobox1.change, "WAF");
 	WAF.addListener("product", "onCollectionChange", productEvent.onCollectionChange, "WAF");
 // @endregion
 };// @endlock
