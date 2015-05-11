@@ -4,12 +4,12 @@
 */
 
 #htmlTag18 {
+	position: absolute;
 	z-index: 0;
 	width: 0px;
 	height: 0px;
 	top: auto;
 	left: auto;
-	position: absolute;
 }
 
 #label11 {
@@ -179,7 +179,7 @@
 	width: 77px;
 	height: 15px;
 	top: 303px;
-	left: 205px;
+	left: 405px;
 	position: absolute;
 	text-align: left;
 }
@@ -189,7 +189,7 @@
 	width: 49px;
 	height: 15px;
 	top: 270px;
-	left: 233px;
+	left: 433px;
 	position: absolute;
 	text-align: right;
 }
@@ -1132,7 +1132,7 @@
 	width: 75px;
 	height: 15px;
 	top: 237px;
-	left: 207px;
+	left: 407px;
 	position: absolute;
 	min-width: 75px;
 	text-align: right;
@@ -1142,7 +1142,7 @@
 	z-index: 22;
 	width: 54px;
 	height: 15px;
-	top: 153px;
+	top: 151px;
 	left: 10px;
 	position: absolute;
 }
@@ -1151,7 +1151,7 @@
 	z-index: 17;
 	width: 59px;
 	height: 24px;
-	top: 149px;
+	top: 147px;
 	left: 69px;
 	position: absolute;
 }
@@ -1258,7 +1258,7 @@
 	width: 97px;
 	height: 22px;
 	top: 267px;
-	left: 287px;
+	left: 487px;
 	position: absolute;
 	color: rgb(63, 127, 0);
 	font-weight: bold;
@@ -1270,7 +1270,7 @@
 	width: 97px;
 	height: 22px;
 	top: 300px;
-	left: 287px;
+	left: 487px;
 	position: absolute;
 	color: rgb(63, 127, 0);
 	font-weight: bold;
@@ -1313,7 +1313,7 @@
 	width: 53px;
 	height: 22px;
 	top: 234px;
-	left: 287px;
+	left: 487px;
 	position: absolute;
 	text-align: right;
 }
@@ -1332,7 +1332,7 @@
 	width: 53px;
 	height: 22px;
 	top: 234px;
-	left: 287px;
+	left: 487px;
 	position: absolute;
 	text-align: right;
 }

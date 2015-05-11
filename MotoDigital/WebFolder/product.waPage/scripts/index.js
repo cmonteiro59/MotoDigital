@@ -131,8 +131,10 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	ibPaypal.click = function ibPaypal_click (event)// @startlock
 	{// @endlock
-			$$('tfNib').hide();
+		$$('tfNib').hide();
 		$$('tfInstructions').hide();
+		$$('cbPaypal').show();
+		
 	};// @lock
 
 	ibTransfer.click = function ibTransfer_click (event)// @startlock
@@ -226,6 +228,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	documentEvent.onLoad = function documentEvent_onLoad (event)// @startlock
 	{// @endlock
 		$$('container4').hide();
+
 		
 	};// @lock
 

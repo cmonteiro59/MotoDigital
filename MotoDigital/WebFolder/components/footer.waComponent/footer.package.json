@@ -8,10 +8,6 @@
 			"type": "widget"
 		},
 		{
-			"id": "Widget/image",
-			"type": "widget"
-		},
-		{
 			"id": "Widget/richText",
 			"type": "widget"
 		},
