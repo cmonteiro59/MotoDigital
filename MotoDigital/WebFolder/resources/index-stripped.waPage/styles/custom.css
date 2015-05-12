@@ -1,0 +1,28 @@
+body {
+
+}
+
+
+#centeredContainer {
+    margin: 0px auto;
+    min-width: 900px;
+    max-width: 1300px;
+    width:100%;
+    right: 0px;
+}
+
+#headerContainer {
+   margin: 0px auto;
+   min-width: 900px;
+   max-width: 1300px;
+   width: 100%;
+   right: 0px;
+}
+
+#footerContainer {
+   margin: 0px auto;
+   min-width: 900px;
+   max-width: 1300px;
+   width: 100%;
+   right: 0px;
+}

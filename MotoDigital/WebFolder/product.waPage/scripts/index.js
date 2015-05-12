@@ -2,7 +2,6 @@
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
-	var ibPaypal = {};	// @buttonImage
 	var ibTransfer = {};	// @buttonImage
 	var categoryComboBox = {};	// @combobox
 	var featuredComboBox = {};	// @combobox
@@ -29,6 +28,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	var subTotal = 0;
 	var total = 0;
 	var discount = 0;
+	var numDays = 0;
 	
 	
 	function calculatePrice()
@@ -97,7 +97,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 				subTotal += 1.25;
 			break;
 		}
-		
+		//numDays = numWeeks /7; //per day, affects product start date -> end date
 		$$('itDiscount').setValue(discount * 100);
 		$$('itsubTotal').setValue(subTotal);
 		total = subTotal * 1.23; //Tax 23 %
@@ -129,14 +129,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			
 // eventHandlers// @lock
 
-	ibPaypal.click = function ibPaypal_click (event)// @startlock
-	{// @endlock
-		$$('tfNib').hide();
-		$$('tfInstructions').hide();
-		$$('cbPaypal').show();
-		
-	};// @lock
-
 	ibTransfer.click = function ibTransfer_click (event)// @startlock
 	{// @endlock
 		// Bank Transfer
@@ -165,6 +157,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			sources.order2.addNewElement();
        	 	sources.order2.serverRefresh(); //optional
         	vOrderInit = true;
+        	sources.order2.publisher = username;
         	calculatePrice();
         	
     	}
@@ -172,13 +165,15 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	imageButton4.click = function imageButton4_click (event)// @startlock
 	{// @endlock
+		// Ok saving the payments, there are product.attributes to save.
 		
+		//sources.order2.numDays = numDays; Depends on credit. redunctant with product...never mind, keep it simple, we are in a hurry. Will get back to this. Code needs cleaning.
 		sources.order2.total = total;
 		sources.order2.date = today;
 		sources.order2.publisher = username;
 		sources.order2.save({
         onSuccess: function(event) {
-                // displays success message in a DisplayError area
+                // displays success message in a DisplayError area, NOT THROWING ANY MESSAGE. Get back to this later.
             alert("O número do seu pagamento é:  " + order2.ID);
             
         },
@@ -187,7 +182,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
             alert("Erro ao gravar o pagamento. Por favor contacte o Departamento de suporte.");
         }
     	});
-    	alert(sources.product.title); // It WORKS The record is still in memory
+    	//alert(sources.product.title); // It WORKS The record is still in memory
     	window.location = "/product.waPage/";
     	
 		
@@ -208,7 +203,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	imageButton1.click = function imageButton1_click (event)// @startlock
 	{// @endlock
-		
+		sources.product.date = today;
 		sources.product.publisher = username;
 		sources.product.categoria = $$('combobox2').getValue();
 		sources.product.save({
@@ -249,7 +244,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	};// @lock
 
 // @region eventManager// @startlock
-	WAF.addListener("ibPaypal", "click", ibPaypal.click, "WAF");
 	WAF.addListener("ibTransfer", "click", ibTransfer.click, "WAF");
 	WAF.addListener("categoryComboBox", "change", categoryComboBox.change, "WAF");
 	WAF.addListener("featuredComboBox", "change", featuredComboBox.change, "WAF");

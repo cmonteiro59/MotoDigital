@@ -320,8 +320,9 @@
 					"type" : "bool"
 				},
 				{
-					"name" : "weeks",
+					"name" : "numDays",
 					"kind" : "storage",
+					"matchColumn" : "weeks",
 					"scope" : "public",
 					"type" : "long"
 				},
@@ -565,8 +566,9 @@
 					"type" : "string"
 				},
 				{
-					"name" : "weeks",
+					"name" : "numDays",
 					"kind" : "storage",
+					"matchColumn" : "weeks",
 					"scope" : "public",
 					"type" : "long"
 				},
