@@ -1,5 +1,5 @@
 {
-	"name": "MotoDigital/resources/temp.waPage/index.html",
+	"name": "MotoDigital/resources/paypal.waPage/index.html",
 	"version": "1.0.0",
 	"loadDependencies": [
 		{
@@ -16,7 +16,7 @@
 			"type": "theme"
 		},
 		{
-			"id": "resources/temp.waPage/styles/index.css",
+			"id": "resources/paypal.waPage/styles/index.css",
 			"path": "WEBFOLDER",
 			"type": "style"
 		},
@@ -26,7 +26,12 @@
 			"type": "style"
 		},
 		{
-			"id": "resources/temp.waPage/scripts/index.js",
+			"id": "resources/paypal.waPage/scripts/index.js",
+			"path": "WEBFOLDER",
+			"type": "script"
+		},
+		{
+			"id": "resources\\paypal.waPage/scripts/payment.js",
 			"path": "WEBFOLDER",
 			"type": "script"
 		}

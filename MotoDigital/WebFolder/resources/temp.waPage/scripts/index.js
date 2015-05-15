@@ -2,17 +2,17 @@
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
-	var container14 = {};	// @container
+	var button1 = {};	// @button
 // @endregion// @endlock
 
 // eventHandlers// @lock
 
-	container14.click = function container14_click (event)// @startlock
+	button1.click = function button1_click (event)// @startlock
 	{// @endlock
-		$$("container5").show();
+		alert(usability.helloWorld());
 	};// @lock
 
 // @region eventManager// @startlock
-	WAF.addListener("container14", "click", container14.click, "WAF");
+	WAF.addListener("button1", "click", button1.click, "WAF");
 // @endregion
 };// @endlock

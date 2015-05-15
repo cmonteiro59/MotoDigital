@@ -2,4 +2,6 @@
 	<allow type="module" resource="Settibgs" action="executeFromClient"/>
 	<allow type="service" resource="upload" action="upload" groupName="Admin"/>
 	<allow type="service" resource="upload" action="upload" groupName="Customer"/>
+	<allow type="module" resource="wak-paypal/payment" action="executeFromClient"/>
+	<allow type="module" resource="usability" action="executeFromClient"/>
 </permissions>

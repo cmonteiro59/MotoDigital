@@ -4,11 +4,11 @@
 */
 
 #button1 {
-	z-index: 3;
+	z-index: 1;
 	width: 92px;
 	height: 22px;
-	top: 118px;
-	left: 90px;
+	top: 167px;
+	left: 127px;
 	position: absolute;
 }
 
