@@ -18,8 +18,8 @@
 		
 		
 		
-		<meta name="WAF.config.loadJS" content="scripts/index.js" id="waf-script"/>
-<meta name="WAF.config.rpc.file" content="/rpc-proxy/wak-paypal/payment?namespace=payment"/>
+		<meta name="WAF.config.loadJS" id="waf-script" content="scripts/index.js"/>
+<meta name="WAF.config.rpc.file" content="/rpc-proxy/payment?namespace=payment"/>
 </head>
     
     <body id="waf-body" data-workspace-width="0" data-workspace-orientation="portrait" data-workspace-height="0" data-workspace-device="desktop" data-viewport-width="device-width" data-viewport-minimum-scale="1.0" data-viewport-maximum-scale="1.0" data-viewport-initial-scale="1.0" data-type="document" data-title="index" data-theme="default" data-platform="desktop" data-lib="WAF" data-group="[]" data-entire-model="false" data-apple-meta-tags-status-bar="default" style="bottom:;right:;visibility:hidden;">
@@ -27,8 +27,8 @@
 
 
 		<button id="button1" data-type="button" data-target="_blank" data-lib="WAF" data-constraint-top="true" data-constraint-left="true" data-action="simple" class="waf-widget waf-button"></button>
-		<label id="label1" data-type="label" data-lib="WAF" for="type" data-valign="middle" data-margin="5" data-constraint-top="true" data-constraint-left="true" class="waf-widget waf-label waf-label-textfield">Type</label>
-		<input id="type" data-type="textField" data-lib="WAF" type="text" value="ReferenceError: payment is not defined" class="waf-widget waf-textField" data-label="Type" data-label-position="left" data-multiline="false" data-readOnly="false" data-password="false" data-datapicker-on="false" data-datapicker-icon-only="false" data-constraint-top="true" data-constraint-left="true"/>
+		<label id="label1" for="type" data-valign="middle" data-type="label" data-margin="5" data-lib="WAF" data-constraint-top="true" data-constraint-left="true" class="waf-widget waf-label waf-label-textfield">Type</label>
+		<input value="ReferenceError: payment is not defined" type="text" id="type" data-type="textField" data-readOnly="false" data-password="false" data-multiline="false" data-lib="WAF" data-label-position="left" data-label="Type" data-datapicker-on="false" data-datapicker-icon-only="false" data-constraint-top="true" data-constraint-left="true" class="waf-widget waf-textField"/>
 		<script type="text/javascript" src="/waLib/WAF/Loader.js"></script>
 	</body>
 
