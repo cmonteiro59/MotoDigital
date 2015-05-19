@@ -3,30 +3,51 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
-#image2 {
+#icon5 {
+	width: 24px;
+	height: 24px;
+	top: 13px;
+	left: 46px;
+	position: absolute;
+	z-index: 1;
+}
+
+#imageButton5 {
+	width: 117px;
+	height: 50px;
+	top: 307px;
+	left: 17px;
+	position: absolute;
+	background-image: url('/images/PayPal_Logo.jpg');
 	z-index: 40;
-	width: 114px;
-	height: 40px;
-	top: 296px;
-	left: 16px;
+	background-repeat: no-repeat;
+}
+
+#richText7 {
+	z-index: 4;
+	width: 333px;
+	height: 51px;
+	top: 103px;
+	left: 15px;
 	position: absolute;
 }
 
-#frame1 {
-	z-index: 39;
-	width: 141px;
-	height: 28px;
-	top: 305px;
-	left: 135px;
+#richText5 {
+	z-index: 3;
+	width: 217px;
+	height: 16px;
+	top: 79px;
+	left: 125px;
 	position: absolute;
-	border-top-style: none;
-	border-top-width: 0px;
-	border-left-style: none;
-	border-left-width: 0px;
-	border-right-style: none;
-	border-right-width: 0px;
-	border-bottom-style: none;
-	border-bottom-width: 0px;
+}
+
+#container2 {
+	z-index: 39;
+	width: 374px;
+	height: 160px;
+	top: 326px;
+	left: 314px;
+	position: absolute;
 }
 
 #htmlTag18 {
@@ -57,7 +78,7 @@
 }
 
 #textField2 {
-	z-index: 37;
+	z-index: 36;
 	width: 93px;
 	height: 22px;
 	top: 208px;
@@ -67,7 +88,7 @@
 }
 
 #label18 {
-	z-index: 37;
+	z-index: 36;
 	width: 75px;
 	height: 15px;
 	top: 211px;
@@ -255,7 +276,7 @@
 
 #container9 {
 	z-index: 1;
-	width: 699px;
+	width: 740px;
 	height: 32px;
 	top: -1px;
 	left: -1px;
@@ -277,7 +298,7 @@
 
 #container8 {
 	z-index: 4;
-	width: 701px;
+	width: 741px;
 	height: 570px;
 	top: 116px;
 	left: 389px;
@@ -1128,7 +1149,7 @@
 
 #container10 {
 	z-index: 6;
-	width: 675px;
+	width: 714px;
 	height: 519px;
 	top: 36px;
 	left: 7px;
@@ -1213,11 +1234,11 @@
 }
 
 #imageButton4 {
-	z-index: 13;
+	z-index: 1;
 	width: 130px;
 	height: 30px;
-	top: 478px;
-	left: 499px;
+	top: 158px;
+	left: 231px;
 	position: absolute;
 	border-top-style: none;
 	border-top-width: 0px;
@@ -1356,11 +1377,11 @@
 }
 
 #tfInstructions {
-	z-index: 35;
-	width: 330px;
-	height: 95px;
-	top: 361px;
-	left: 328px;
+	z-index: 2;
+	width: 349px;
+	height: 96px;
+	top: 3px;
+	left: 14px;
 	position: absolute;
 	color: rgb(102, 102, 102);
 }

@@ -13,6 +13,7 @@
 	<service name="Builder handler" modulePath="services/builder-service" enabled="true" max-age="0" hardCache="false"/>
 	<service name="remoteFileExplorer" enabled="true"/>
 	<service name="Print service" enabled="false" modulePath="services/print"/>
+	<service name="payment" modulePath="wak-paypal/payment" enabled="true"/>
 	<virtualFolder location="/WIDGETS_CUSTOM/" name="widgets-custom"/>
 	<virtualFolder location="/THEMES_CUSTOM/" name="themes-custom"/>
 	<resources location="/walib/" lifeTime="31536000"/>

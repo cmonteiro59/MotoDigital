@@ -2,6 +2,8 @@
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
+	var imageButton5 = {};	// @buttonImage
+	var richText5 = {};	// @richText
 	var ibTransfer = {};	// @buttonImage
 	var categoryComboBox = {};	// @combobox
 	var featuredComboBox = {};	// @combobox
@@ -129,6 +131,34 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			
 // eventHandlers// @lock
 
+	imageButton5.click = function imageButton5_click (event)// @startlock
+	{// @endlock
+		alert("Brevemente aceitaremos Paypal");
+	};// @lock
+
+	richText5.click = function richText5_click (event)// @startlock
+	{// @endlock
+		// Ok saving the payments, there are product.attributes to save.
+		
+		//sources.order2.numDays = numDays; Depends on credit. redunctant with product...never mind, keep it simple, we are in a hurry. Will get back to this. Code needs cleaning.
+		sources.order2.total = total;
+		sources.order2.date = today;
+		sources.order2.publisher = username;
+		sources.order2.save({
+        onSuccess: function(event) {
+                // displays success message in a DisplayError area, NOT THROWING ANY MESSAGE. Get back to this later.
+            alert("O número do seu pagamento é:  " + order2.ID);
+            
+        },
+        onError: function(error) {
+                // displays error message in a DisplayError area
+            alert("Erro ao gravar o pagamento. Por favor contacte o Departamento de suporte.");
+        }
+    	});
+    	//alert(sources.product.title); // It WORKS The record is still in memory
+    	window.location = "/product.waPage/";
+	};// @lock
+
 	ibTransfer.click = function ibTransfer_click (event)// @startlock
 	{// @endlock
 		// Bank Transfer
@@ -244,6 +274,8 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	};// @lock
 
 // @region eventManager// @startlock
+	WAF.addListener("imageButton5", "click", imageButton5.click, "WAF");
+	WAF.addListener("richText5", "click", richText5.click, "WAF");
 	WAF.addListener("ibTransfer", "click", ibTransfer.click, "WAF");
 	WAF.addListener("categoryComboBox", "change", categoryComboBox.change, "WAF");
 	WAF.addListener("featuredComboBox", "change", featuredComboBox.change, "WAF");
