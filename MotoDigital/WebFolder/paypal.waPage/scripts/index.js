@@ -17,6 +17,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	button1.click = function button1_click (event)// @startlock
 	{// @endlock
+			
 //			var credit_card = {};
 
 //			credit_card.type			= "Visa";
@@ -27,10 +28,11 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 //			credit_card.first_name		= "ABC";
 //			credit_card.last_name		= "CBA";
 //					
-//			var payer = {};
+			var payer = {};
 
 //			payer.payment_method = "credit_card";
 //			payer.funding_instruments = [{"credit_card": credit_card}];
+			payer.payment_method = "paypal";
 
 			var transactions = [
 				    {
