@@ -18,27 +18,26 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	button1.click = function button1_click (event)// @startlock
 	{// @endlock
 			
-//			var credit_card = {};
+			var credit_card = {};
 
-//			credit_card.type			= "Visa";
-//			credit_card.number			= "123456789";
-//			credit_card.cvv2			= "123";
-//			credit_card.expire_month	= "05"
-//			credit_card.expire_year		= "16";
-//			credit_card.first_name		= "ABC";
-//			credit_card.last_name		= "CBA";
-//					
+			credit_card.type			= "visa";
+			credit_card.number			= "4032036440604294";
+			credit_card.cvv2			= "123";
+			credit_card.expire_month	= "5"
+			credit_card.expire_year		= "2020";
+			credit_card.first_name		= "CELSO";
+			credit_card.last_name		= "MONTEIRO";
+			
 			var payer = {};
-
-//			payer.payment_method = "credit_card";
-//			payer.funding_instruments = [{"credit_card": credit_card}];
-			payer.payment_method = "paypal";
+			debugger;
+			payer.payment_method = "credit_card";
+			payer.funding_instruments = [{"credit_card": credit_card}];
 
 			var transactions = [
 				    {
 				      "amount": {
-				        "total": "7.47",
-				        "currency": "USD"
+				        "total": "1",
+				        "currency": "EUR"
 				      },
 				      "description": "This is the payment transaction description."
 				    }
@@ -55,7 +54,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 						},
 						params: [{
 							    intent: "sale",
-							    //payer: payer,
+							    payer: payer,
 							    transactions: transactions,
 							    redirect_urls: redirect_urls
 							}]
