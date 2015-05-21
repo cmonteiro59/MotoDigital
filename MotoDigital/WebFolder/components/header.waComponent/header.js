@@ -39,7 +39,7 @@ function constructor (id) {
 	{// @endlock
 		var username = WAF.directory.currentUser();
 		if(username == null){
-			window.location = "/profile.waPage/indext.html";
+			window.location = "/profile.waPage/index.html";
 		}else {
 			alert("Não se pode registar, porque já está autenticado através de login");
 		}
