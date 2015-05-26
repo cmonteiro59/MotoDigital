@@ -2,7 +2,6 @@
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
-	var imageButton5 = {};	// @buttonImage
 	var richText5 = {};	// @richText
 	var ibTransfer = {};	// @buttonImage
 	var categoryComboBox = {};	// @combobox
@@ -130,11 +129,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			
 			
 // eventHandlers// @lock
-
-	imageButton5.click = function imageButton5_click (event)// @startlock
-	{// @endlock
-		alert("Brevemente aceitaremos Paypal");
-	};// @lock
 
 	richText5.click = function richText5_click (event)// @startlock
 	{// @endlock
@@ -274,7 +268,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	};// @lock
 
 // @region eventManager// @startlock
-	WAF.addListener("imageButton5", "click", imageButton5.click, "WAF");
 	WAF.addListener("richText5", "click", richText5.click, "WAF");
 	WAF.addListener("ibTransfer", "click", ibTransfer.click, "WAF");
 	WAF.addListener("categoryComboBox", "change", categoryComboBox.change, "WAF");

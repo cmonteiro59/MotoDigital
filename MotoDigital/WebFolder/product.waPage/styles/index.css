@@ -3,26 +3,6 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
-#icon5 {
-	width: 24px;
-	height: 24px;
-	top: 13px;
-	left: 46px;
-	position: absolute;
-	z-index: 1;
-}
-
-#imageButton5 {
-	width: 117px;
-	height: 50px;
-	top: 307px;
-	left: 17px;
-	position: absolute;
-	background-image: url('/images/PayPal_Logo.jpg');
-	z-index: 40;
-	background-repeat: no-repeat;
-}
-
 #richText7 {
 	z-index: 4;
 	width: 333px;
@@ -81,8 +61,8 @@
 	z-index: 36;
 	width: 93px;
 	height: 22px;
-	top: 208px;
-	left: 485px;
+	top: 98px;
+	left: 525px;
 	position: absolute;
 	text-align: right;
 }
@@ -91,8 +71,8 @@
 	z-index: 36;
 	width: 75px;
 	height: 15px;
-	top: 211px;
-	left: 405px;
+	top: 101px;
+	left: 445px;
 	position: absolute;
 	min-width: 75px;
 	text-align: right;
@@ -237,8 +217,8 @@
 	z-index: 30;
 	width: 77px;
 	height: 15px;
-	top: 303px;
-	left: 405px;
+	top: 193px;
+	left: 445px;
 	position: absolute;
 	text-align: left;
 }
@@ -247,8 +227,8 @@
 	z-index: 29;
 	width: 49px;
 	height: 15px;
-	top: 270px;
-	left: 433px;
+	top: 160px;
+	left: 473px;
 	position: absolute;
 	text-align: right;
 }
@@ -1190,8 +1170,8 @@
 	z-index: 23;
 	width: 75px;
 	height: 15px;
-	top: 237px;
-	left: 407px;
+	top: 127px;
+	left: 447px;
 	position: absolute;
 	min-width: 75px;
 	text-align: right;
@@ -1307,8 +1287,8 @@
 	z-index: 29;
 	width: 97px;
 	height: 22px;
-	top: 267px;
-	left: 487px;
+	top: 157px;
+	left: 527px;
 	position: absolute;
 	color: rgb(63, 127, 0);
 	font-weight: bold;
@@ -1319,8 +1299,8 @@
 	z-index: 31;
 	width: 97px;
 	height: 22px;
-	top: 300px;
-	left: 487px;
+	top: 190px;
+	left: 527px;
 	position: absolute;
 	color: rgb(63, 127, 0);
 	font-weight: bold;
@@ -1351,8 +1331,8 @@
 	z-index: 23;
 	width: 53px;
 	height: 22px;
-	top: 234px;
-	left: 487px;
+	top: 124px;
+	left: 527px;
 	position: absolute;
 	text-align: right;
 }
@@ -1370,8 +1350,8 @@
 	z-index: 23;
 	width: 53px;
 	height: 22px;
-	top: 234px;
-	left: 487px;
+	top: 124px;
+	left: 527px;
 	position: absolute;
 	text-align: right;
 }

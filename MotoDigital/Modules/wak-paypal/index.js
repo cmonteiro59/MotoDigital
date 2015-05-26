@@ -265,9 +265,8 @@ paypal.prototype.sendPaypalRequest = function(type, action, resource, headers, b
         xhr.send(body);
 
         if (xhr.readyState == 4) {
-
+			
             response = JSON.parse(xhr.responseText);
-
         }
         return response;
 

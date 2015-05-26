@@ -2,6 +2,13 @@
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
+	var dialog1 = {};	// @dialog
+	var button28 = {};	// @button
+	var button33 = {};	// @button
+	var button32 = {};	// @button
+	var button27 = {};	// @button
+	var imageButton4 = {};	// @buttonImage
+	var imageButton5 = {};	// @buttonImage
 	var container12 = {};	// @container
 	var image17 = {};	// @image
 	var image16 = {};	// @image
@@ -29,6 +36,78 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 // @endregion// @endlock
 
 // eventHandlers// @lock
+
+	dialog1.click = function dialog1_click (event)// @startlock
+	{// @endlock
+		$$('container22').hide(); //message sent button
+	};// @lock
+
+	button28.click = function button28_click (event)// @startlock
+	{// @endlock
+		
+		//TO DO delete the product, ask the user.
+		$$('container22').hide(); //cancel button
+	};// @lock
+
+	button33.click = function button33_click (event)// @startlock
+	{// @endlock
+		$$('dialog1').closeDialog(); //ok button
+		//$$('container1').hide(); //ok button
+	};// @lock
+
+	button32.click = function button32_click (event)// @startlock
+	{// @endlock
+		$$('dialog1').closeDialog(); //cancel button
+	};// @lock
+
+	button27.click = function button27_click (event)// @startlock
+	{// @endlock
+		var xhr=new XMLHttpRequest(); 
+        //Create an empty FormData object
+	    var formdata=new FormData();
+	    formdata.append('To',mail.Cust)
+	    formdata.append('Title',mail.Title)
+	    formdata.append('Content',mail.Content);
+	 
+	        //Add a listener to read the response of the handler (server side)
+	    xhr.addEventListener("load", function (evt) {
+	        switch(evt.target.responseText){
+	            case 'true' :
+	                $$('message').setValue('Mensagem enviada com sucesso!');
+	                $$('message').$domNode.css({
+	                    color : 'green'
+	                });
+	                break;
+	        //If the sendMail function response is true, 
+	        //then a green message will be displayed in the 
+	        //message dialog
+	 
+	            case 'false' :
+	                $$('message').setValue('Erro ao enviar mensagem, Por favor tente de novo!');
+	                $$('message').$domNode.css({
+	                    color : 'red'
+	                });
+	                break;
+	        //If the sendMail function response is false,
+	        //then a red message will be displayed on the message
+	        //dialog
+	        }
+	        $$('dialog1').displayDialog();
+	    }, false); 
+	 
+	    xhr.open('POST','/sendMail',true); //call the sendMail handler
+	    xhr.send(formdata); //Send the formdata object to the handler on the server
+	};// @lock
+
+	imageButton4.click = function imageButton4_click (event)// @startlock
+	{// @endlock
+		$$('container22').show(); // Open the email msg container
+	};// @lock
+
+	imageButton5.click = function imageButton5_click (event)// @startlock
+	{// @endlock
+		$$('container22').show(); // Open the email msg container
+	};// @lock
 
 	container12.click = function container12_click (event)// @startlock
 	{// @endlock
@@ -235,6 +314,13 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	};// @lock
 
 // @region eventManager// @startlock
+	WAF.addListener("dialog1", "click", dialog1.click, "WAF");
+	WAF.addListener("button28", "click", button28.click, "WAF");
+	WAF.addListener("button33", "click", button33.click, "WAF");
+	WAF.addListener("button32", "click", button32.click, "WAF");
+	WAF.addListener("button27", "click", button27.click, "WAF");
+	WAF.addListener("imageButton4", "click", imageButton4.click, "WAF");
+	WAF.addListener("imageButton5", "click", imageButton5.click, "WAF");
 	WAF.addListener("container12", "click", container12.click, "WAF");
 	WAF.addListener("image17", "mouseover", image17.mouseover, "WAF");
 	WAF.addListener("image17", "mouseout", image17.mouseout, "WAF");

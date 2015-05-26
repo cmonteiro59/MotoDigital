@@ -19,20 +19,19 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	{// @endlock
 			
 			var credit_card = {};
-
-			credit_card.type			= "visa";
-			credit_card.number			= "4032036440604294";
-			credit_card.cvv2			= "123";
-			credit_card.expire_month	= "5"
-			credit_card.expire_year		= "2020";
-			credit_card.first_name		= "CELSO";
-			credit_card.last_name		= "MONTEIRO";
-			
+			credit_card.type			= $$('type').getValue();
+			credit_card.number			= $$('number').getValue();
+			credit_card.cvv2			= $$('cvv2').getValue();
+			credit_card.expire_month	= $$('expire_month').getValue();
+			credit_card.expire_year		= $$('expire_year').getValue();
+			credit_card.first_name		= $$('first_name').getValue();
+			credit_card.last_name		= $$('last_name').getValue();
+						
 			var payer = {};
-			debugger;
+			
 			payer.payment_method = "credit_card";
 			payer.funding_instruments = [{"credit_card": credit_card}];
-
+			
 			var transactions = [
 				    {
 				      "amount": {
@@ -43,10 +42,10 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 				    }
 				  ];
 			//optional	  
-			var redirect_urls  = {return_url: "www.wakanda.org", cancel_url:"www.wakanda.org"}	  
+			var redirect_urls  = {return_url: "http://www.wakanda.org", cancel_url:"http://www.wakanda.org"}	  
 
 
-
+							debugger;
 			var response = payment.createAsync({
 						onSuccess:function(data)
 						{
