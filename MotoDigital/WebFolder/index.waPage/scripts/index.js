@@ -2,6 +2,9 @@
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
+	var contact1 = {};	// @buttonImage
+	var imageButton6 = {};	// @buttonImage
+	var textField19 = {};	// @textField
 	var dialog1 = {};	// @dialog
 	var button28 = {};	// @button
 	var button33 = {};	// @button
@@ -34,8 +37,39 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	var image1 = {};	// @image
 	var container1 = {};	// @container
 // @endregion// @endlock
-
+	var whichMatrix = 1;
+	var subject ="";
 // eventHandlers// @lock
+
+	contact1.click = function contact1_click (event)// @startlock
+	{// @endlock
+		$$('container2').hide();
+		$$('container22').show(); // Open the email msg container
+	};// @lock
+
+	imageButton6.click = function imageButton6_click (event)// @startlock
+	{// @endlock
+		$$("container5").hide();
+		$$('container22').show(); // Open the email msg container
+	};// @lock
+
+	textField19.change = function textField19_change (event)// @startlock
+	{// @endlock
+		switch(whichMatrix) 
+	    {
+			case 1:
+				subject = sources.product.title;
+				break;
+			case 2:
+				subject = sources.productClassified.title;
+				break;
+			case 3:
+				subject = sources.productTop.title;
+				break;
+		}
+		subject = "De Moto Digital: O seu anúncio : "+subject
+		$$('mailSubject').setValue(subject);
+	};// @lock
 
 	dialog1.click = function dialog1_click (event)// @startlock
 	{// @endlock
@@ -44,8 +78,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	button28.click = function button28_click (event)// @startlock
 	{// @endlock
-		
-		//TO DO delete the product, ask the user.
 		$$('container22').hide(); //cancel button
 	};// @lock
 
@@ -66,7 +98,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
         //Create an empty FormData object
 	    var formdata=new FormData();
 	    formdata.append('To',mail.Cust)
-	    formdata.append('Title',mail.Title)
+	    formdata.append('Title',mail.Title)	  
 	    formdata.append('Content',mail.Content);
 	 
 	        //Add a listener to read the response of the handler (server side)
@@ -106,12 +138,14 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	imageButton5.click = function imageButton5_click (event)// @startlock
 	{// @endlock
+		$$("container3").hide();
 		$$('container22').show(); // Open the email msg container
 	};// @lock
 
 	container12.click = function container12_click (event)// @startlock
 	{// @endlock
 		$$('container2').show();
+		whichMatrix = 3;
 	};// @lock
 
 	image17.mouseover = function image17_mouseover (event)// @startlock
@@ -235,6 +269,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	container14.click = function container14_click (event)// @startlock
 	{// @endlock
 		$$("container5").show();
+		whichMatrix = 2;
 	};// @lock
 
 	container7.click = function container7_click (event)// @startlock
@@ -314,6 +349,9 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	};// @lock
 
 // @region eventManager// @startlock
+	WAF.addListener("contact1", "click", contact1.click, "WAF");
+	WAF.addListener("imageButton6", "click", imageButton6.click, "WAF");
+	WAF.addListener("textField19", "change", textField19.change, "WAF");
 	WAF.addListener("dialog1", "click", dialog1.click, "WAF");
 	WAF.addListener("button28", "click", button28.click, "WAF");
 	WAF.addListener("button33", "click", button33.click, "WAF");
