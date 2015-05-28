@@ -3,7 +3,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
 	var richText5 = {};	// @richText
-	var ibTransfer = {};	// @buttonImage
 	var categoryComboBox = {};	// @combobox
 	var featuredComboBox = {};	// @combobox
 	var order2Event = {};	// @dataSource
@@ -153,15 +152,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
     	window.location = "/product.waPage/";
 	};// @lock
 
-	ibTransfer.click = function ibTransfer_click (event)// @startlock
-	{// @endlock
-		// Bank Transfer
-		
-		$$('tfNib').show();
-		$$('tfInstructions').show();
-		
-	};// @lock
-
 	categoryComboBox.change = function categoryComboBox_change (event)// @startlock
 	{// @endlock
 		var cli = $$('clientComboBox').getValue();
@@ -269,7 +259,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region eventManager// @startlock
 	WAF.addListener("richText5", "click", richText5.click, "WAF");
-	WAF.addListener("ibTransfer", "click", ibTransfer.click, "WAF");
 	WAF.addListener("categoryComboBox", "change", categoryComboBox.change, "WAF");
 	WAF.addListener("featuredComboBox", "change", featuredComboBox.change, "WAF");
 	WAF.addListener("order2", "onCollectionChange", order2Event.onCollectionChange, "WAF");

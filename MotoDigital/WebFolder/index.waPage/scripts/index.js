@@ -67,7 +67,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 				subject = sources.productTop.title;
 				break;
 		}
-		subject = "De Moto Digital: O seu anúncio : "+subject
+		subject = "De Moto Digital: O seu anuncio: "+subject
 		$$('mailSubject').setValue(subject);
 	};// @lock
 

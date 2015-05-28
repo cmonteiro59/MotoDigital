@@ -87,11 +87,6 @@
 			"id": "product.waPage/scripts/index.js",
 			"path": "WEBFOLDER",
 			"type": "script"
-		},
-		{
-			"id": "product.waPage/scripts/paypal-button.min.js",
-			"path": "WEBFOLDER",
-			"type": "script"
 		}
 	]
 }
