@@ -29,12 +29,13 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	var subTotal = 0;
 	var total = 0;
 	var discount = 0;
+	var numWeeks = 2;
 	var numDays = 0;
 	
 	
 	function calculatePrice()
 	{
-		var numWeeks = $$('weeksComboBox').getValue();
+		numWeeks = $$('weeksComboBox').getValue();
 		var cli = $$('clientComboBox').getValue();
 		var cat = $$('categoryComboBox').getValue();
 		subTotal = 0;
@@ -101,7 +102,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		numDays = numWeeks *7; //per day, affects product  end date
 		
 		$$('itDiscount').setValue(discount * 100);
-		sources.order1.net = subTotal;
+		sources.order.net = subTotal;
 		$$('itNet').setValue(sources.order.net);
 		total = subTotal * 1.23; //Tax 23 %
 		sources.order.total = total;
@@ -137,14 +138,14 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	paypal.click = function paypal_click (event)// @startlock
 	{// @endlock
-		var htmlFile ="";
-		var ref = custType+catType;
-		switch(ref) {
-		case "11":
-			break;
-		case "12":
-			break;
+		var n = total*100;
+		var htmlFile = n.toString();
+		if(htmlFile == "184.5")
+		{
+			htmlFile ="184";
 		}
+		htmlFile = "/paypal/"+htmlFile+".waPage/";
+		alert(htmlFile);
 		$$('ppFrame').setValue(htmlFile);
 	};// @lock
 
@@ -156,6 +157,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
         	vOrderInit = true;
         	sources.order.publisher = username;
         	calculatePrice();
+        }
   
 	};// @lock
 

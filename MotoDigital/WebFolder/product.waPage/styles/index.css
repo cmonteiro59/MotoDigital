@@ -22,13 +22,13 @@
 }
 
 #label20 {
+	z-index: 41;
 	width: 68px;
 	height: 15px;
 	top: 161px;
 	left: 455px;
 	position: absolute;
 	text-align: left;
-	z-index: 41;
 }
 
 #icon5 {
@@ -1402,6 +1402,7 @@
 }
 
 #itNet {
+	z-index: 41;
 	width: 97px;
 	height: 22px;
 	top: 158px;
@@ -1410,7 +1411,6 @@
 	color: rgb(63, 127, 0);
 	font-weight: bold;
 	text-align: right;
-	z-index: 41;
 }
 
 #paypal {
