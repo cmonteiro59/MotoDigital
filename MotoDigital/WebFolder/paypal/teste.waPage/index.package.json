@@ -1,0 +1,20 @@
+{
+	"name": "MotoDigital/paypal/teste.waPage/index.html",
+	"version": "1.0.0",
+	"loadDependencies": [
+		{
+			"id": "default",
+			"type": "theme"
+		},
+		{
+			"id": "paypal/teste.waPage/styles/index.css",
+			"path": "WEBFOLDER",
+			"type": "style"
+		},
+		{
+			"id": "application.css",
+			"path": "WEBFOLDER",
+			"type": "style"
+		}
+	]
+}

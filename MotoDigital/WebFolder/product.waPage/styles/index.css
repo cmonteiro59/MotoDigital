@@ -3,6 +3,43 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
+#richText10 {
+	z-index: 45;
+	width: 112px;
+	height: 18px;
+	top: 69px;
+	left: 521px;
+	position: absolute;
+}
+
+#label26 {
+	z-index: 44;
+	width: 36px;
+	height: 15px;
+	top: 275px;
+	left: 144px;
+	position: absolute;
+}
+
+#label20 {
+	width: 68px;
+	height: 15px;
+	top: 161px;
+	left: 455px;
+	position: absolute;
+	text-align: left;
+	z-index: 41;
+}
+
+#icon5 {
+	z-index: 2;
+	width: 24px;
+	height: 24px;
+	top: 13px;
+	left: 46px;
+	position: absolute;
+}
+
 #richText7 {
 	z-index: 4;
 	width: 333px;
@@ -22,11 +59,11 @@
 }
 
 #container2 {
-	z-index: 39;
+	z-index: 38;
 	width: 374px;
 	height: 160px;
-	top: 326px;
-	left: 314px;
+	top: 366px;
+	left: 344px;
 	position: absolute;
 }
 
@@ -215,22 +252,12 @@
 
 #label24 {
 	z-index: 30;
-	width: 77px;
+	width: 102px;
 	height: 15px;
 	top: 193px;
-	left: 445px;
+	left: 420px;
 	position: absolute;
 	text-align: left;
-}
-
-#label23 {
-	z-index: 29;
-	width: 49px;
-	height: 15px;
-	top: 160px;
-	left: 473px;
-	position: absolute;
-	text-align: right;
 }
 
 #richText4 {
@@ -1146,6 +1173,7 @@
 	 -moz-box-shadow: rgb(153, 153, 153) 0px 0px 0px 0px;
 	 box-shadow: rgb(153, 153, 153) 0px 0px 0px 0px;
 	box-shadow: rgb(153, 153, 153) 0px 0px 0px 0px;
+	background-repeat: no-repeat;
 }
 
 #image1 {
@@ -1283,18 +1311,6 @@
 	min-width: 75px;
 }
 
-#itsubTotal {
-	z-index: 29;
-	width: 97px;
-	height: 22px;
-	top: 157px;
-	left: 527px;
-	position: absolute;
-	color: rgb(63, 127, 0);
-	font-weight: bold;
-	text-align: right;
-}
-
 #itTotal {
 	z-index: 31;
 	width: 97px;
@@ -1320,7 +1336,7 @@
 	z-index: 34;
 	width: 117px;
 	height: 50px;
-	top: 363px;
+	top: 403px;
 	left: 17px;
 	position: absolute;
 	background-image: url('/images/transferencia.jpg');
@@ -1370,7 +1386,7 @@
 	z-index: 32;
 	width: 156px;
 	height: 75px;
-	top: 365px;
+	top: 405px;
 	left: 153px;
 	position: absolute;
 	color: rgb(102, 102, 102);
@@ -1383,5 +1399,45 @@
 	top: 22px;
 	left: 92px;
 	position: absolute;
+}
+
+#itNet {
+	width: 97px;
+	height: 22px;
+	top: 158px;
+	left: 528px;
+	position: absolute;
+	color: rgb(63, 127, 0);
+	font-weight: bold;
+	text-align: right;
+	z-index: 41;
+}
+
+#paypal {
+	z-index: 39;
+	width: 117px;
+	height: 50px;
+	top: 307px;
+	left: 17px;
+	position: absolute;
+	background-image: url('/images/PayPal_Logo.jpg');
+	background-repeat: no-repeat;
+}
+
+#ppFrame {
+	z-index: 43;
+	width: 228px;
+	height: 84px;
+	top: 295px;
+	left: 144px;
+	position: absolute;
+	border-top-style: none;
+	border-top-width: 0px;
+	border-left-style: none;
+	border-left-width: 0px;
+	border-right-style: none;
+	border-right-width: 0px;
+	border-bottom-style: none;
+	border-bottom-width: 0px;
 }
 
