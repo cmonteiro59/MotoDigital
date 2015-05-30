@@ -105,6 +105,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		sources.order.net = subTotal;
 		$$('itNet').setValue(sources.order.net);
 		total = subTotal * 1.23; //Tax 23 %
+		total = total.toFixed(2);
 		sources.order.total = total;
 		$$('itTotal').setValue(sources.order.total);
 		sources.order.serverRefresh();
@@ -140,12 +141,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	{// @endlock
 		var n = total*100;
 		var htmlFile = n.toString();
-		if(htmlFile == "184.5")
-		{
-			htmlFile ="184";
-		}
 		htmlFile = "/paypal/"+htmlFile+".waPage/";
-		alert(htmlFile);
 		$$('ppFrame').setValue(htmlFile);
 	};// @lock
 
