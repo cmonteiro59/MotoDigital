@@ -57,33 +57,6 @@
 	 background-image:linear-gradient(top, rgb(255, 255, 255) 0%,rgb(255, 255, 255) 50%,rgb(191, 0, 0) 50%,rgb(191, 0, 0) 100%);
 }
 
-#htmlTag4 {
-	position: absolute;
-	z-index: 0;
-	width: 0px;
-	height: 0px;
-	top: auto;
-	left: auto;
-}
-
-#htmlTag3 {
-	position: absolute;
-	z-index: 0;
-	width: 0px;
-	height: 0px;
-	top: auto;
-	left: auto;
-}
-
-#htmlTag2 {
-	position: absolute;
-	z-index: 0;
-	width: 0px;
-	height: 0px;
-	top: auto;
-	left: auto;
-}
-
 #label6 {
 	z-index: 22;
 	width: 75px;

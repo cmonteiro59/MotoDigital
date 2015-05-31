@@ -2,6 +2,7 @@
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
+	var ibTransfer = {};	// @buttonImage
 	var paypal = {};	// @buttonImage
 	var orderEvent = {};	// @dataSource
 	var richText5 = {};	// @richText
@@ -144,8 +145,16 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			
 // eventHandlers// @lock
 
+	ibTransfer.click = function ibTransfer_click (event)// @startlock
+	{// @endlock
+		$$('ppFrame').hide();
+		$$('tbMsgContainer').show();
+	};// @lock
+
 	paypal.click = function paypal_click (event)// @startlock
 	{// @endlock
+		$$('ppFrame').show();
+		$$('tbMsgContainer').hide();
 		var n = total*100;
 		var htmlFile = n.toString();
 		htmlFile = "/paypal/"+htmlFile+".html/";
@@ -190,6 +199,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	categoryComboBox.change = function categoryComboBox_change (event)// @startlock
 	{// @endlock
+		$$('ppFrame').hide();
 		var cli = $$('clientComboBox').getValue();
 		var cat = $$('categoryComboBox').getValue();
 		weeks(cli, cat);
@@ -213,7 +223,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	{// @endlock
 		// Ok saving the payments, there are product.attributes to save.
 		
-		//sources.order.numDays = numDays; Depends on credit. redunctant with product...never mind, keep it simple, we are in a hurry. Will get back to this. Code needs cleaning.
+		//sources.order.numDays = numDays; Depends on credit. redunctant with product... Will get back to this. Code needs cleaning.
 		sources.order.total = total;
 		sources.order.date = today;
 		sources.order.publisher = username;
@@ -236,6 +246,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	weeksComboBox.change = function weeksComboBox_change (event)// @startlock
 	{// @endlock
+		$$('ppFrame').hide();
 		calculatePrice ();
 	};// @lock
 
@@ -299,6 +310,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	};// @lock
 
 // @region eventManager// @startlock
+	WAF.addListener("ibTransfer", "click", ibTransfer.click, "WAF");
 	WAF.addListener("paypal", "click", paypal.click, "WAF");
 	WAF.addListener("order", "onCollectionChange", orderEvent.onCollectionChange, "WAF");
 	WAF.addListener("richText5", "click", richText5.click, "WAF");

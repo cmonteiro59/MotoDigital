@@ -7,8 +7,8 @@
 	z-index: 6;
 	width: 180px;
 	height: 150px;
-	top: 267px;
-	left: 1122px;
+	top: 264px;
+	left: 1048px;
 	position: absolute;
 }
 
@@ -39,53 +39,8 @@
 	position: absolute;
 }
 
-#htmlTag8 {
-	z-index: 0;
-	width: 0px;
-	height: 0px;
-	top: auto;
-	left: auto;
-	position: absolute;
-}
-
-#htmlTag7 {
-	z-index: 0;
-	width: 0px;
-	height: 0px;
-	top: auto;
-	left: auto;
-	position: absolute;
-}
-
-#htmlTag6 {
-	z-index: 0;
-	width: 0px;
-	height: 0px;
-	top: auto;
-	left: auto;
-	position: absolute;
-}
-
-#htmlTag5 {
-	z-index: 0;
-	width: 0px;
-	height: 0px;
-	top: auto;
-	left: auto;
-	position: absolute;
-}
-
-#htmlTag4 {
-	z-index: 0;
-	width: 0px;
-	height: 0px;
-	top: auto;
-	left: auto;
-	position: absolute;
-}
-
 #richText10 {
-	z-index: 45;
+	z-index: 44;
 	width: 112px;
 	height: 18px;
 	top: 69px;
@@ -1424,11 +1379,11 @@
 }
 
 #tbMsgContainer {
-	z-index: 38;
-	width: 374px;
-	height: 160px;
-	top: 366px;
-	left: 344px;
+	z-index: 45;
+	width: 411px;
+	height: 196px;
+	top: 309px;
+	left: 294px;
 	position: absolute;
 }
 
