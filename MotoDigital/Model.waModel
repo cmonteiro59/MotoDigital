@@ -97,7 +97,7 @@
 		{
 			"scriptMode" : "manual",
 			"workspaceLeft" : 0,
-			"workspaceTop" : 200,
+			"workspaceTop" : 0,
 			"lastScriptLocation" : 
 			{
 				"Settings" : 
@@ -453,7 +453,14 @@
 					"matchColumn" : "products",
 					"scope" : "public",
 					"type" : "date",
-					"simpleDate" : true
+					"simpleDate" : true,
+					"defaultFormat" : 
+					[
+						{
+							"format" : "dd/mm/yy",
+							"presentation" : "text"
+						}
+					]
 				},
 				{
 					"name" : "price",
@@ -510,7 +517,14 @@
 					"kind" : "storage",
 					"scope" : "public",
 					"type" : "date",
-					"simpleDate" : true
+					"simpleDate" : true,
+					"defaultFormat" : 
+					[
+						{
+							"format" : "d",
+							"presentation" : "text"
+						}
+					]
 				},
 				{
 					"name" : "endDate",

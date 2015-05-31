@@ -3,21 +3,93 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
+#calendar1 {
+	z-index: 6;
+	width: 180px;
+	height: 150px;
+	top: 267px;
+	left: 1122px;
+	position: absolute;
+}
+
+#htmlTag17 {
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
+	position: absolute;
+}
+
+#htmlTag14 {
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
+	position: absolute;
+}
+
+#htmlTag10 {
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
+	position: absolute;
+}
+
+#htmlTag8 {
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
+	position: absolute;
+}
+
+#htmlTag7 {
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
+	position: absolute;
+}
+
+#htmlTag6 {
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
+	position: absolute;
+}
+
+#htmlTag5 {
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
+	position: absolute;
+}
+
+#htmlTag4 {
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
+	position: absolute;
+}
+
 #richText10 {
 	z-index: 45;
 	width: 112px;
 	height: 18px;
 	top: 69px;
 	left: 521px;
-	position: absolute;
-}
-
-#label26 {
-	z-index: 44;
-	width: 36px;
-	height: 15px;
-	top: 275px;
-	left: 144px;
 	position: absolute;
 }
 
@@ -56,33 +128,6 @@
 	top: 79px;
 	left: 125px;
 	position: absolute;
-}
-
-#container2 {
-	z-index: 38;
-	width: 374px;
-	height: 160px;
-	top: 366px;
-	left: 344px;
-	position: absolute;
-}
-
-#htmlTag18 {
-	position: absolute;
-	z-index: 0;
-	width: 0px;
-	height: 0px;
-	top: auto;
-	left: auto;
-}
-
-#htmlTag16 {
-	position: absolute;
-	z-index: 0;
-	width: 0px;
-	height: 0px;
-	top: auto;
-	left: auto;
 }
 
 #htmlTag15 {
@@ -124,15 +169,6 @@
 	position: absolute;
 }
 
-#htmlTag13 {
-	position: absolute;
-	z-index: 0;
-	width: 0px;
-	height: 0px;
-	top: auto;
-	left: auto;
-}
-
 #htmlTag12 {
 	position: absolute;
 	z-index: 0;
@@ -143,60 +179,6 @@
 }
 
 #htmlTag11 {
-	position: absolute;
-	z-index: 0;
-	width: 0px;
-	height: 0px;
-	top: auto;
-	left: auto;
-}
-
-#htmlTag9 {
-	position: absolute;
-	z-index: 0;
-	width: 0px;
-	height: 0px;
-	top: auto;
-	left: auto;
-}
-
-#htmlTag8 {
-	position: absolute;
-	z-index: 0;
-	width: 0px;
-	height: 0px;
-	top: auto;
-	left: auto;
-}
-
-#htmlTag7 {
-	position: absolute;
-	z-index: 0;
-	width: 0px;
-	height: 0px;
-	top: auto;
-	left: auto;
-}
-
-#htmlTag6 {
-	position: absolute;
-	z-index: 0;
-	width: 0px;
-	height: 0px;
-	top: auto;
-	left: auto;
-}
-
-#htmlTag5 {
-	position: absolute;
-	z-index: 0;
-	width: 0px;
-	height: 0px;
-	top: auto;
-	left: auto;
-}
-
-#htmlTag4 {
 	position: absolute;
 	z-index: 0;
 	width: 0px;
@@ -1439,5 +1421,14 @@
 	border-right-width: 0px;
 	border-bottom-style: none;
 	border-bottom-width: 0px;
+}
+
+#tbMsgContainer {
+	z-index: 38;
+	width: 374px;
+	height: 160px;
+	top: 366px;
+	left: 344px;
+	position: absolute;
 }
 

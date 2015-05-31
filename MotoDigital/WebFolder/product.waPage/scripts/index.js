@@ -19,8 +19,8 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	var vProductInit = false;
 	var vOrderInit = false;
 	var username = WAF.directory.currentUser().userName;
-	var today = new Date();
-
+	var today;
+	
 	//Init price table...Temporary
  	var parMotosPrice = 1.50;
 	var parEquipPrice = 0.75;
@@ -35,7 +35,13 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	
 	function calculatePrice()
 	{
-		numWeeks = $$('weeksComboBox').getValue();
+		var visible = $$('weeksComboBox').isVisible();
+		if(visible)
+		{
+			numWeeks = $$('weeksComboBox').getValue();
+		}else{
+			numWeeks = 1; // Means we dealing with a Featured add "Destaque"
+		}
 		var cli = $$('clientComboBox').getValue();
 		var cat = $$('categoryComboBox').getValue();
 		subTotal = 0;
@@ -102,6 +108,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		numDays = numWeeks *7; //per day, affects product  end date
 		
 		$$('itDiscount').setValue(discount * 100);
+		subTotal = subTotal.toFixed(2);
 		sources.order.net = subTotal;
 		$$('itNet').setValue(sources.order.net);
 		total = subTotal * 1.23; //Tax 23 %
@@ -141,9 +148,10 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	{// @endlock
 		var n = total*100;
 		var htmlFile = n.toString();
-		htmlFile = "/paypal/"+htmlFile+".waPage/";
+		htmlFile = "/paypal/"+htmlFile+".html/";
 		$$('ppFrame').setValue(htmlFile);
 	};// @lock
+
 
 	orderEvent.onCollectionChange = function orderEvent_onCollectionChange (event)// @startlock
 	{// @endlock
@@ -190,6 +198,14 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	featuredComboBox.change = function featuredComboBox_change (event)// @startlock
 	{// @endlock
+		var opt = this.getValue();
+		if(opt != "0")
+		{
+			$$('weeksComboBox').hide();
+		}else{
+			$$('weeksComboBox').show();
+		}
+		$$('weeksComboBox').setValue();
 		calculatePrice ();
 	};// @lock
 
@@ -225,6 +241,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	clientComboBox.change = function clientComboBox_change (event)// @startlock
 	{// @endlock
+		$$('ppFrame').hide();
 		var cli = $$('clientComboBox').getValue();
 		var cat = $$('categoryComboBox').getValue();
 		weeks(cli, cat);
@@ -233,7 +250,15 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	imageButton1.click = function imageButton1_click (event)// @startlock
 	{// @endlock
+		
+		today = $$("calendar1").getValue(false);
 		sources.product.date = today;
+		var someDate = new Date();
+		var numberOfDaysToAdd = 6;
+		someDate.setDate(someDate.getDate() + numberOfDaysToAdd);
+		$$("calendar1").setValue(someDate, true);
+		var end = $$("calendar1").getValue(false);
+		sources.product.endDate = end;
 		sources.product.publisher = username;
 		sources.product.categoria = $$('combobox2').getValue();
 		sources.product.save({
