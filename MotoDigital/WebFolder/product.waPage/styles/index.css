@@ -88,8 +88,8 @@
 	z-index: 6;
 	width: 180px;
 	height: 150px;
-	top: 264px;
-	left: 1048px;
+	top: 266px;
+	left: 922px;
 	position: absolute;
 }
 
@@ -121,21 +121,12 @@
 	position: absolute;
 }
 
-#richText7 {
-	z-index: 4;
-	width: 333px;
-	height: 51px;
-	top: 103px;
-	left: 15px;
-	position: absolute;
-}
-
 #richText5 {
 	z-index: 3;
 	width: 217px;
 	height: 16px;
-	top: 79px;
-	left: 125px;
+	top: 94px;
+	left: 133px;
 	position: absolute;
 }
 
@@ -299,7 +290,7 @@
 	width: 741px;
 	height: 570px;
 	top: 116px;
-	left: 389px;
+	left: 229px;
 	position: absolute;
 	-webkit-box-shadow: rgba(0, 0, 0, 0.199219) 0px 0px 0px 0px;
 	 -moz-box-shadow: rgba(0, 0, 0, 0.199219) 0px 0px 0px 0px;
@@ -676,7 +667,7 @@
 	width: 714px;
 	height: 549px;
 	top: 122px;
-	left: 482px;
+	left: 322px;
 	position: absolute;
 	-webkit-box-shadow: rgba(0, 0, 0, 0.199219) 0px 0px 0px 0px;
 	 -moz-box-shadow: rgba(0, 0, 0, 0.199219) 0px 0px 0px 0px;
@@ -1057,7 +1048,7 @@
 	width: 598px;
 	height: 534px;
 	top: 135px;
-	left: 468px;
+	left: 308px;
 	position: absolute;
 	border-top-left-radius: 10px;
 	-moz-border-radius-topleft: 10px;
@@ -1292,7 +1283,7 @@
 #tfInstructions {
 	z-index: 2;
 	width: 349px;
-	height: 96px;
+	height: 149px;
 	top: 3px;
 	left: 14px;
 	position: absolute;
@@ -1361,9 +1352,9 @@
 #tbMsgContainer {
 	z-index: 45;
 	width: 411px;
-	height: 196px;
-	top: 309px;
-	left: 294px;
+	height: 211px;
+	top: 244px;
+	left: 298px;
 	position: absolute;
 }
 

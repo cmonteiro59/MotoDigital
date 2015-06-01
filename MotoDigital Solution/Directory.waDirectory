@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><directory>
-	<user name="admin" ID="D09CF58EE8C50547805C24347DCA06F4" fullName="Administrador" password="6ccde8d382d90ba9b41a3301837543cc"/>
+	<user name="admin" ID="D09CF58EE8C50547805C24347DCA06F4" fullName="Administrador" password=""/>
 	<user name="celso" ID="9B453FBAF90A73498F012279BBF0FF97" fullName="Celso Monteiro" password="f1a78420fb6d885065eb935e96b10561"/>
 	<group name="Admin" ID="01000000000000000000000000000000" fullName="Admin">
 		<include user="admin" userID="D09CF58EE8C50547805C24347DCA06F4"/>

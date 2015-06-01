@@ -5,7 +5,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	var ibTransfer = {};	// @buttonImage
 	var paypal = {};	// @buttonImage
 	var orderEvent = {};	// @dataSource
-	var richText5 = {};	// @richText
 	var categoryComboBox = {};	// @combobox
 	var featuredComboBox = {};	// @combobox
 	var ibTransferFinal = {};	// @buttonImage
@@ -32,6 +31,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	var discount = 0;
 	var numWeeks = 2;
 	var numDays = 0;
+	var endDate;
 	
 	
 	function calculatePrice()
@@ -146,9 +146,14 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	ibTransfer.click = function ibTransfer_click (event)// @startlock
 	{// @endlock
-		$$('ppFrame').hide();
-		$$('tbMsgContainer').show();
+		
 		var conf = confirm("Confirma que quer pagar por transferência bancaria!");
+		if(conf)
+		{
+			$$('ppFrame').hide();
+			$$('tbMsgContainer').show();
+			
+		}
 		
 	};// @lock
 
@@ -175,30 +180,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
   
 	};// @lock
 
-	richText5.click = function richText5_click (event)// @startlock
-	{// @endlock
-//		// Ok saving the payments, there are product.attributes to save.
-//		
-//		//sources.order.numDays = numDays; Depends on credit. redunctant with product...never mind, keep it simple, we are in a hurry. Will get back to this. Code needs cleaning.
-//		
-//		sources.order.total = total;
-//		sources.order.date = today;
-//		sources.order.publisher = username;
-//		sources.order.save({
-//        onSuccess: function(event) {
-//                // displays success message in a DisplayError area, NOT THROWING ANY MESSAGE. Get back to this later.
-//            alert("O número do seu pagamento é:  " + order.ID);
-//    		window.location = "/product.waPage/";
-//            
-//	        },
-//	        onError: function(error) {
-//	                // displays error message in a DisplayError area
-//	            alert("Erro ao gravar o pagamento. Por favor contacte o Departamento de suporte.");
-//	        }
-//    	});
-//    	//alert(sources.product.title); // It WORKS The record is still in memory
-	};// @lock
-
 	categoryComboBox.change = function categoryComboBox_change (event)// @startlock
 	{// @endlock
 		$$('ppFrame').hide();
@@ -223,22 +204,63 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	ibTransferFinal.click = function ibTransferFinal_click (event)// @startlock
 	{// @endlock
-		//sources.order.numDays = numDays; Depends on credit. redunctant with product... Will get back to this, may be not needed.
+		//sources.order.numDays = numDays; //Depends on credit. redunctant with product...never mind, keep it simple, we are in a hurry. Will get back to this. Code needs cleaning.
+		sources.order.method = "bt"; // bank transfer
 		sources.order.total = total;
 		sources.order.date = today;
 		sources.order.publisher = username;
-		sources.order.addNum = sources.product.ID;
-    	//alert(sources.product.title); // It WORKS The record is still in memory
+		
 		sources.order.save({
 	        onSuccess: function(event) {
-	            alert("O número do seu pagamento é:  " + order.ID);
-	    		window.location = "/product.waPage/index.html";	
-			},
-	        onError: function(error) {
-				// displays error message in a DisplayError area
-	            alert("Erro ao gravar o pagamento. Por favor contacte o Departamento de suporte!");
-	        }
-    	});
+	            alert("O número do seu pagamento é:  "); // + order.ID+ " e o numero do seu anuncio é : ");//+ sources.product.ID );
+	        	// send an email msg to customer and to us
+				var xhr=new XMLHttpRequest(); 
+		        //Create an empty FormData object
+			    var formdata=new FormData();
+			    formdata.append('To',"celso.monteiro@moto-digital.com")
+			    formdata.append('Title',"Referencia para transferencia bancaria: ") //+order.ID)	
+			    formdata.append('Content', $$('tfInstructions').getValue());
+			 
+			        //Add a listener to read the response of the handler (server side)
+			    xhr.addEventListener("load", function (evt) {
+			    	var debug = true;
+			    	if(debug)
+			    	{
+				        switch(evt.target.responseText){
+				            case 'true' :
+				            alert('Mensagem enviada!');
+				               break;
+				        //If the sendMail function response is true,
+				 
+				            case 'false' :
+				                alert('Erro ao enviar mensagem, Por favor tente de novo!');
+				                break;
+				        //If the sendMail function response is false, and debug is true
+				        }
+				    }
+				}, false); 
+			 
+			    xhr.open('POST','/sendMail',true); //call the sendMail handler
+			    xhr.send(formdata); //Send the formdata object to the handler on the server
+        		
+	            //alert("O número do seu pagamento é:  " + order.ID);
+	    		  var n = confirm("Deseja criar outro anuncio?");
+		          if(n)
+		          {
+		    		window.location = "/product.waPage/index.html";
+		           }else{
+		            window.location = "/index.waPage/index.html";
+		          }
+		    	},
+		        onError: function(error) {
+		            alert("Erro ao gravar o pagamento. Por favor contacte o Departamento de suporte.");
+		            
+		        }
+		        		
+    		});
+			
+	       //alert(sources.product.title); // It WORKS The record is still in memory
+		
 	};// @lock
 
 	weeksComboBox.change = function weeksComboBox_change (event)// @startlock
@@ -258,7 +280,16 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	ibNext1.click = function ibNext1_click (event)// @startlock
 	{// @endlock
-		
+		// using calendar in order to save date in DB
+		today = $$("calendar1").getValue(false);
+		sources.product.date = today;
+		//sources.product.startDate = today; // if the paypal payment  suceeded...use this in the thankYou page
+		var someDate = new Date();
+		var numberOfDaysToAdd = numDays;
+		someDate.setDate(someDate.getDate() + numberOfDaysToAdd);
+		$$("calendar1").setValue(someDate, true);
+		endDate = $$("calendar1").getValue(false);
+		sources.product.endDate = endDate;
 		sources.product.publisher = username;
 		sources.product.categoria = $$('combobox2').getValue();
 		sources.product.save({
@@ -302,7 +333,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	        			sources.product.professional = false;
 	        		}
 	           	}
-	    });   
+	    	});   
     	}
 	};// @lock
 
@@ -310,7 +341,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	WAF.addListener("ibTransfer", "click", ibTransfer.click, "WAF");
 	WAF.addListener("paypal", "click", paypal.click, "WAF");
 	WAF.addListener("order", "onCollectionChange", orderEvent.onCollectionChange, "WAF");
-	WAF.addListener("richText5", "click", richText5.click, "WAF");
 	WAF.addListener("categoryComboBox", "change", categoryComboBox.change, "WAF");
 	WAF.addListener("featuredComboBox", "change", featuredComboBox.change, "WAF");
 	WAF.addListener("ibTransferFinal", "click", ibTransferFinal.click, "WAF");
