@@ -50,8 +50,12 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			okToSave = false;
 		if($$('fullNameInput').getValue() == "")
 			okToSave = false;
-		if($$('nif').getValue() == "")
-			okToSave = false;
+		var str = $$('nif').getValue();
+		var n = str.length;
+		if(n != 9)
+		{
+			alert("Número de contribuinte inváildo")
+		}
 		if($$('phone').getValue() == "")
 			okToSave = false;
 		if($$('address').getValue() == "")

@@ -3,39 +3,93 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
+#htmlTag18 {
+	position: absolute;
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
+}
+
+#htmlTag16 {
+	position: absolute;
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
+}
+
+#htmlTag13 {
+	position: absolute;
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
+}
+
+#htmlTag9 {
+	position: absolute;
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
+}
+
+#htmlTag8 {
+	position: absolute;
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
+}
+
+#htmlTag7 {
+	position: absolute;
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
+}
+
+#htmlTag6 {
+	position: absolute;
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
+}
+
+#htmlTag5 {
+	position: absolute;
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
+}
+
+#htmlTag4 {
+	position: absolute;
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
+}
+
 #calendar1 {
 	z-index: 6;
 	width: 180px;
 	height: 150px;
 	top: 264px;
 	left: 1048px;
-	position: absolute;
-}
-
-#htmlTag17 {
-	z-index: 0;
-	width: 0px;
-	height: 0px;
-	top: auto;
-	left: auto;
-	position: absolute;
-}
-
-#htmlTag14 {
-	z-index: 0;
-	width: 0px;
-	height: 0px;
-	top: auto;
-	left: auto;
-	position: absolute;
-}
-
-#htmlTag10 {
-	z-index: 0;
-	width: 0px;
-	height: 0px;
-	top: auto;
-	left: auto;
 	position: absolute;
 }
 
@@ -885,43 +939,6 @@
 	position: absolute;
 }
 
-#imageButton1.waf-state-hover {
-	background-color: rgb(102, 102, 102);
-	background-repeat: no-repeat;
-}
-
-#imageButton1 {
-	z-index: 18;
-	width: 130px;
-	height: 30px;
-	top: 443px;
-	left: 398px;
-	position: absolute;
-	border-top-style: none;
-	border-top-width: 0px;
-	border-left-style: none;
-	border-left-width: 0px;
-	border-right-style: none;
-	border-right-width: 0px;
-	border-bottom-style: none;
-	border-bottom-width: 0px;
-	border-top-left-radius: 10px;
-	-moz-border-radius-topleft: 10px;
-	border-top-right-radius: 10px;
-	-moz-border-radius-topright: 10px;
-	border-bottom-left-radius: 10px;
-	-moz-border-radius-bottomleft: 10px;
-	border-bottom-right-radius: 10px;
-	-moz-border-radius-bottomright: 10px;
-	background-image: none;
-	background-color: rgb(127, 127, 127);
-	-webkit-box-shadow: rgba(0, 0, 0, 0.148438) 0px 0px 0px 0px;
-	 -moz-box-shadow: rgba(0, 0, 0, 0.148438) 0px 0px 0px 0px;
-	 box-shadow: rgba(0, 0, 0, 0.148438) 0px 0px 0px 0px;
-	box-shadow: rgba(0, 0, 0, 0.148438) 0px 0px 0px 0px;
-	background-repeat: no-repeat;
-}
-
 #errorDiv3 {
 	z-index: 15;
 	width: 266px;
@@ -1178,43 +1195,6 @@
 	position: absolute;
 }
 
-#imageButton4 {
-	z-index: 1;
-	width: 130px;
-	height: 30px;
-	top: 158px;
-	left: 231px;
-	position: absolute;
-	border-top-style: none;
-	border-top-width: 0px;
-	border-left-style: none;
-	border-left-width: 0px;
-	border-right-style: none;
-	border-right-width: 0px;
-	border-bottom-style: none;
-	border-bottom-width: 0px;
-	border-top-left-radius: 10px;
-	-moz-border-radius-topleft: 10px;
-	border-top-right-radius: 10px;
-	-moz-border-radius-topright: 10px;
-	border-bottom-left-radius: 10px;
-	-moz-border-radius-bottomleft: 10px;
-	border-bottom-right-radius: 10px;
-	-moz-border-radius-bottomright: 10px;
-	background-image: none;
-	background-color: rgb(127, 127, 127);
-	-webkit-box-shadow: rgba(0, 0, 0, 0.148438) 0px 0px 0px 0px;
-	 -moz-box-shadow: rgba(0, 0, 0, 0.148438) 0px 0px 0px 0px;
-	 box-shadow: rgba(0, 0, 0, 0.148438) 0px 0px 0px 0px;
-	box-shadow: rgba(0, 0, 0, 0.148438) 0px 0px 0px 0px;
-	background-repeat: no-repeat;
-}
-
-#imageButton4.waf-state-hover {
-	background-color: rgb(102, 102, 102);
-	background-repeat: no-repeat;
-}
-
 #label6 {
 	z-index: 2;
 	width: 53px;
@@ -1385,5 +1365,79 @@
 	top: 309px;
 	left: 294px;
 	position: absolute;
+}
+
+#ibTransferFinal {
+	z-index: 1;
+	width: 130px;
+	height: 30px;
+	top: 158px;
+	left: 231px;
+	position: absolute;
+	border-top-style: none;
+	border-top-width: 0px;
+	border-left-style: none;
+	border-left-width: 0px;
+	border-right-style: none;
+	border-right-width: 0px;
+	border-bottom-style: none;
+	border-bottom-width: 0px;
+	border-top-left-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	border-top-right-radius: 10px;
+	-moz-border-radius-topright: 10px;
+	border-bottom-left-radius: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	border-bottom-right-radius: 10px;
+	-moz-border-radius-bottomright: 10px;
+	background-image: none;
+	background-color: rgb(127, 127, 127);
+	-webkit-box-shadow: rgba(0, 0, 0, 0.148438) 0px 0px 0px 0px;
+	 -moz-box-shadow: rgba(0, 0, 0, 0.148438) 0px 0px 0px 0px;
+	 box-shadow: rgba(0, 0, 0, 0.148438) 0px 0px 0px 0px;
+	box-shadow: rgba(0, 0, 0, 0.148438) 0px 0px 0px 0px;
+	background-repeat: no-repeat;
+}
+
+#ibTransferFinal.waf-state-hover {
+	background-color: rgb(102, 102, 102);
+	background-repeat: no-repeat;
+}
+
+#ibNext1.waf-state-hover {
+	background-color: rgb(102, 102, 102);
+	background-repeat: no-repeat;
+}
+
+#ibNext1 {
+	z-index: 18;
+	width: 130px;
+	height: 30px;
+	top: 443px;
+	left: 398px;
+	position: absolute;
+	border-top-style: none;
+	border-top-width: 0px;
+	border-left-style: none;
+	border-left-width: 0px;
+	border-right-style: none;
+	border-right-width: 0px;
+	border-bottom-style: none;
+	border-bottom-width: 0px;
+	border-top-left-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	border-top-right-radius: 10px;
+	-moz-border-radius-topright: 10px;
+	border-bottom-left-radius: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	border-bottom-right-radius: 10px;
+	-moz-border-radius-bottomright: 10px;
+	background-image: none;
+	background-color: rgb(127, 127, 127);
+	-webkit-box-shadow: rgba(0, 0, 0, 0.148438) 0px 0px 0px 0px;
+	 -moz-box-shadow: rgba(0, 0, 0, 0.148438) 0px 0px 0px 0px;
+	 box-shadow: rgba(0, 0, 0, 0.148438) 0px 0px 0px 0px;
+	box-shadow: rgba(0, 0, 0, 0.148438) 0px 0px 0px 0px;
+	background-repeat: no-repeat;
 }
 

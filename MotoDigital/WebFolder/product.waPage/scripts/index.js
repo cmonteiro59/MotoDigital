@@ -8,10 +8,10 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	var richText5 = {};	// @richText
 	var categoryComboBox = {};	// @combobox
 	var featuredComboBox = {};	// @combobox
-	var imageButton4 = {};	// @buttonImage
+	var ibTransferFinal = {};	// @buttonImage
 	var weeksComboBox = {};	// @combobox
 	var clientComboBox = {};	// @combobox
-	var imageButton1 = {};	// @buttonImage
+	var ibNext1 = {};	// @buttonImage
 	var documentEvent = {};	// @document
 	var imageButton2 = {};	// @buttonImage
 	var productEvent = {};	// @dataSource
@@ -70,7 +70,8 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		}
 		
 		subTotal = subTotal * numWeeks;
-		if(discount > 0){
+		if(discount > 0)
+		{
 			subTotal = subTotal * discount;
 		}
 		
@@ -78,14 +79,14 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		switch(featured)
 		{
 			
-			case "1": //Sobressaído
+			case "1": //popup...to do
 				if(cat == "Motos"){
 					subTotal = 15.00;
 				}else{
 					subTotal = 10.00;
 				}
 			break;
-			case "2": //Em primeiro Lugar
+			case "2": //first
 				if(cat == "Motos"){
 					subTotal = 10.00;
 				}else{
@@ -99,10 +100,10 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 					subTotal = 4.00;
 				}
 			break;
-			case "4": //Oportunidade
+			case "4": //right side
 				subTotal = 6.00;
 			break;
-			case "5": //Pull to Top só profissionais
+			case "5": //Push to Top... only comercial
 				subTotal += 1.25;
 			break;
 		}
@@ -116,9 +117,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		total = total.toFixed(2);
 		sources.order.total = total;
 		$$('itTotal').setValue(sources.order.total);
-		sources.order.serverRefresh();
-		
-	
+		sources.order.serverRefresh();	
 	};
 	
 	function weeks (custType,catType ) 
@@ -149,6 +148,8 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	{// @endlock
 		$$('ppFrame').hide();
 		$$('tbMsgContainer').show();
+		var conf = confirm("Confirma que quer pagar por transferência bancaria!");
+		
 	};// @lock
 
 	paypal.click = function paypal_click (event)// @startlock
@@ -176,25 +177,26 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	richText5.click = function richText5_click (event)// @startlock
 	{// @endlock
-		// Ok saving the payments, there are product.attributes to save.
-		
-		//sources.order.numDays = numDays; Depends on credit. redunctant with product...never mind, keep it simple, we are in a hurry. Will get back to this. Code needs cleaning.
-		sources.order.total = total;
-		sources.order.date = today;
-		sources.order.publisher = username;
-		sources.order.save({
-        onSuccess: function(event) {
-                // displays success message in a DisplayError area, NOT THROWING ANY MESSAGE. Get back to this later.
-            alert("O número do seu pagamento é:  " + order.ID);
-            
-        },
-        onError: function(error) {
-                // displays error message in a DisplayError area
-            alert("Erro ao gravar o pagamento. Por favor contacte o Departamento de suporte.");
-        }
-    	});
-    	//alert(sources.product.title); // It WORKS The record is still in memory
-    	window.location = "/product.waPage/";
+//		// Ok saving the payments, there are product.attributes to save.
+//		
+//		//sources.order.numDays = numDays; Depends on credit. redunctant with product...never mind, keep it simple, we are in a hurry. Will get back to this. Code needs cleaning.
+//		
+//		sources.order.total = total;
+//		sources.order.date = today;
+//		sources.order.publisher = username;
+//		sources.order.save({
+//        onSuccess: function(event) {
+//                // displays success message in a DisplayError area, NOT THROWING ANY MESSAGE. Get back to this later.
+//            alert("O número do seu pagamento é:  " + order.ID);
+//    		window.location = "/product.waPage/";
+//            
+//	        },
+//	        onError: function(error) {
+//	                // displays error message in a DisplayError area
+//	            alert("Erro ao gravar o pagamento. Por favor contacte o Departamento de suporte.");
+//	        }
+//    	});
+//    	//alert(sources.product.title); // It WORKS The record is still in memory
 	};// @lock
 
 	categoryComboBox.change = function categoryComboBox_change (event)// @startlock
@@ -219,29 +221,24 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		calculatePrice ();
 	};// @lock
 
-	imageButton4.click = function imageButton4_click (event)// @startlock
+	ibTransferFinal.click = function ibTransferFinal_click (event)// @startlock
 	{// @endlock
-		// Ok saving the payments, there are product.attributes to save.
-		
-		//sources.order.numDays = numDays; Depends on credit. redunctant with product... Will get back to this. Code needs cleaning.
+		//sources.order.numDays = numDays; Depends on credit. redunctant with product... Will get back to this, may be not needed.
 		sources.order.total = total;
 		sources.order.date = today;
 		sources.order.publisher = username;
-		sources.order.save({
-        onSuccess: function(event) {
-                // displays success message in a DisplayError area, NOT THROWING ANY MESSAGE. Get back to this later.
-            alert("O número do seu pagamento é:  " + order.ID);
-            
-        },
-        onError: function(error) {
-                // displays error message in a DisplayError area
-            alert("Erro ao gravar o pagamento. Por favor contacte o Departamento de suporte.");
-        }
-    	});
+		sources.order.addNum = sources.product.ID;
     	//alert(sources.product.title); // It WORKS The record is still in memory
-    	window.location = "/product.waPage/";
-    	
-		
+		sources.order.save({
+	        onSuccess: function(event) {
+	            alert("O número do seu pagamento é:  " + order.ID);
+	    		window.location = "/product.waPage/index.html";	
+			},
+	        onError: function(error) {
+				// displays error message in a DisplayError area
+	            alert("Erro ao gravar o pagamento. Por favor contacte o Departamento de suporte!");
+	        }
+    	});
 	};// @lock
 
 	weeksComboBox.change = function weeksComboBox_change (event)// @startlock
@@ -259,38 +256,27 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		calculatePrice ();
 	};// @lock
 
-	imageButton1.click = function imageButton1_click (event)// @startlock
+	ibNext1.click = function ibNext1_click (event)// @startlock
 	{// @endlock
 		
-		today = $$("calendar1").getValue(false);
-		sources.product.date = today;
-		var someDate = new Date();
-		var numberOfDaysToAdd = 6;
-		someDate.setDate(someDate.getDate() + numberOfDaysToAdd);
-		$$("calendar1").setValue(someDate, true);
-		var end = $$("calendar1").getValue(false);
-		sources.product.endDate = end;
 		sources.product.publisher = username;
 		sources.product.categoria = $$('combobox2').getValue();
 		sources.product.save({
-        onSuccess: function(event) {
-                // displays success message in a DisplayError area
-           alert("O número do seu anúncio é:  " + product.ID);
-        },
-        onError: function(error) {
-                // displays error message in a DisplayError area
-             alert("Erro ao gravar o anúncio. Por favor contacte o Departamento de suporte.");
-        }
+	        onSuccess: function(event) {
+	        	$$('container4').show();
+				$$('newProduct').hide();
+	        },
+	        onError: function(error) {
+	                // displays error message in a DisplayError area
+	             alert("Erro ao gravar o anúncio. Por favor contacte o Departamento de suporte.");
+	        }
     	});
-		$$('container4').show();
-		$$('newProduct').hide();
+		
 	};// @lock
 
 	documentEvent.onLoad = function documentEvent_onLoad (event)// @startlock
 	{// @endlock
 		$$('container4').hide();
-
-		
 	};// @lock
 
 	imageButton2.click = function imageButton2_click (event)// @startlock
@@ -305,7 +291,18 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			sources.product.addNewElement();
        	 	sources.product.serverRefresh(); //optional
        	 	vProductInit = true;
-        	
+       	 	// Find customer and check nif
+			sources.customer.query("email == :1",username, {
+		        onSuccess: function(){
+	        		var n = sources.customer.nif;
+	        		var n = n.charAt(0);
+	        		sources.product.professional = true;
+	        		if(n == "1" || n== "2")
+	        		{
+	        			sources.product.professional = false;
+	        		}
+	           	}
+	    });   
     	}
 	};// @lock
 
@@ -316,10 +313,10 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	WAF.addListener("richText5", "click", richText5.click, "WAF");
 	WAF.addListener("categoryComboBox", "change", categoryComboBox.change, "WAF");
 	WAF.addListener("featuredComboBox", "change", featuredComboBox.change, "WAF");
-	WAF.addListener("imageButton4", "click", imageButton4.click, "WAF");
+	WAF.addListener("ibTransferFinal", "click", ibTransferFinal.click, "WAF");
 	WAF.addListener("weeksComboBox", "change", weeksComboBox.change, "WAF");
 	WAF.addListener("clientComboBox", "change", clientComboBox.change, "WAF");
-	WAF.addListener("imageButton1", "click", imageButton1.click, "WAF");
+	WAF.addListener("ibNext1", "click", ibNext1.click, "WAF");
 	WAF.addListener("document", "onLoad", documentEvent.onLoad, "WAF");
 	WAF.addListener("imageButton2", "click", imageButton2.click, "WAF");
 	WAF.addListener("product", "onCollectionChange", productEvent.onCollectionChange, "WAF");

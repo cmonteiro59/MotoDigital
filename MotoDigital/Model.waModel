@@ -97,7 +97,7 @@
 		{
 			"scriptMode" : "manual",
 			"workspaceLeft" : 0,
-			"workspaceTop" : 0,
+			"workspaceTop" : 400,
 			"lastScriptLocation" : 
 			{
 				"Settings" : 
@@ -351,6 +351,12 @@
 					"kind" : "storage",
 					"scope" : "public",
 					"type" : "string"
+				},
+				{
+					"name" : "addNum",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "long"
 				}
 			],
 			"key" : 
