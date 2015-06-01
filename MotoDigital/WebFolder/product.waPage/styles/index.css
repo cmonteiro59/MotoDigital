@@ -3,6 +3,60 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
+#htmlTag9 {
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
+	position: absolute;
+}
+
+#htmlTag8 {
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
+	position: absolute;
+}
+
+#htmlTag7 {
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
+	position: absolute;
+}
+
+#htmlTag6 {
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
+	position: absolute;
+}
+
+#htmlTag5 {
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
+	position: absolute;
+}
+
+#htmlTag4 {
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
+	position: absolute;
+}
+
 #htmlTag18 {
 	position: absolute;
 	z-index: 0;
@@ -64,15 +118,6 @@
 	height: 24px;
 	top: 13px;
 	left: 46px;
-	position: absolute;
-}
-
-#richText5 {
-	z-index: 3;
-	width: 217px;
-	height: 16px;
-	top: 79px;
-	left: 126px;
 	position: absolute;
 }
 
@@ -1027,8 +1072,8 @@
 	z-index: 4;
 	width: 1465px;
 	height: 857px;
-	top: 2px;
-	left: 6px;
+	top: -1px;
+	left: -77px;
 	position: absolute;
 	background-color: transparent;
 	border-top-style: none;
@@ -1229,7 +1274,7 @@
 #tfInstructions {
 	z-index: 2;
 	width: 349px;
-	height: 131px;
+	height: 103px;
 	top: 3px;
 	left: 14px;
 	position: absolute;
@@ -1376,5 +1421,23 @@
 	 box-shadow: rgba(0, 0, 0, 0.148438) 0px 0px 0px 0px;
 	box-shadow: rgba(0, 0, 0, 0.148438) 0px 0px 0px 0px;
 	background-repeat: no-repeat;
+}
+
+#tbContent {
+	z-index: 8;
+	width: 215px;
+	height: 198px;
+	top: 432px;
+	left: 973px;
+	position: absolute;
+}
+
+#tbEmail {
+	z-index: 3;
+	width: 217px;
+	height: 16px;
+	top: 79px;
+	left: 126px;
+	position: absolute;
 }
 

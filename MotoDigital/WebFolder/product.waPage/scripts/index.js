@@ -215,13 +215,15 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		sources.order.save({
 	    onSuccess: function(event) {
 	        // send an email msg to customer and to us
+	        var content = "";
 			var xhr=new XMLHttpRequest(); 
 		    //Create an empty FormData object
 		    var formdata=new FormData();
 		    formdata.append('To', username)
-		    formdata.append('Title',"Referencia para transferencia bancaria: ")	
-		    formdata.append('Content', "Content");
-//			 
+		    formdata.append('Title',"Referencia para transferencia bancaria: Anuncio nº : ")	
+		    formdata.append('Content',$$('tbContent').getValue());
+		    formdata.append('Content',  $$('tbEmail').getValue());
+		   
 			//Add a listener to read the response of the handler (server side)
 		    xhr.addEventListener("load", function (evt) {
 		    	var debug = false;
@@ -244,7 +246,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		  xhr.open('POST','/sendMail',true); //call the sendMail handler
 		  xhr.send(formdata); //Send the formdata object to the handler on the server
 		  sources.order.serverRefresh();
-		  alert("O número do seu pagamento é:  "+ order.ID+ " e o numero do seu anuncio é : "+ sources.product.ID )
+		  //alert("O número do seu pagamento é:  "+ order.ID+ " e o numero do seu anuncio é : "+ sources.product.ID )
 		  var n = confirm("Deseja criar outro anuncio?");
           if(n)
           {
