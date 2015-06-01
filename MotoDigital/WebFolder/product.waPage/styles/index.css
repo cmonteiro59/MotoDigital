@@ -30,60 +30,6 @@
 	left: auto;
 }
 
-#htmlTag9 {
-	position: absolute;
-	z-index: 0;
-	width: 0px;
-	height: 0px;
-	top: auto;
-	left: auto;
-}
-
-#htmlTag8 {
-	position: absolute;
-	z-index: 0;
-	width: 0px;
-	height: 0px;
-	top: auto;
-	left: auto;
-}
-
-#htmlTag7 {
-	position: absolute;
-	z-index: 0;
-	width: 0px;
-	height: 0px;
-	top: auto;
-	left: auto;
-}
-
-#htmlTag6 {
-	position: absolute;
-	z-index: 0;
-	width: 0px;
-	height: 0px;
-	top: auto;
-	left: auto;
-}
-
-#htmlTag5 {
-	position: absolute;
-	z-index: 0;
-	width: 0px;
-	height: 0px;
-	top: auto;
-	left: auto;
-}
-
-#htmlTag4 {
-	position: absolute;
-	z-index: 0;
-	width: 0px;
-	height: 0px;
-	top: auto;
-	left: auto;
-}
-
 #calendar1 {
 	z-index: 6;
 	width: 180px;
@@ -125,8 +71,8 @@
 	z-index: 3;
 	width: 217px;
 	height: 16px;
-	top: 94px;
-	left: 133px;
+	top: 79px;
+	left: 126px;
 	position: absolute;
 }
 
@@ -1283,7 +1229,7 @@
 #tfInstructions {
 	z-index: 2;
 	width: 349px;
-	height: 149px;
+	height: 131px;
 	top: 3px;
 	left: 14px;
 	position: absolute;
@@ -1352,9 +1298,9 @@
 #tbMsgContainer {
 	z-index: 45;
 	width: 411px;
-	height: 211px;
-	top: 244px;
-	left: 298px;
+	height: 174px;
+	top: 334px;
+	left: 318px;
 	position: absolute;
 }
 
@@ -1362,7 +1308,7 @@
 	z-index: 1;
 	width: 130px;
 	height: 30px;
-	top: 158px;
+	top: 118px;
 	left: 231px;
 	position: absolute;
 	border-top-style: none;

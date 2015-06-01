@@ -19,7 +19,7 @@ function sendMail(request,response)
     message.subject = request.parts[1].asText; 
         //Set the content type of the message to text/html
     message.setBodyTypeToHTML();
-        //Add “content” attribute of mail client object to the body of the message
+    message.setBody(request.parts[2].asText);
         //Send the mail using the wakanda function
     var res = message.send(address , port , true, usernameFrom, password);
         //Return a String(“true”,”false”)

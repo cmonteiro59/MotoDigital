@@ -32,6 +32,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	var numWeeks = 2;
 	var numDays = 0;
 	var endDate;
+	var orderSaved = false;
 	
 	
 	function calculatePrice()
@@ -174,7 +175,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			sources.order.addNewElement();
        	 	sources.order.serverRefresh(); //optional
         	vOrderInit = true;
-        	sources.order.publisher = username;
         	calculatePrice();
         }
   
@@ -204,62 +204,62 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	ibTransferFinal.click = function ibTransferFinal_click (event)// @startlock
 	{// @endlock
-		//sources.order.numDays = numDays; //Depends on credit. redunctant with product...never mind, keep it simple, we are in a hurry. Will get back to this. Code needs cleaning.
+		//using calendar in order to save date in DB
+		today = $$("calendar1").getValue(false);
+		sources.order.numDays = numDays; //Depends on credit. redunctant with product...never mind, keep it simple, we are in a hurry. Will get back to this. Code needs cleaning.
 		sources.order.method = "bt"; // bank transfer
 		sources.order.total = total;
 		sources.order.date = today;
 		sources.order.publisher = username;
-		
+		sources.order.addNum = sources.product.ID;
 		sources.order.save({
-	        onSuccess: function(event) {
-	            alert("O número do seu pagamento é:  "); // + order.ID+ " e o numero do seu anuncio é : ");//+ sources.product.ID );
-	        	// send an email msg to customer and to us
-				var xhr=new XMLHttpRequest(); 
-		        //Create an empty FormData object
-			    var formdata=new FormData();
-			    formdata.append('To',"celso.monteiro@moto-digital.com")
-			    formdata.append('Title',"Referencia para transferencia bancaria: ") //+order.ID)	
-			    formdata.append('Content', $$('tfInstructions').getValue());
+	    onSuccess: function(event) {
+	        // send an email msg to customer and to us
+			var xhr=new XMLHttpRequest(); 
+		    //Create an empty FormData object
+		    var formdata=new FormData();
+		    formdata.append('To', username)
+		    formdata.append('Title',"Referencia para transferencia bancaria: ")	
+		    formdata.append('Content', "Content");
+//			 
+			//Add a listener to read the response of the handler (server side)
+		    xhr.addEventListener("load", function (evt) {
+		    	var debug = false;
+		    	if(debug)
+		    	{
+			        switch(evt.target.responseText){
+			            case 'true' :
+			            alert('Mensagem enviada!');
+			               break;
+			        //If the sendMail function response is true,
 			 
-			        //Add a listener to read the response of the handler (server side)
-			    xhr.addEventListener("load", function (evt) {
-			    	var debug = true;
-			    	if(debug)
-			    	{
-				        switch(evt.target.responseText){
-				            case 'true' :
-				            alert('Mensagem enviada!');
-				               break;
-				        //If the sendMail function response is true,
-				 
-				            case 'false' :
-				                alert('Erro ao enviar mensagem, Por favor tente de novo!');
-				                break;
-				        //If the sendMail function response is false, and debug is true
-				        }
-				    }
-				}, false); 
-			 
-			    xhr.open('POST','/sendMail',true); //call the sendMail handler
-			    xhr.send(formdata); //Send the formdata object to the handler on the server
-        		
-	            //alert("O número do seu pagamento é:  " + order.ID);
-	    		  var n = confirm("Deseja criar outro anuncio?");
-		          if(n)
-		          {
-		    		window.location = "/product.waPage/index.html";
-		           }else{
-		            window.location = "/index.waPage/index.html";
-		          }
-		    	},
-		        onError: function(error) {
-		            alert("Erro ao gravar o pagamento. Por favor contacte o Departamento de suporte.");
-		            
-		        }
+			            case 'false' :
+			                alert('Erro ao enviar mensagem, Por favor tente de novo!');
+			                break;
+			        //If the sendMail function response is false, and debug is true
+			        }
+			    }
+			}, false); 
+		 
+		  xhr.open('POST','/sendMail',true); //call the sendMail handler
+		  xhr.send(formdata); //Send the formdata object to the handler on the server
+		  sources.order.serverRefresh();
+		  alert("O número do seu pagamento é:  "+ order.ID+ " e o numero do seu anuncio é : "+ sources.product.ID )
+		  var n = confirm("Deseja criar outro anuncio?");
+          if(n)
+          {
+    		window.location = "/product.waPage/index.html";
+          }else{
+            window.location = "/index.waPage/index.html";
+          }
+          
+    	},
+	    onError: function(error) {
+	        alert("Erro ao gravar o pagamento. Por favor contacte o Departamento de suporte.");
+	    }
 		        		
-    		});
-			
-	       //alert(sources.product.title); // It WORKS The record is still in memory
+    	});
+       //alert(sources.product.title); // It WORKS The record is still in memory
 		
 	};// @lock
 
