@@ -1,10 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?><directory>
-	<user name="admin" ID="D09CF58EE8C50547805C24347DCA06F4" fullName="Administrador" password=""/>
-	<user name="celso.monteiro@moto-digital.com" ID="9B453FBAF90A73498F012279BBF0FF97" fullName="Celso Monteiro" password="ae2c7c6416cd718df9a5bfd2c63e1b5e"/>
-	<group name="Admin" ID="01000000000000000000000000000000" fullName="Admin">
-		<include user="admin" userID="D09CF58EE8C50547805C24347DCA06F4"/>
-	</group>
-	<group name="Customer" ID="88364DC3596EB9468002EBF374B10DC7" fullName="Customer">
-		<include user="celso.monteiro@moto-digital.com" userID="9B453FBAF90A73498F012279BBF0FF97"/>
-	</group>
-</directory>
+<?xml version="1.0" encoding="utf-8"?><directory><user name="admin" ID="D09CF58EE8C50547805C24347DCA06F4" fullName="Administrador" password=""/><user name="celso.monteiro@moto-digital.com" ID="9B453FBAF90A73498F012279BBF0FF97" fullName="Celso Monteiro" password=""/><user name="rrr" ID="51C0A9F015A4844C9AABB299AA97204B" fullName="rrr" password="06c882e1eaf611bff0a98d518cda4e67"/><group name="Admin" ID="01000000000000000000000000000000" fullName="Admin"><include user="admin" userID="D09CF58EE8C50547805C24347DCA06F4"/></group><group name="Customer" ID="88364DC3596EB9468002EBF374B10DC7" fullName="Customer"><include user="celso.monteiro@moto-digital.com" userID="9B453FBAF90A73498F012279BBF0FF97"/><include user="rrr" userID="51C0A9F015A4844C9AABB299AA97204B"/></group></directory>

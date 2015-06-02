@@ -3,12 +3,30 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
+#autoForm5 {
+	z-index: 5;
+	width: 369px;
+	height: 372px;
+	top: 30px;
+	left: 410px;
+	position: absolute;
+}
+
+#htmlTag2 {
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
+	position: absolute;
+}
+
 #autoForm4 {
 	z-index: 2;
-	width: 645px;
+	width: 485px;
 	height: 440px;
-	top: 22px;
-	left: 501px;
+	top: 19px;
+	left: 465px;
 	position: absolute;
 }
 
@@ -54,8 +72,8 @@
 
 #autoForm3 {
 	z-index: 2;
-	width: 870px;
-	height: 465px;
+	width: 499px;
+	height: 451px;
 	top: 11px;
 	left: 376px;
 	position: absolute;
@@ -64,7 +82,7 @@
 #dataGrid5 {
 	z-index: 1;
 	width: 363px;
-	height: 480px;
+	height: 453px;
 	top: 10px;
 	left: 10px;
 	position: absolute;
@@ -72,7 +90,7 @@
 
 #dataGrid4 {
 	z-index: 1;
-	width: 476px;
+	width: 440px;
 	height: 447px;
 	top: 21px;
 	left: 10px;
@@ -158,16 +176,6 @@
 	top: 0px;
 	left: 0px;
 	position: absolute;
-}
-
-#richText3 {
-	z-index: 4;
-	width: 278px;
-	height: 63px;
-	top: 218px;
-	left: 684px;
-	position: absolute;
-	font-size: 30px;
 }
 
 #menuItem6.waf-state-selected {
@@ -296,7 +304,7 @@
 
 #tabView1 {
 	z-index: 2;
-	width: 1271px;
+	width: 974px;
 	height: 507px;
 	top: 137px;
 	left: 59px;

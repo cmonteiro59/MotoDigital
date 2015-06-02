@@ -3,42 +3,6 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
-#htmlTag15 {
-	z-index: 0;
-	width: 0px;
-	height: 0px;
-	top: auto;
-	left: auto;
-	position: absolute;
-}
-
-#htmlTag10 {
-	z-index: 0;
-	width: 0px;
-	height: 0px;
-	top: auto;
-	left: auto;
-	position: absolute;
-}
-
-#htmlTag16 {
-	position: absolute;
-	z-index: 0;
-	width: 0px;
-	height: 0px;
-	top: auto;
-	left: auto;
-}
-
-#label25 {
-	z-index: 8;
-	width: 54px;
-	height: 15px;
-	top: 185px;
-	left: 18px;
-	position: absolute;
-}
-
 #htmlTag14 {
 	position: absolute;
 	z-index: 0;
@@ -48,7 +12,70 @@
 	left: auto;
 }
 
-#htmlTag12 {
+#htmlTag10 {
+	position: absolute;
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
+}
+
+#htmlTag9 {
+	position: absolute;
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
+}
+
+#htmlTag7 {
+	position: absolute;
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
+}
+
+#htmlTag6 {
+	position: absolute;
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
+}
+
+#htmlTag5 {
+	position: absolute;
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
+}
+
+#htmlTag4 {
+	position: absolute;
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
+}
+
+#htmlTag3 {
+	position: absolute;
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
+}
+
+#htmlTag2 {
 	position: absolute;
 	z-index: 0;
 	width: 0px;
@@ -80,7 +107,16 @@
 	position: absolute;
 }
 
-#htmlTag9 {
+#htmlTag16 {
+	position: absolute;
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
+}
+
+#htmlTag13 {
 	position: absolute;
 	z-index: 0;
 	width: 0px;
@@ -93,8 +129,8 @@
 	z-index: 6;
 	width: 180px;
 	height: 150px;
-	top: 265px;
-	left: 975px;
+	top: 266px;
+	left: 922px;
 	position: absolute;
 }
 
@@ -154,6 +190,15 @@
 	top: 107px;
 	left: 11px;
 	position: absolute;
+}
+
+#htmlTag11 {
+	position: absolute;
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
 }
 
 #icon8 {
@@ -1020,11 +1065,11 @@
 }
 
 #mainContainer {
-	z-index: 2;
+	z-index: 4;
 	width: 1465px;
 	height: 857px;
 	top: -1px;
-	left: 3px;
+	left: -5px;
 	position: absolute;
 	background-color: transparent;
 	border-top-style: none;
@@ -1090,6 +1135,24 @@
 	position: absolute;
 	min-width: 75px;
 	text-align: right;
+}
+
+#label10 {
+	z-index: 22;
+	width: 54px;
+	height: 15px;
+	top: 151px;
+	left: 10px;
+	position: absolute;
+}
+
+#weeksComboBox {
+	z-index: 17;
+	width: 59px;
+	height: 24px;
+	top: 147px;
+	left: 69px;
+	position: absolute;
 }
 
 #label7 {
@@ -1187,7 +1250,7 @@
 
 #categoryComboBox {
 	z-index: 34;
-	width: 193px;
+	width: 297px;
 	height: 24px;
 	top: 103px;
 	left: 70px;
@@ -1408,14 +1471,5 @@
 
 #btnFree.waf-state-hover {
 	background-color: rgb(102, 102, 102);
-}
-
-#weeksComboBox {
-	z-index: 8;
-	width: 57px;
-	height: 24px;
-	top: 181px;
-	left: 77px;
-	position: absolute;
 }
 

@@ -3,22 +3,31 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
+#{id}image1 {
+	z-index: 4;
+	width: 151px;
+	height: 46px;
+	top: 21px;
+	left: 960px;
+	position: absolute;
+}
+
 #{id}richText3 {
+	z-index: 3;
 	width: 209px;
 	height: 57px;
 	top: 27px;
 	left: 489px;
 	position: absolute;
 	color: rgb(255, 255, 255);
-	z-index: 3;
 }
 
 #{id}richText4 {
 	z-index: 2;
 	width: 146px;
-	height: 18px;
-	top: 43px;
-	left: 885px;
+	height: 29px;
+	top: 32px;
+	left: 716px;
 	position: absolute;
 	color: rgb(255, 255, 255);
 	font-size: 14px;

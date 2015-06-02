@@ -258,6 +258,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	productEvent.onCollectionChange = function productEvent_onCollectionChange (event)// @startlock
 	{// @endlock
+		$$('button1').disable();
 		$$('checkbox1').disable();
 		$$('checkbox2').disable();
 		$$('checkbox3').disable();
@@ -285,12 +286,14 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		}else{
 			title = "*" +title+"*";
 		}
-		
 		var cat = $$('combobox3').getValue();
+		if(cat == "Todas"){
+			cat = "*";
+		}
 		//alert(title, cat);
-		WAF.sources.product.query('title = :1 and categoria = :2 ', title, cat);
-		WAF.sources.productClassified.query('title = :1 and categoria = :2 ', title, cat);
-		WAF.sources.productTop.query('title = :1 and categoria = :2 ', title, cat);
+		WAF.sources.product.query('title = :1 and categoria = :2 and classified < :3', title, cat, "2");
+		WAF.sources.productClassified.query('title = :1 and categoria = :2 and classified = :3', title, cat, "5" );
+		WAF.sources.productTop.query('title = :1 and categoria = :2 and classified < :3 and classified > :4' , title, cat, "5", "2");
 	};// @lock
 
 	image10.mouseout = function image10_mouseout (event)// @startlock

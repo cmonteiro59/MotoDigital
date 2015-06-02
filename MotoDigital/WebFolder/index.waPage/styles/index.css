@@ -3,6 +3,15 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
+#htmlTag2 {
+	position: absolute;
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
+}
+
 #label49 {
 	z-index: 2;
 	width: 117px;
@@ -1034,15 +1043,6 @@
 	color: rgb(127, 0, 0);
 }
 
-#htmlTag2 {
-	position: absolute;
-	z-index: 0;
-	width: 0px;
-	height: 0px;
-	top: auto;
-	left: auto;
-}
-
 #container11 {
 	width: 1297px;
 	height: 136px;
@@ -1613,10 +1613,10 @@
 
 #combobox3 {
 	z-index: 31;
-	width: 164px;
+	width: 257px;
 	height: 24px;
 	top: 320px;
-	left: 726px;
+	left: 646px;
 	position: absolute;
 }
 
@@ -1625,7 +1625,7 @@
 	width: 54px;
 	height: 15px;
 	top: 324px;
-	left: 667px;
+	left: 587px;
 	position: absolute;
 }
 
@@ -1634,7 +1634,7 @@
 	width: 161px;
 	height: 22px;
 	top: 319px;
-	left: 489px;
+	left: 421px;
 	position: absolute;
 }
 
@@ -1643,7 +1643,7 @@
 	width: 57px;
 	height: 15px;
 	top: 322px;
-	left: 427px;
+	left: 359px;
 	position: absolute;
 }
 

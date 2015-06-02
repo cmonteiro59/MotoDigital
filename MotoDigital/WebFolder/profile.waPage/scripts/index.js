@@ -10,6 +10,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 // @endregion// @endlock
 	var vDatasourceInit = false;
 	var okToSave = true;
+	var pro = true;
 // eventHandlers// @lock
 
 	userNameInput.change = function userNameInput_change (event)// @startlock
@@ -18,15 +19,14 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		if (user == ""){
 			okToSave = false;
 		}else {
-				var exists = ds.Customer.findUser($$('userNameInput').getValue());
-				if(exists != null)
-				{
-					okToSave = false;
-					alert ("O email " + user + " já existe!!");
-					$$('userNameInput').setValue("");
-				}
+			var exists = ds.Customer.findUser($$('userNameInput').getValue());
+			if(exists != null)
+			{
+				okToSave = false;
+				alert ("O email " + user + " já existe!!");
+				$$('userNameInput').setValue("");
 			}
-			
+		}	
 	};// @lock
 
 	customer1Event.onCollectionChange = function customer1Event_onCollectionChange (event)// @startlock
@@ -55,6 +55,8 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		if(n != 9)
 		{
 			alert("Número de contribuinte inváildo")
+			okToSave = false;
+			return;
 		}
 		if($$('phone').getValue() == "")
 			okToSave = false;
@@ -65,29 +67,36 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			alert("Todos os campos são de preenchimento obrigatório");
 			//event.preventDefault();
 		}else{
-				ds.Settings.addUser($$('userNameInput').getValue(), $$('passwordInput').getValue(), $$('fullNameInput').getValue(),
-				{
-					onSuccess: function(e){
-						if(!e.result.success){
-							okToSave = false;
-						}
-					}
-				});
-		}
-		if(okToSave){
-			 sources.customer1.save(
+			var n = $$('nif').getValue();
+			alert(n);
+			var n = n.charAt(0);
+			if(n == "1" || n== "2")
+			{
+				pro = false;
+			}
+			sources.customer1.professional = pro;
+			sources.customer1.save(
 			 {
-       			onSuccess: function(event) {
-            		alert("Utilizador criado com sucesso.");
-       			 },
-        		onError: function(error) {
-                	alert("Ocurreu um erro.Tente de novo!");
-       		 	}
-    		});
-		
+	   			onSuccess: function(event) {
+	   				ds.Settings.addUser($$('userNameInput').getValue(), $$('passwordInput').getValue(), $$('fullNameInput').getValue(),
+					{
+						onSuccess: function(e){
+							if(!e.result.success){
+								alert("Utilizador criado com sucesso.");
+							}
+						},
+			    		onError: function(error) {
+			            	alert("Ocurreu um erro.Por favor tente de novo!");
+			   		 	}
+					});
+	        	alert("Utilizador criado com sucesso.");
+	   			},
+	    		onError: function(error) {
+	            	alert("Ocurreu um erro.Por favor tente de novo!");
+	   		 	}
+			});
+			
 		}
-		
-
 	};// @lock
 
 	passwordInput.change = function passwordInput_change (event)// @startlock

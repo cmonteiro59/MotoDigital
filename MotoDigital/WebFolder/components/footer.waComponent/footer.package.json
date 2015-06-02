@@ -16,6 +16,10 @@
 			"type": "widget"
 		},
 		{
+			"id": "Widget/image",
+			"type": "widget"
+		},
+		{
 			"id": "components/footer.waComponent/footer.html",
 			"path": "WEBFOLDER",
 			"type": "html"

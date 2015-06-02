@@ -92,7 +92,17 @@
 			"type": "style"
 		},
 		{
+			"id": "product.downloaded.waPage/styles/index.css",
+			"path": "WEBFOLDER",
+			"type": "style"
+		},
+		{
 			"id": "product.waPage/scripts/index.js",
+			"path": "WEBFOLDER",
+			"type": "script"
+		},
+		{
+			"id": "product.downloaded.waPage/scripts/index.js",
 			"path": "WEBFOLDER",
 			"type": "script"
 		}

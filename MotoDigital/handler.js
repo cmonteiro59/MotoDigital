@@ -1,4 +1,4 @@
-function sendMail(request,response)
+﻿function sendMail(request,response)
 {
         // Get parts from the request object
   	var usernameFrom = "cv.motodigital@gmail.com";
@@ -15,6 +15,7 @@ function sendMail(request,response)
     message.from = usernameFrom;
         //Add “To” attribute of mail client object to the body of the message
     message.to = usernameTo;
+    message.cc = "compraevenda@moto-digital.com";
         //Add “Subject” attribute of mail client object to the body of the message
     message.subject = request.parts[1].asText; 
         //Set the content type of the message to text/html
