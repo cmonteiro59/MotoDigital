@@ -2,6 +2,7 @@
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
+	var ibSave = {};	// @buttonImage
 	var btnFree = {};	// @buttonImage
 	var ibTransfer = {};	// @buttonImage
 	var paypal = {};	// @buttonImage
@@ -11,8 +12,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	var ibTransferFinal = {};	// @buttonImage
 	var clientComboBox = {};	// @combobox
 	var ibNext1 = {};	// @buttonImage
-	var documentEvent = {};	// @document
-	var ibSave = {};	// @buttonImage
 	var productEvent = {};	// @dataSource
 // @endregion// @endlock
 
@@ -150,9 +149,20 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			
 // eventHandlers// @lock
 
+	ibSave.click = function ibSave_click (event)// @startlock
+	{// @endlock
+		var n = confirm("Deseja criar outro anúncio?");
+        if(n)
+        {
+			window.location = "/product.waPage/index.html";
+        }else{
+        	window.location = "/index.waPage/index.html";
+      	}
+		
+	};// @lock
+
 	btnFree.click = function btnFree_click (event)// @startlock
 	{// @endlock
-		$$('container4').show();
 		// Add your code here
 		today = $$("calendar1").getValue(false);
 		sources.product.date = today;
@@ -214,16 +224,9 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 				 
 					    xhr.open('POST','/sendMail',true); //call the sendMail handler
 					    xhr.send(formdata); //Send the formdata object to the handler on the server
-					    sources.order.serverRefresh();
+					    //sources.order.serverRefresh();
 					    //alert("O número do seu pagamento é:  "+ order.ID+ " e o numero do seu anuncio é : "+ sources.product.ID )
-					    var n = confirm("Deseja criar outro anuncio?");
-			            if(n)
-			            {
-			    			window.location = "/product.waPage/index.html";
-			            }else{
-			            	window.location = "/index.waPage/index.html";
-			          }
-		          
+					   
 		    	},
 			    onError: function(error) {
 			        alert("Erro ao gravar o pagamento. Por favor contacte o Departamento de suporte.");
@@ -238,6 +241,8 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	            alert("Erro ao gravar o anúncio. Por favor contacte o Departamento de suporte.");
 	        }
     	});
+		
+		$$('container4').show(); //iamges container, temp stuff
 	};// @lock
 
 	ibTransfer.click = function ibTransfer_click (event)// @startlock
@@ -389,16 +394,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 //    	}); 
 	};// @lock
 
-	documentEvent.onLoad = function documentEvent_onLoad (event)// @startlock
-	{// @endlock
-		$$('container4').hide();
-	};// @lock
-
-	ibSave.click = function ibSave_click (event)// @startlock
-	{// @endlock
-		$$('container4').hide();
-	};// @lock
-
 	productEvent.onCollectionChange = function productEvent_onCollectionChange (event)// @startlock
 	{// @endlock
 		if(vProductInit == false){
@@ -409,6 +404,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	};// @lock
 
 // @region eventManager// @startlock
+	WAF.addListener("ibSave", "click", ibSave.click, "WAF");
 	WAF.addListener("btnFree", "click", btnFree.click, "WAF");
 	WAF.addListener("ibTransfer", "click", ibTransfer.click, "WAF");
 	WAF.addListener("paypal", "click", paypal.click, "WAF");
@@ -418,8 +414,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	WAF.addListener("ibTransferFinal", "click", ibTransferFinal.click, "WAF");
 	WAF.addListener("clientComboBox", "change", clientComboBox.change, "WAF");
 	WAF.addListener("ibNext1", "click", ibNext1.click, "WAF");
-	WAF.addListener("document", "onLoad", documentEvent.onLoad, "WAF");
-	WAF.addListener("ibSave", "click", ibSave.click, "WAF");
 	WAF.addListener("product", "onCollectionChange", productEvent.onCollectionChange, "WAF");
 // @endregion
 };// @endlock
