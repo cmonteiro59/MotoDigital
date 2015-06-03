@@ -12,7 +12,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	var clientComboBox = {};	// @combobox
 	var ibNext1 = {};	// @buttonImage
 	var documentEvent = {};	// @document
-	var imageButton2 = {};	// @buttonImage
+	var ibSave = {};	// @buttonImage
 	var productEvent = {};	// @dataSource
 // @endregion// @endlock
 
@@ -152,6 +152,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	btnFree.click = function btnFree_click (event)// @startlock
 	{// @endlock
+		$$('container4').show();
 		// Add your code here
 		today = $$("calendar1").getValue(false);
 		sources.product.date = today;
@@ -393,10 +394,9 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		$$('container4').hide();
 	};// @lock
 
-	imageButton2.click = function imageButton2_click (event)// @startlock
+	ibSave.click = function ibSave_click (event)// @startlock
 	{// @endlock
 		$$('container4').hide();
-		$$('container8').show();
 	};// @lock
 
 	productEvent.onCollectionChange = function productEvent_onCollectionChange (event)// @startlock
@@ -419,7 +419,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	WAF.addListener("clientComboBox", "change", clientComboBox.change, "WAF");
 	WAF.addListener("ibNext1", "click", ibNext1.click, "WAF");
 	WAF.addListener("document", "onLoad", documentEvent.onLoad, "WAF");
-	WAF.addListener("imageButton2", "click", imageButton2.click, "WAF");
+	WAF.addListener("ibSave", "click", ibSave.click, "WAF");
 	WAF.addListener("product", "onCollectionChange", productEvent.onCollectionChange, "WAF");
 // @endregion
 };// @endlock
