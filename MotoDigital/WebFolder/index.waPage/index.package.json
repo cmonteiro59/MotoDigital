@@ -64,12 +64,12 @@
 			"type": "widget"
 		},
 		{
-			"id": "components/footer.waComponent/footer.package.json",
+			"id": "components/header.waComponent/header.package.json",
 			"path": "WEBFOLDER",
 			"type": "component"
 		},
 		{
-			"id": "components/header.waComponent/header.package.json",
+			"id": "components/footer.waComponent/footer.package.json",
 			"path": "WEBFOLDER",
 			"type": "component"
 		},
