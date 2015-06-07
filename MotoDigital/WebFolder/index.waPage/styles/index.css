@@ -322,7 +322,7 @@
 	z-index: 29;
 	width: 645px;
 	height: 489px;
-	top: -258px;
+	top: 2px;
 	left: 41px;
 	position: absolute;
 	background-color: rgb(229, 229, 229);
@@ -818,8 +818,8 @@
 	z-index: 41;
 	width: 662px;
 	height: 553px;
-	top: 349px;
-	left: 360px;
+	top: 309px;
+	left: 370px;
 	position: absolute;
 }
 
@@ -1395,7 +1395,7 @@
 	z-index: 38;
 	width: 658px;
 	height: 536px;
-	top: 489px;
+	top: 309px;
 	left: 372px;
 	position: absolute;
 }
@@ -1417,8 +1417,8 @@
 	z-index: 15;
 	width: 28px;
 	height: 14px;
-	top: 78px;
-	left: 154px;
+	top: 48px;
+	left: 194px;
 	position: absolute;
 	font-size: 11px;
 }
@@ -1436,15 +1436,15 @@
 	z-index: 14;
 	width: 32px;
 	height: 14px;
-	top: 53px;
-	left: 154px;
+	top: 26px;
+	left: 194px;
 	position: absolute;
 	font-size: 11px;
 }
 
 #matrix2 .waf-widget.waf-clone-label5 {
-	position: absolute;
 	font-size: 11px;
+	position: absolute;
 }
 
 #matrix2 .waf-widget.waf-clone-checkbox4 {
@@ -1455,8 +1455,8 @@
 	z-index: 10;
 	width: 53px;
 	height: 14px;
-	top: 29px;
-	left: 154px;
+	top: 26px;
+	left: 114px;
 	position: absolute;
 	font-size: 11px;
 }
@@ -1465,8 +1465,8 @@
 	z-index: 10;
 	width: 16px;
 	height: 16px;
-	top: 28px;
-	left: 133px;
+	top: 25px;
+	left: 93px;
 	position: absolute;
 }
 
@@ -1489,7 +1489,7 @@
 
 #richText2 {
 	z-index: 7;
-	width: 98px;
+	width: 82px;
 	height: 21px;
 	top: 25px;
 	left: 5px;
@@ -1537,10 +1537,10 @@
 
 #image6 {
 	z-index: 2;
-	width: 85px;
-	height: 80px;
+	width: 148px;
+	height: 126px;
 	top: 50px;
-	left: 17px;
+	left: 7px;
 	position: absolute;
 }
 
@@ -1554,8 +1554,8 @@
 
 #container14 {
 	z-index: 1;
-	width: 219px;
-	height: 140px;
+	width: 248px;
+	height: 190px;
 	top: 3px;
 	left: 3px;
 	position: absolute;
@@ -1567,8 +1567,8 @@
 
 #matrix2 {
 	z-index: 33;
-	width: 239px;
-	height: 434px;
+	width: 255px;
+	height: 581px;
 	top: 456px;
 	left: 1045px;
 	position: absolute;
@@ -2001,7 +2001,7 @@
 	z-index: 40;
 	width: 662px;
 	height: 536px;
-	top: 489px;
+	top: 309px;
 	left: 371px;
 	position: absolute;
 }
@@ -2358,7 +2358,7 @@
 #matrix1 {
 	z-index: 2;
 	width: 684px;
-	height: 432px;
+	height: 575px;
 	top: 453px;
 	left: 357px;
 	position: absolute;
@@ -2394,8 +2394,8 @@
 	z-index: 14;
 	width: 16px;
 	height: 16px;
-	top: 52px;
-	left: 133px;
+	top: 25px;
+	left: 173px;
 	position: absolute;
 }
 
@@ -2403,8 +2403,8 @@
 	z-index: 15;
 	width: 16px;
 	height: 16px;
-	top: 77px;
-	left: 133px;
+	top: 47px;
+	left: 173px;
 	position: absolute;
 }
 
