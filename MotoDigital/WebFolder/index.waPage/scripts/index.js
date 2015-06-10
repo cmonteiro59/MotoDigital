@@ -11,7 +11,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	var button32 = {};	// @button
 	var button27 = {};	// @button
 	var imageButton4 = {};	// @buttonImage
-	var imageButton5 = {};	// @buttonImage
 	var container12 = {};	// @container
 	var image17 = {};	// @image
 	var image16 = {};	// @image
@@ -133,12 +132,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	imageButton4.click = function imageButton4_click (event)// @startlock
 	{// @endlock
-		$$('container22').show(); // Open the email msg container
-	};// @lock
-
-	imageButton5.click = function imageButton5_click (event)// @startlock
-	{// @endlock
-		$$("container3").hide();
+		$$('container3').hide(); // Open the email msg container
 		$$('container22').show(); // Open the email msg container
 	};// @lock
 
@@ -361,7 +355,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	WAF.addListener("button32", "click", button32.click, "WAF");
 	WAF.addListener("button27", "click", button27.click, "WAF");
 	WAF.addListener("imageButton4", "click", imageButton4.click, "WAF");
-	WAF.addListener("imageButton5", "click", imageButton5.click, "WAF");
 	WAF.addListener("container12", "click", container12.click, "WAF");
 	WAF.addListener("image17", "mouseover", image17.mouseover, "WAF");
 	WAF.addListener("image17", "mouseout", image17.mouseout, "WAF");

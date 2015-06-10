@@ -1,1 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?><directory><user name="admin" ID="D09CF58EE8C50547805C24347DCA06F4" fullName="Administrador" password=""/><user name="cc" ID="663ABF672C092449B8515D30CDBD3DB1" fullName="c" password="e0e7adf5651c1bae18ccf677ea3af841"/><group name="Admin" ID="01000000000000000000000000000000" fullName="Admin"><include user="admin" userID="D09CF58EE8C50547805C24347DCA06F4"/></group><group name="Customer" ID="88364DC3596EB9468002EBF374B10DC7" fullName="Customer"><include user="cc" userID="663ABF672C092449B8515D30CDBD3DB1"/></group></directory>
+<?xml version="1.0" encoding="UTF-8"?><directory>
+	<user name="admin" ID="D09CF58EE8C50547805C24347DCA06F4" fullName="Administrador" password=""/>
+	<user name="celso.monteiro@moto-digital.com" ID="A50355C22D1341C7A9B83C32BDC82486" fullName="Celso Moto Digital" password="ae2c7c6416cd718df9a5bfd2c63e1b5e"/>
+	<user ID="39B6D3F165BA4346B02DC9EE1DA0B3E7" name="motrok@gmail.com" fullName="Mário Campos" password="158b51119de2120ed426f17dd17f23df"/>
+	<user ID="DE157F9A4B49DC4D87A272ABAB4586DD" name="motochicane@gmail.com" fullName="Carlos de Sousa Gomes" password="be704f3918fd1cbec09767e265356389"/>
+	<user ID="75CC35B054EB02479C3625E0653DD281" name="ricardo.gordo@moto-digital.com" fullName="Ricardo Gordo" password="021a29804a4396978a5b503dbf9e224a"/>
+	<group name="Admin" ID="01000000000000000000000000000000" fullName="Admin">
+		<include user="admin" userID="D09CF58EE8C50547805C24347DCA06F4"/>
+	</group>
+	<group name="Customer" ID="88364DC3596EB9468002EBF374B10DC7" fullName="Customer">
+		<include user="celso.monteiro@moto-digital.com" userID="A50355C22D1341C7A9B83C32BDC82486"/>
+		<include user="motrok@gmail.com" ID="39B6D3F165BA4346B02DC9EE1DA0B3E7"/>
+		<include user="motochicane@gmail.com" ID="DE157F9A4B49DC4D87A272ABAB4586DD"/>
+		<include user="ricardo.gordo@moto-digital.com" ID="75CC35B054EB02479C3625E0653DD281"/>
+		<include user="admin" userID="D09CF58EE8C50547805C24347DCA06F4"/>
+	</group>
+</directory>

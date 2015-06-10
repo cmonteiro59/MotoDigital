@@ -1,5 +1,5 @@
 {
-	"name": "MotoDigital/product.waPage/index.html",
+	"name": "MotoDigital/index.waPage/index.html",
 	"version": "1.0.0",
 	"loadDependencies": [
 		{
@@ -8,15 +8,31 @@
 			"type": "core"
 		},
 		{
-			"id": "Widget/container",
-			"type": "widget"
-		},
-		{
 			"id": "Widget/component",
 			"type": "widget"
 		},
 		{
+			"id": "Widget/matrix",
+			"type": "widget"
+		},
+		{
+			"id": "Widget/container",
+			"type": "widget"
+		},
+		{
+			"id": "Widget/textField",
+			"type": "widget"
+		},
+		{
 			"id": "Widget/label",
+			"type": "widget"
+		},
+		{
+			"id": "Widget/checkbox",
+			"type": "widget"
+		},
+		{
+			"id": "Widget/image",
 			"type": "widget"
 		},
 		{
@@ -28,19 +44,7 @@
 			"type": "widget"
 		},
 		{
-			"id": "Widget/errorDiv",
-			"type": "widget"
-		},
-		{
-			"id": "Widget/textField",
-			"type": "widget"
-		},
-		{
 			"id": "Widget/richText",
-			"type": "widget"
-		},
-		{
-			"id": "Widget/checkbox",
 			"type": "widget"
 		},
 		{
@@ -48,23 +52,15 @@
 			"type": "widget"
 		},
 		{
-			"id": "Widget/image",
-			"type": "widget"
-		},
-		{
-			"id": "Widget/fileUpload",
-			"type": "widget"
-		},
-		{
 			"id": "Widget/button",
 			"type": "widget"
 		},
 		{
-			"id": "Widget/frame",
+			"id": "Widget/dialog",
 			"type": "widget"
 		},
 		{
-			"id": "Widget/calendar",
+			"id": "Widget/wysiwyg",
 			"type": "widget"
 		},
 		{
@@ -82,7 +78,7 @@
 			"type": "theme"
 		},
 		{
-			"id": "product.waPage/styles/index.css",
+			"id": "index.waPage/styles/index.css",
 			"path": "WEBFOLDER",
 			"type": "style"
 		},
@@ -92,12 +88,7 @@
 			"type": "style"
 		},
 		{
-			"id": "product.waPage/scripts/Untitled1.js",
-			"path": "WEBFOLDER",
-			"type": "script"
-		},
-		{
-			"id": "product.waPage/scripts/index.js",
+			"id": "index.waPage/scripts/index.js",
 			"path": "WEBFOLDER",
 			"type": "script"
 		}

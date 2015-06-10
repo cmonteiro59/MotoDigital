@@ -3,6 +3,7 @@
         // Get parts from the request object
   	var usernameFrom = "cv.motodigital@gmail.com";
     var usernameTo = request.parts[0].asText;
+    alert(usernameTo);
     var password =" MotoCV15%!";
     var address = 'smtp.gmail.com'; //Define address of the server mail
     var port = 465;  //Define SSL port for gmail
@@ -15,7 +16,7 @@
     message.from = usernameFrom;
         //Add “To” attribute of mail client object to the body of the message
     message.to = usernameTo;
-    message.cc = "compraevenda@moto-digital.com";
+    message.bcc = "compraevenda@moto-digital.com";
         //Add “Subject” attribute of mail client object to the body of the message
     message.subject = request.parts[1].asText; 
         //Set the content type of the message to text/html
