@@ -11,7 +11,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	var vDatasourceInit = false;
 	var okToSave = true;
 	var pro = true;
-	var custID = 0;
 // eventHandlers// @lock
 
 	userNameInput.change = function userNameInput_change (event)// @startlock
@@ -77,35 +76,16 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			sources.customer1.save(
 			{
 	   			onSuccess: function(event) {
-	   				custID = sources.customer1.ID;
 					alert("Utilizador criado com sucesso. Faça Login com as suas credenciais!");
+					// send an email
 					var xhr=new XMLHttpRequest(); 
 				    //Create an empty FormData object
 				    var formdata=new FormData();
 				    formdata.append('To', sources.customer1.email)
-					formdata.append('Title',"Moto Digital Anuncio numero: "+ sources.product.ID);
-				    var c =	"A sua conta foi criada com sucesso<BR>O seu username :"+ sources.customer1.email+ "<BR>" + " A sua password : " + sources.customer1.password + "<BR>" + "Obrigado pela sua Preferencia!";
+					formdata.append('Title',"Moto Digital Bemvindo: "+ sources.customer1.fullName)
+				    var c =	"A sua conta foi criada com sucesso<BR>O seu username: "+ sources.customer1.email+ "<BR>" + " A sua password : " + sources.customer1.password + "<BR>" + "Obrigado pela sua Preferencia!"
 				    formdata.append('Content', c);
-				   
-					//Add a listener to read the response of the handler (server side)
-				    xhr.addEventListener("load", function (evt) {
-				    	var debug = true;
-				    	if(debug)
-				    	{
-					        switch(evt.target.responseText){
-					            case 'true' :
-					            alert('Mensagem enviada!');
-					               break;
-					        //If the sendMail function response is true,
-					 
-					            case 'false' :
-					                alert('Erro ao enviar mensagem, Contacte o departamento de suporte!');
-					                break;
-					        //If the sendMail function response is false, and debug is true
-					        }
-					    }
-					}, false); 
-			 
+				    
 				    xhr.open('POST','/sendMail',true); //call the sendMail handler
 				    xhr.send(formdata);
 	   				ds.Settings.addUser($$('userNameInput').getValue(), $$('passwordInput').getValue(), $$('fullNameInput').getValue());
@@ -117,19 +97,19 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	   		 	}
 			});
 			
-			if(!okToSave)
-			{
-				var thePerson = ds.Customer(custID); //select the entity to remove
-				try {
-				    thePerson.remove();
-				    var message = "Person deleted successfully."
-				} catch(e) {
-				        // handle error
-				    var message = "Cannot delete person: "+ e.message;
-				}
-			}else{
-				window.location = "/index.waPage/index.html";
-			}	
+//			if(!okToSave)
+//			{
+//				var thePerson = ds.Customer(custID); //select the entity to remove
+//				try {
+//				    thePerson.remove();
+//				    var message = "Person deleted successfully."
+//				} catch(e) {
+//				        // handle error
+//				    var message = "Cannot delete person: "+ e.message;
+//				}
+//			}else{
+//				window.location = "/index.waPage/index.html";
+//			}	
 		}
 	};// @lock
 

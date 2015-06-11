@@ -2,7 +2,6 @@
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
-	var ibSave = {};	// @buttonImage
 	var btnFree = {};	// @buttonImage
 	var ibTransfer = {};	// @buttonImage
 	var paypal = {};	// @buttonImage
@@ -10,8 +9,11 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	var categoryComboBox = {};	// @combobox
 	var featuredComboBox = {};	// @combobox
 	var ibTransferFinal = {};	// @buttonImage
+	var weeksComboBox = {};	// @combobox
 	var clientComboBox = {};	// @combobox
 	var ibNext1 = {};	// @buttonImage
+	var documentEvent = {};	// @document
+	var imageButton2 = {};	// @buttonImage
 	var productEvent = {};	// @dataSource
 // @endregion// @endlock
 
@@ -33,8 +35,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	var numDays = 0;
 	var endDate;
 	var orderSaved = false;
-	var featured = "0"; // destaque
-
 	
 	
 	function calculatePrice()
@@ -44,7 +44,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		{
 			numWeeks = $$('weeksComboBox').getValue();
 		}else{
-			numWeeks = 1; // Means we dealing with an add "Destaque"
+			numWeeks = 1; // Means we dealing with a Featured add "Destaque"
 		}
 		var cli = $$('clientComboBox').getValue();
 		var cat = $$('categoryComboBox').getValue();
@@ -78,12 +78,10 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			subTotal = subTotal * discount;
 		}
 		
-		featured = $$('featuredComboBox').getValue();
-		var destaque = featured;
+		var featured = $$('featuredComboBox').getValue();
 		switch(featured)
 		{
-			case "0": // normal
-			break;
+			
 			case "1": //popup...to do
 				if(cat == "Motos"){
 					subTotal = 15.00;
@@ -149,100 +147,74 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			
 // eventHandlers// @lock
 
-	ibSave.click = function ibSave_click (event)// @startlock
-	{// @endlock
-		var n = confirm("Deseja criar outro anúncio?");
-        if(n)
-        {
-			window.location = "/product.waPage/index.html";
-        }else{
-        	window.location = "/index.waPage/index.html";
-      	}
-		
-	};// @lock
-
 	btnFree.click = function btnFree_click (event)// @startlock
 	{// @endlock
 		// Add your code here
 		today = $$("calendar1").getValue(false);
-		sources.product.date = today;
-		//sources.product.startDate = today; // if the paypal payment  suceeded...use this in the thankYou page
-		var someDate = new Date();
-		var numberOfDaysToAdd = numDays;
-		someDate.setDate(someDate.getDate() + numberOfDaysToAdd);
-		$$("calendar1").setValue(someDate, true);
-		endDate = $$("calendar1").getValue(false);
-		sources.product.endDate = endDate;
-		sources.product.categoria = $$('categoryComboBox').getValue();
-		sources.product.classified = featured;
-		sources.product.numDays = numDays;
-		sources.product.approved = true;
-        sources.product.save({
-	        onSuccess: function(event) {
-	        	sources.order.numDays = numDays; //Depends on credit. redunctant with product...never mind, keep it simple, we are in a hurry. Will get back to this. Code needs cleaning.
-				sources.order.method = "Gratis"; // bank transfer
-				sources.order.total = total;
-				sources.order.date = today;
-				sources.order.publisher = username;
-				sources.order.addNum = sources.product.ID;
-				sources.order.save({
-			    onSuccess: function(event) {
-			        // send an email msg to customer and to us
-			        var content = "";
-					var xhr=new XMLHttpRequest(); 
-				    //Create an empty FormData object
-				    var formdata=new FormData();
-				    if(username =="admin")
-				    {
-				    	formdata.append('To', "compraevenda@moto-digital.com")
-				    }else{
-				    	formdata.append('To', username)
-				    }
-				    formdata.append('Title',"Moto Digital Anuncio numero: "+ sources.product.ID)
-				    //var c =	"Ref: Pagamento numero: "+ sources.order.ID + "<BR>" + $$('tbContent').getValue()+  $$('tbEmail').getValue();
-				    var c =	"O seu anuncio foi gravado com sucesso<BR>Nao e necessario pagamento ate 1 de Julho de 2015.<BR>" + "Obrigado pela sua Preferencia!";
-				    formdata.append('Content', c);
-				   
-						//Add a listener to read the response of the handler (server side)
-					    xhr.addEventListener("load", function (evt) {
-					    	var debug = false;
-					    	if(debug)
-					    	{
-						        switch(evt.target.responseText){
-						            case 'true' :
-						            alert('Mensagem enviada!');
-						               break;
-						        //If the sendMail function response is true,
-						 
-						            case 'false' :
-						                alert('Erro ao enviar mensagem, Por favor tente de novo!');
-						                break;
-						        //If the sendMail function response is false, and debug is true
-						        }
-						    }
-						}, false); 
-				 
-					    xhr.open('POST','/sendMail',true); //call the sendMail handler
-					    xhr.send(formdata); //Send the formdata object to the handler on the server
-					    //sources.order.serverRefresh();
-					    //alert("O número do seu pagamento é:  "+ order.ID+ " e o numero do seu anuncio é : "+ sources.product.ID )
-					   
-		    	},
-			    onError: function(error) {
-			        alert("Erro ao gravar o pagamento. Por favor contacte o Departamento de suporte.");
-			    }     		
-    		});
-		
-	        	
-	        	
-	        },
-	        onError: function(error) {
-	                // displays error message in a DisplayError area
-	            alert("Erro ao gravar o anúncio. Por favor contacte o Departamento de suporte.");
-	        }
+		sources.order.numDays = numDays; //Depends on credit. redunctant with product...never mind, keep it simple, we are in a hurry. Will get back to this. Code needs cleaning.
+		sources.order.method = "Gratis"; // bank transfer
+		sources.order.total = total;
+		sources.order.date = today;
+		sources.order.publisher = username;
+		sources.order.addNum = sources.product.ID;
+		sources.order.save({
+	    onSuccess: function(event) {
+	        // send an email msg to customer and to us
+	        var content = "";
+			var xhr=new XMLHttpRequest(); 
+		    //Create an empty FormData object
+		    var formdata=new FormData();
+		    if(username =="admin")
+		    {
+		    	formdata.append('To', "compraevenda@moto-digital.com")
+		    }else{
+		    	formdata.append('To', username)
+		    	formdata.append('Cc', "compraevenda@moto-digital.com")
+		    }
+		    formdata.append('Title',"Moto Digital Anuncio numero: "+ sources.product.ID)
+		    //var c =	"Ref: Pagamento numero: "+ sources.order.ID + "<BR>" + $$('tbContent').getValue()+  $$('tbEmail').getValue();
+		    var c =	"O seu anuncio foi gravado com sucesso<BR>Nao e necessario pagamento ate 1 de Julho de 2015.<BR>" + "Obrigado pela sua Preferencia!";
+		    formdata.append('Content', c)
+		   
+			//Add a listener to read the response of the handler (server side)
+		    xhr.addEventListener("load", function (evt) {
+		    	var debug = false;
+		    	if(debug)
+		    	{
+			        switch(evt.target.responseText){
+			            case 'true' :
+			            alert('Mensagem enviada!');
+			               break;
+			        //If the sendMail function response is true,
+			 
+			            case 'false' :
+			                alert('Erro ao enviar mensagem, Por favor tente de novo!');
+			                break;
+			        //If the sendMail function response is false, and debug is true
+			        }
+			    }
+			}, false); 
+		 
+		  xhr.open('POST','/sendMail',true); //call the sendMail handler
+		  xhr.send(formdata); //Send the formdata object to the handler on the server
+		  sources.order.serverRefresh();
+		  //alert("O número do seu pagamento é:  "+ order.ID+ " e o numero do seu anuncio é : "+ sources.product.ID )
+		  var n = confirm("Deseja criar outro anuncio?");
+          if(n)
+          {
+    		window.location = "/product.waPage/index.html";
+          }else{
+            window.location = "/index.waPage/index.html";
+          }
+          
+    	},
+	    onError: function(error) {
+	        alert("Erro ao gravar o pagamento. Por favor contacte o Departamento de suporte.");
+	    }
+		        		
     	});
+       //alert(sources.product.title); // It WORKS The record is still in memory
 		
-		$$('container4').show(); //iamges container, temp stuff
 	};// @lock
 
 	ibTransfer.click = function ibTransfer_click (event)// @startlock
@@ -293,7 +265,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			$$('weeksComboBox').show();
 		}
 		$$('weeksComboBox').setValue();
-		featured = this.getValue();
 		calculatePrice ();
 	};// @lock
 
@@ -360,6 +331,12 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		
 	};// @lock
 
+	weeksComboBox.change = function weeksComboBox_change (event)// @startlock
+	{// @endlock
+		$$('ppFrame').hide();
+		calculatePrice ();
+	};// @lock
+
 	clientComboBox.change = function clientComboBox_change (event)// @startlock
 	{// @endlock
 		$$('ppFrame').hide();
@@ -371,27 +348,40 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	ibNext1.click = function ibNext1_click (event)// @startlock
 	{// @endlock
+		// using calendar in order to save date in DB
+		today = $$("calendar1").getValue(false);
+		sources.product.date = today;
+		//sources.product.startDate = today; // if the paypal payment  suceeded...use this in the thankYou page
+		var someDate = new Date();
+		var numberOfDaysToAdd = numDays;
+		someDate.setDate(someDate.getDate() + numberOfDaysToAdd);
+		$$("calendar1").setValue(someDate, true);
+		endDate = $$("calendar1").getValue(false);
+		sources.product.endDate = endDate;
 		sources.product.publisher = username;
+		sources.product.categoria = $$('combobox2').getValue();
+		sources.product.save({
+	        onSuccess: function(event) {
+	        	$$('container4').show();
+				$$('newProduct').hide();
+	        },
+	        onError: function(error) {
+	                // displays error message in a DisplayError area
+	             alert("Erro ao gravar o anúncio. Por favor contacte o Departamento de suporte.");
+	        }
+    	});
+		
+	};// @lock
+
+	documentEvent.onLoad = function documentEvent_onLoad (event)// @startlock
+	{// @endlock
+		$$('container4').hide();
+	};// @lock
+
+	imageButton2.click = function imageButton2_click (event)// @startlock
+	{// @endlock
+		$$('container4').hide();
 		$$('container8').show();
-		$$('newProduct').hide();
-   	 	// Find customer and check nif
-//		sources.customer.query("email == :1",username, {
-//	        onSuccess: function(){
-//	        	// isProfessional ?
-//	        	sources.product.professional = sources.customer.professional;
-//	        	sources.product.save({
-//		        onSuccess: function(event) {
-//		        	event.dataSource.getCurrentElement()
-//		        	$$('container4').show();
-//					$$('newProduct').hide();
-//		        },
-//		        onError: function(error) {
-//		                // displays error message in a DisplayError area
-//		             alert("Erro ao gravar anúncio.. Por favor contacte o Departamento de suporte.");
-//		        }
-//    		});
-//    	}
-//    	}); 
 	};// @lock
 
 	productEvent.onCollectionChange = function productEvent_onCollectionChange (event)// @startlock
@@ -400,11 +390,22 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			sources.product.addNewElement();
        	 	sources.product.serverRefresh(); //optional
        	 	vProductInit = true;
+       	 	// Find customer and check nif
+			sources.customer.query("email == :1",username, {
+		        onSuccess: function(){
+	        		var n = sources.customer.nif;
+	        		var n = n.charAt(0);
+	        		sources.product.professional = true;
+	        		if(n == "1" || n== "2")
+	        		{
+	        			sources.product.professional = false;
+	        		}
+	           	}
+	    	});   
     	}
 	};// @lock
 
 // @region eventManager// @startlock
-	WAF.addListener("ibSave", "click", ibSave.click, "WAF");
 	WAF.addListener("btnFree", "click", btnFree.click, "WAF");
 	WAF.addListener("ibTransfer", "click", ibTransfer.click, "WAF");
 	WAF.addListener("paypal", "click", paypal.click, "WAF");
@@ -412,8 +413,11 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	WAF.addListener("categoryComboBox", "change", categoryComboBox.change, "WAF");
 	WAF.addListener("featuredComboBox", "change", featuredComboBox.change, "WAF");
 	WAF.addListener("ibTransferFinal", "click", ibTransferFinal.click, "WAF");
+	WAF.addListener("weeksComboBox", "change", weeksComboBox.change, "WAF");
 	WAF.addListener("clientComboBox", "change", clientComboBox.change, "WAF");
 	WAF.addListener("ibNext1", "click", ibNext1.click, "WAF");
+	WAF.addListener("document", "onLoad", documentEvent.onLoad, "WAF");
+	WAF.addListener("imageButton2", "click", imageButton2.click, "WAF");
 	WAF.addListener("product", "onCollectionChange", productEvent.onCollectionChange, "WAF");
 // @endregion
 };// @endlock
