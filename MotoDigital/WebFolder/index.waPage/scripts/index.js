@@ -2,7 +2,6 @@
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
-	var documentEvent = {};	// @document
 	var contact1 = {};	// @buttonImage
 	var imageButton6 = {};	// @buttonImage
 	var textField19 = {};	// @textField
@@ -40,11 +39,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	var whichMatrix = 1;
 	var subject ="";
 // eventHandlers// @lock
-
-	documentEvent.onLoad = function documentEvent_onLoad (event)// @startlock
-	{// @endlock
-		// $("iframe").contents().find('#tinymce p').attr('style','font-size:20px')
-	};// @lock
 
 	contact1.click = function contact1_click (event)// @startlock
 	{// @endlock
@@ -352,7 +346,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	};// @lock
 
 // @region eventManager// @startlock
-	WAF.addListener("document", "onLoad", documentEvent.onLoad, "WAF");
 	WAF.addListener("contact1", "click", contact1.click, "WAF");
 	WAF.addListener("imageButton6", "click", imageButton6.click, "WAF");
 	WAF.addListener("textField19", "change", textField19.change, "WAF");

@@ -3,6 +3,63 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
+#textField21 {
+	width: 104px;
+	height: 22px;
+	top: 237px;
+	left: 92px;
+	position: absolute;
+	z-index: 30;
+}
+
+#label51 {
+	width: 75px;
+	height: 15px;
+	top: 240px;
+	left: 12px;
+	position: absolute;
+	min-width: 75px;
+	z-index: 30;
+}
+
+#textField20 {
+	width: 104px;
+	height: 22px;
+	top: 235px;
+	left: 92px;
+	position: absolute;
+	z-index: 32;
+}
+
+#label43 {
+	width: 75px;
+	height: 15px;
+	top: 238px;
+	left: 12px;
+	position: absolute;
+	min-width: 75px;
+	z-index: 32;
+}
+
+#textField18 {
+	width: 104px;
+	height: 22px;
+	top: 237px;
+	left: 92px;
+	position: absolute;
+	z-index: 45;
+}
+
+#label4 {
+	width: 75px;
+	height: 15px;
+	top: 240px;
+	left: 12px;
+	position: absolute;
+	min-width: 75px;
+	z-index: 45;
+}
+
 #htmlTag2 {
 	position: absolute;
 	z-index: 0;
@@ -370,7 +427,7 @@
 }
 
 #imageButton4 {
-	z-index: 44;
+	z-index: 43;
 	width: 147px;
 	height: 30px;
 	top: 475px;
@@ -765,7 +822,7 @@
 
 #container2 {
 	z-index: 39;
-	width: 662px;
+	width: 659px;
 	height: 553px;
 	top: 309px;
 	left: 370px;
@@ -1050,7 +1107,7 @@
 	width: 240px;
 	height: 619px;
 	top: 150px;
-	left: 91px;
+	left: 62px;
 	position: absolute;
 }
 

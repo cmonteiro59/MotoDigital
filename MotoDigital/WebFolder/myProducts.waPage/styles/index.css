@@ -3,7 +3,36 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
+#textField1 {
+	width: 104px;
+	height: 22px;
+	top: 272px;
+	left: 92px;
+	position: absolute;
+	z-index: 35;
+}
+
+#label1 {
+	width: 75px;
+	height: 15px;
+	top: 275px;
+	left: 12px;
+	position: absolute;
+	min-width: 75px;
+	z-index: 35;
+}
+
+#htmlTag2 {
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
+	position: absolute;
+}
+
 #label3 {
+	z-index: 2;
 	width: 46px;
 	height: 16px;
 	top: 7px;
@@ -14,19 +43,19 @@
 	font-size: 14px;
 	text-shadow: rgb(255, 255, 255) 0px 0px 0px;
 	font-weight: normal;
-	z-index: 2;
 }
 
 #icon2 {
+	z-index: 2;
 	width: 24px;
 	height: 24px;
 	top: 3px;
 	left: 27px;
 	position: absolute;
-	z-index: 2;
 }
 
 #imageButton2 {
+	z-index: 33;
 	width: 130px;
 	height: 30px;
 	top: 456px;
@@ -50,7 +79,6 @@
 	-moz-border-radius-bottomright: 10px;
 	background-image: none;
 	background-color: rgb(127, 127, 127);
-	z-index: 34;
 	background-repeat: no-repeat;
 }
 
@@ -476,7 +504,7 @@
 	z-index: 13;
 	width: 75px;
 	height: 15px;
-	top: 288px;
+	top: 308px;
 	left: 12px;
 	position: absolute;
 	min-width: 75px;
@@ -609,7 +637,7 @@
 	z-index: 13;
 	width: 281px;
 	height: 107px;
-	top: 288px;
+	top: 308px;
 	left: 92px;
 	position: absolute;
 }

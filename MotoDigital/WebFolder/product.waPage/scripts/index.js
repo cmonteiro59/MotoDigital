@@ -115,7 +115,8 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		numDays = numWeeks *7; //per day, affects product  end date
 		
 		$$('itDiscount').setValue(discount * 100);
-		subTotal = subTotal.toFixed(2);
+		//subTotal = subTotal.toFixed(2);
+		subTotal = 0; // unitl 1st of July
 		sources.order.net = subTotal;
 		$$('itNet').setValue(sources.order.net);
 		total = subTotal * 1.23; //Tax 23 %

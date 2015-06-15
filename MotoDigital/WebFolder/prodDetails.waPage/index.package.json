@@ -36,10 +36,6 @@
 			"type": "widget"
 		},
 		{
-			"id": "Widget/combobox",
-			"type": "widget"
-		},
-		{
 			"id": "Widget/buttonImage",
 			"type": "widget"
 		},

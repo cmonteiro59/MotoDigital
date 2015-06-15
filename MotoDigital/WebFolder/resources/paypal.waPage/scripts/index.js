@@ -35,7 +35,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 					},
 					params: [{
 						    intent: "sale",
-						   // payer: payer,
+						    payer: payer,
 						    transactions: transactions,
 						    redirect_urls: redirect_urls
 						}]
