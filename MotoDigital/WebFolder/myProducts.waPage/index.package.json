@@ -8,11 +8,11 @@
 			"type": "core"
 		},
 		{
-			"id": "Widget/component",
+			"id": "Widget/container",
 			"type": "widget"
 		},
 		{
-			"id": "Widget/container",
+			"id": "Widget/dataGrid",
 			"type": "widget"
 		},
 		{
@@ -20,11 +20,15 @@
 			"type": "widget"
 		},
 		{
-			"id": "Widget/label",
+			"id": "Widget/buttonImage",
 			"type": "widget"
 		},
 		{
-			"id": "Widget/image",
+			"id": "Widget/icon",
+			"type": "widget"
+		},
+		{
+			"id": "Widget/label",
 			"type": "widget"
 		},
 		{
@@ -36,11 +40,7 @@
 			"type": "widget"
 		},
 		{
-			"id": "Widget/buttonImage",
-			"type": "widget"
-		},
-		{
-			"id": "Widget/icon",
+			"id": "Widget/image",
 			"type": "widget"
 		},
 		{
@@ -53,10 +53,6 @@
 		},
 		{
 			"id": "Widget/combobox",
-			"type": "widget"
-		},
-		{
-			"id": "Widget/dataGrid",
 			"type": "widget"
 		},
 		{

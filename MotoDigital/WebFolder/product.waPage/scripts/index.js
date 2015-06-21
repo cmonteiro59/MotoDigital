@@ -2,6 +2,7 @@
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
+	var documentEvent = {};	// @document
 	var ibSave = {};	// @buttonImage
 	var btnFree = {};	// @buttonImage
 	var ibTransfer = {};	// @buttonImage
@@ -150,6 +151,11 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			
 // eventHandlers// @lock
 
+	documentEvent.onLoad = function documentEvent_onLoad (event)// @startlock
+	{// @endlock
+		
+	};// @lock
+
 	ibSave.click = function ibSave_click (event)// @startlock
 	{// @endlock
 		var n = confirm("Deseja criar outro anúncio?");
@@ -167,7 +173,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		// Add your code here
 		today = $$("calendar1").getValue(false);
 		sources.product.date = today;
-		//sources.product.startDate = today; // if the paypal payment  suceeded...use this in the thankYou page
+		sources.product.startDate = today; 
 		var someDate = new Date();
 		var numberOfDaysToAdd = numDays;
 		someDate.setDate(someDate.getDate() + numberOfDaysToAdd);
@@ -372,6 +378,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	ibNext1.click = function ibNext1_click (event)// @startlock
 	{// @endlock
+		var username = WAF.directory.currentUser().userName;
 		sources.product.publisher = username;
 		$$('container8').show();
 		$$('newProduct').hide();
@@ -405,6 +412,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	};// @lock
 
 // @region eventManager// @startlock
+	WAF.addListener("document", "onLoad", documentEvent.onLoad, "WAF");
 	WAF.addListener("ibSave", "click", ibSave.click, "WAF");
 	WAF.addListener("btnFree", "click", btnFree.click, "WAF");
 	WAF.addListener("ibTransfer", "click", ibTransfer.click, "WAF");

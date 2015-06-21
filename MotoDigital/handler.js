@@ -17,7 +17,7 @@
     message.to = usernameTo;
     message.cc = "compraevenda@moto-digital.com";
         //Add “Subject” attribute of mail client object to the body of the message
-    message.subject = request.parts[1].asText; 
+    message.subject= request.parts[1].asText; 
         //Set the content type of the message to text/html
     message.setBodyTypeToHTML();
     message.setBody(request.parts[2].asText);

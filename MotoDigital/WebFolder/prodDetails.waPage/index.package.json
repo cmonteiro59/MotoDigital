@@ -12,10 +12,6 @@
 			"type": "widget"
 		},
 		{
-			"id": "Widget/component",
-			"type": "widget"
-		},
-		{
 			"id": "Widget/container",
 			"type": "widget"
 		},

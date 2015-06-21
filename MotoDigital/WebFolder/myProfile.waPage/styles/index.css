@@ -307,8 +307,8 @@
 	z-index: 6;
 	width: 684px;
 	height: 479px;
-	top: 192px;
-	left: 470px;
+	top: 9px;
+	left: 8px;
 	position: absolute;
 	border-top-left-radius: 10px;
 	-moz-border-radius-topleft: 10px;
@@ -339,24 +339,6 @@
 
 #waf-body {
 	background-color: rgb(255, 255, 255);
-}
-
-#component2 {
-	z-index: 3;
-	width: 1302px;
-	height: 130px;
-	top: 671px;
-	left: 1px;
-	position: absolute;
-}
-
-#component1 {
-	z-index: 2;
-	width: 1302px;
-	height: 136px;
-	top: 4px;
-	left: 1px;
-	position: absolute;
 }
 
 #container1 {

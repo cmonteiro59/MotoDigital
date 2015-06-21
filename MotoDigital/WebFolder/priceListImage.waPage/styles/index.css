@@ -3,25 +3,29 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
-#image2 {
-	z-index: 1;
-	width: 708px;
-	height: 906px;
-	top: 0px;
-	left: 40px;
+#image4 {
+	width: 641px;
+	height: 839px;
+	top: 16px;
+	left: 178px;
 	position: absolute;
+	z-index: 1;
 }
 
-#container1 {
-	z-index: 3;
-	width: 786px;
-	height: 862px;
-	top: 0px;
-	left: 0px;
+#priceListContainer {
+	z-index: 1;
+	width: 1000px;
+	height: 854px;
+	top: 3px;
+	left: 2px;
 	position: absolute;
+	border-top-style: none;
 	border-top-width: 0px;
+	border-left-style: none;
 	border-left-width: 0px;
+	border-right-style: none;
 	border-right-width: 0px;
+	border-bottom-style: none;
 	border-bottom-width: 0px;
 	-webkit-box-shadow: rgba(0, 0, 0, 0.199219) 0px 0px 0px 0px;
 	 -moz-box-shadow: rgba(0, 0, 0, 0.199219) 0px 0px 0px 0px;

@@ -1,615 +1,704 @@
+
 {
-	"toJSON": true,
-	"extraProperties": {
-		"version": "2",
-		"classes": {
-			"Category": {
-				"panelColor": "#76923C",
-				"panel": {
-					"pathVisible": true,
-					"isOpen": "true",
-					"position": {
-						"X": 586,
-						"Y": 371
+	"toJSON" : true,
+	"extraProperties" : 
+	{
+		"version" : "2",
+		"classes" : 
+		{
+			"Category" : 
+			{
+				"panelColor" : "#76923C",
+				"panel" : 
+				{
+					"pathVisible" : true,
+					"isOpen" : "true",
+					"position" : 
+					{
+						"X" : 586,
+						"Y" : 371
 					}
 				}
 			},
-			"Customer": {
-				"panelColor": "#996699",
-				"panel": {
-					"isOpen": "true",
-					"pathVisible": true,
-					"position": {
-						"X": 25,
-						"Y": 20
+			"Customer" : 
+			{
+				"panelColor" : "#996699",
+				"panel" : 
+				{
+					"isOpen" : "true",
+					"pathVisible" : true,
+					"position" : 
+					{
+						"X" : 25,
+						"Y" : 20
 					}
 				}
 			},
-			"Order": {
-				"panelColor": "#E5B9B7",
-				"panel": {
-					"isOpen": "true",
-					"pathVisible": true,
-					"position": {
-						"X": 48,
-						"Y": 486
+			"Order" : 
+			{
+				"panelColor" : "#E5B9B7",
+				"panel" : 
+				{
+					"isOpen" : "true",
+					"pathVisible" : true,
+					"position" : 
+					{
+						"X" : 48,
+						"Y" : 486
 					}
 				}
 			},
-			"Product": {
-				"panelColor": "#E5B9B7",
-				"panel": {
-					"isOpen": "true",
-					"pathVisible": true,
-					"position": {
-						"X": 300,
-						"Y": 25
+			"Product" : 
+			{
+				"panelColor" : "#E5B9B7",
+				"panel" : 
+				{
+					"isOpen" : "true",
+					"pathVisible" : true,
+					"position" : 
+					{
+						"X" : 300,
+						"Y" : 25
 					}
 				}
 			},
-			"Settings": {
-				"panelColor": "#E5B9B7",
-				"methodInhVisible": "true",
-				"isMinimized": "false",
-				"panel": {
-					"isOpen": "true",
-					"pathVisible": false,
-					"position": {
-						"X": 844,
-						"Y": 33
+			"Settings" : 
+			{
+				"panelColor" : "#E5B9B7",
+				"methodInhVisible" : "true",
+				"isMinimized" : "false",
+				"panel" : 
+				{
+					"isOpen" : "true",
+					"pathVisible" : false,
+					"position" : 
+					{
+						"X" : 844,
+						"Y" : 33
 					}
 				}
 			},
-			"PriceList": {
-				"panelColor": "#C3D69B",
-				"panel": {
-					"isOpen": "true",
-					"pathVisible": true,
-					"position": {
-						"X": 565,
-						"Y": 31
+			"PriceList" : 
+			{
+				"panelColor" : "#C3D69B",
+				"panel" : 
+				{
+					"isOpen" : "true",
+					"pathVisible" : true,
+					"position" : 
+					{
+						"X" : 565,
+						"Y" : 31
 					}
 				}
 			}
 		},
-		"model": {
-			"scriptMode": "manual",
-			"workspaceLeft": 0,
-			"workspaceTop": 0,
-			"lastScriptLocation": {
-				"Settings": {
-					"method": "Settings/settings-methods.js"
+		"model" : 
+		{
+			"scriptMode" : "manual",
+			"workspaceLeft" : 0,
+			"workspaceTop" : 200,
+			"lastScriptLocation" : 
+			{
+				"Settings" : 
+				{
+					"method" : "Settings/settings-methods.js"
 				},
-				"Customer": {
-					"events": "Customer/Customer-events.js"
+				"Customer" : 
+				{
+					"events" : "Customer/Customer-events.js",
+					"method" : "Customer/Customer-methods.js"
+				},
+				"Product" : 
+				{
+					"method" : "Product/Product-methods.js"
 				}
 			}
 		}
 	},
-	"dataClasses": [
+	"dataClasses" : 
+	[
 		{
-			"name": "Category",
-			"className": "Category",
-			"collectionName": "Categories",
-			"scope": "public",
-			"attributes": [
+			"name" : "Category",
+			"className" : "Category",
+			"collectionName" : "Categories",
+			"scope" : "public",
+			"attributes" : 
+			[
 				{
-					"name": "name",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
+					"name" : "name",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
 				},
 				{
-					"name": "color",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
+					"name" : "color",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
 				},
 				{
-					"name": "ID",
-					"kind": "storage",
-					"scope": "public",
-					"unique": true,
-					"autosequence": true,
-					"type": "long",
-					"indexKind": "btree",
-					"primKey": true
+					"name" : "ID",
+					"kind" : "storage",
+					"scope" : "public",
+					"indexed" : true,
+					"unique" : true,
+					"autosequence" : true,
+					"type" : "long",
+					"indexKind" : "btree"
 				},
 				{
-					"name": "products",
-					"kind": "relatedEntities",
-					"scope": "public",
-					"type": "Products",
-					"reversePath": true,
-					"path": "category"
+					"name" : "products",
+					"kind" : "relatedEntities",
+					"scope" : "public",
+					"type" : "Products",
+					"reversePath" : true,
+					"path" : "category"
 				},
 				{
-					"name": "priceList",
-					"kind": "relatedEntity",
-					"scope": "public",
-					"type": "PriceList",
-					"path": "PriceList"
-				}
-			]
-		},
-		{
-			"name": "Customer",
-			"className": "Customer",
-			"collectionName": "Customers",
-			"matchTable": "Customers",
-			"scope": "public",
-			"attributes": [
-				{
-					"name": "ID",
-					"kind": "storage",
-					"scope": "public",
-					"unique": true,
-					"autosequence": true,
-					"type": "long",
-					"indexKind": "btree",
-					"primKey": true
-				},
-				{
-					"name": "orders",
-					"kind": "relatedEntities",
-					"scope": "public",
-					"type": "Orders",
-					"reversePath": true,
-					"path": "customer"
-				},
-				{
-					"name": "password",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string",
-					"indexKind": "auto"
-				},
-				{
-					"name": "address",
-					"kind": "storage",
-					"matchColumn": "adress",
-					"scope": "public",
-					"type": "string"
-				},
-				{
-					"name": "email",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string",
-					"indexKind": "auto"
-				},
-				{
-					"name": "phoneNumber",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
-				},
-				{
-					"name": "fullName",
-					"kind": "storage",
-					"matchColumn": "fullname",
-					"scope": "public",
-					"type": "string"
-				},
-				{
-					"name": "nif",
-					"kind": "storage",
-					"matchColumn": "lastName",
-					"scope": "public",
-					"type": "string",
-					"indexKind": "btree"
-				},
-				{
-					"name": "firstName",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
-				},
-				{
-					"name": "products",
-					"kind": "relatedEntities",
-					"scope": "public",
-					"type": "Products",
-					"reversePath": true,
-					"path": "customer"
-				},
-				{
-					"name": "professional",
-					"kind": "storage",
-					"scope": "public",
-					"type": "bool"
+					"name" : "priceList",
+					"kind" : "relatedEntity",
+					"scope" : "public",
+					"type" : "PriceList",
+					"path" : "PriceList"
 				}
 			],
-			"methods": [
+			"key" : 
+			[
 				{
-					"name": "findUser",
-					"applyTo": "dataClass",
-					"scope": "public",
-					"from": "$mainModel.Customer.methods.findUser",
-					"userDefined": true
+					"name" : "ID"
 				}
 			]
 		},
 		{
-			"name": "Order",
-			"className": "Order",
-			"collectionName": "Orders",
-			"scope": "public",
-			"attributes": [
+			"name" : "Customer",
+			"className" : "Customer",
+			"collectionName" : "Customers",
+			"matchTable" : "Customers",
+			"scope" : "public",
+			"attributes" : 
+			[
 				{
-					"name": "ID",
-					"kind": "storage",
-					"scope": "public",
-					"unique": true,
-					"autosequence": true,
-					"type": "long",
-					"indexKind": "btree",
-					"primKey": true
+					"name" : "ID",
+					"kind" : "storage",
+					"scope" : "public",
+					"indexed" : true,
+					"unique" : true,
+					"autosequence" : true,
+					"type" : "long",
+					"indexKind" : "btree"
 				},
 				{
-					"name": "date",
-					"kind": "storage",
-					"scope": "public",
-					"type": "date",
-					"simpleDate": true
+					"name" : "orders",
+					"kind" : "relatedEntities",
+					"scope" : "public",
+					"type" : "Orders",
+					"reversePath" : true,
+					"path" : "customer"
 				},
 				{
-					"name": "total",
-					"kind": "storage",
-					"scope": "public",
-					"type": "number",
-					"defaultFormat": [
+					"name" : "password",
+					"kind" : "storage",
+					"scope" : "public",
+					"indexed" : true,
+					"type" : "string",
+					"indexKind" : "auto"
+				},
+				{
+					"name" : "address",
+					"kind" : "storage",
+					"matchColumn" : "adress",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "email",
+					"kind" : "storage",
+					"scope" : "public",
+					"indexed" : true,
+					"type" : "string",
+					"indexKind" : "auto"
+				},
+				{
+					"name" : "phoneNumber",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "fullName",
+					"kind" : "storage",
+					"matchColumn" : "fullname",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "nif",
+					"kind" : "storage",
+					"matchColumn" : "lastName",
+					"scope" : "public",
+					"indexed" : true,
+					"type" : "string",
+					"indexKind" : "btree"
+				},
+				{
+					"name" : "firstName",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "products",
+					"kind" : "relatedEntities",
+					"scope" : "public",
+					"type" : "Products",
+					"reversePath" : true,
+					"path" : "customer"
+				},
+				{
+					"name" : "professional",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "bool"
+				}
+			],
+			"methods" : 
+			[
+				{
+					"name" : "findUser",
+					"applyTo" : "dataClass",
+					"scope" : "public",
+					"from" : "$mainModel.Customer.methods.findUser",
+					"userDefined" : true
+				}
+			],
+			"key" : 
+			[
+				{
+					"name" : "ID"
+				}
+			]
+		},
+		{
+			"name" : "Order",
+			"className" : "Order",
+			"collectionName" : "Orders",
+			"scope" : "public",
+			"attributes" : 
+			[
+				{
+					"name" : "ID",
+					"kind" : "storage",
+					"scope" : "public",
+					"indexed" : true,
+					"unique" : true,
+					"autosequence" : true,
+					"type" : "long",
+					"indexKind" : "btree"
+				},
+				{
+					"name" : "date",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "date",
+					"simpleDate" : true
+				},
+				{
+					"name" : "total",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "number",
+					"defaultFormat" : 
+					[
 						{
-							"format": "###,###.00",
-							"presentation": "text"
+							"format" : "###,###.00",
+							"presentation" : "text"
 						}
 					]
 				},
 				{
-					"name": "net",
-					"kind": "storage",
-					"matchColumn": "subTotal",
-					"scope": "public",
-					"type": "number"
+					"name" : "net",
+					"kind" : "storage",
+					"matchColumn" : "subTotal",
+					"scope" : "public",
+					"type" : "number"
 				},
 				{
-					"name": "customer",
-					"kind": "relatedEntity",
-					"matchColumn": "customer",
-					"scope": "public",
-					"type": "Customer",
-					"path": "Customer"
+					"name" : "customer",
+					"kind" : "relatedEntity",
+					"matchColumn" : "customer",
+					"scope" : "public",
+					"type" : "Customer",
+					"path" : "Customer"
 				},
 				{
-					"name": "dateApproved",
-					"kind": "storage",
-					"scope": "public",
-					"type": "date",
-					"simpleDate": true
+					"name" : "dateApproved",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "date",
+					"simpleDate" : true
 				},
 				{
-					"name": "approved",
-					"kind": "storage",
-					"scope": "public",
-					"type": "bool"
+					"name" : "approved",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "bool"
 				},
 				{
-					"name": "numDays",
-					"kind": "storage",
-					"matchColumn": "weeks",
-					"scope": "public",
-					"type": "long"
+					"name" : "numDays",
+					"kind" : "storage",
+					"matchColumn" : "weeks",
+					"scope" : "public",
+					"type" : "long"
 				},
 				{
-					"name": "method",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
+					"name" : "method",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
 				},
 				{
-					"name": "publisher",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
+					"name" : "publisher",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
 				},
 				{
-					"name": "addNum",
-					"kind": "storage",
-					"scope": "public",
-					"type": "long"
-				}
-			]
-		},
-		{
-			"name": "PriceList",
-			"className": "PriceList",
-			"collectionName": "PriceListCollection",
-			"matchTable": "Price",
-			"scope": "public",
-			"attributes": [
-				{
-					"name": "ID",
-					"kind": "storage",
-					"scope": "public",
-					"unique": true,
-					"autosequence": true,
-					"type": "long",
-					"indexKind": "btree",
-					"primKey": true
-				},
-				{
-					"name": "price",
-					"kind": "storage",
-					"scope": "public",
-					"type": "number"
-				},
-				{
-					"name": "weeks",
-					"kind": "storage",
-					"matchColumn": "week",
-					"scope": "public",
-					"type": "long"
-				},
-				{
-					"name": "discount",
-					"kind": "storage",
-					"scope": "public",
-					"type": "number"
-				},
-				{
-					"name": "professional",
-					"kind": "storage",
-					"scope": "public",
-					"type": "bool"
-				},
-				{
-					"name": "discountLesserThan",
-					"kind": "storage",
-					"scope": "public",
-					"type": "number"
-				},
-				{
-					"name": "category",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
-				}
-			]
-		},
-		{
-			"name": "Product",
-			"className": "Product",
-			"collectionName": "Products",
-			"scope": "public",
-			"attributes": [
-				{
-					"name": "ID",
-					"kind": "storage",
-					"scope": "public",
-					"unique": true,
-					"autosequence": true,
-					"type": "long",
-					"indexKind": "btree",
-					"primKey": true
-				},
-				{
-					"name": "title",
-					"kind": "storage",
-					"scope": "public",
-					"not_null": true,
-					"type": "string"
-				},
-				{
-					"name": "date",
-					"kind": "storage",
-					"matchColumn": "products",
-					"scope": "public",
-					"type": "date",
-					"simpleDate": true
-				},
-				{
-					"name": "price",
-					"kind": "storage",
-					"scope": "public",
-					"type": "number"
-				},
-				{
-					"name": "category",
-					"kind": "relatedEntity",
-					"matchColumn": "category",
-					"scope": "public",
-					"type": "Category",
-					"path": "Category"
-				},
-				{
-					"name": "negociable",
-					"kind": "storage",
-					"scope": "public",
-					"type": "bool"
-				},
-				{
-					"name": "condition",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
-				},
-				{
-					"name": "image1",
-					"kind": "storage",
-					"scope": "public",
-					"type": "image"
-				},
-				{
-					"name": "image2",
-					"kind": "storage",
-					"scope": "public",
-					"type": "image"
-				},
-				{
-					"name": "image3",
-					"kind": "storage",
-					"scope": "public",
-					"type": "image"
-				},
-				{
-					"name": "image4",
-					"kind": "storage",
-					"scope": "public",
-					"type": "image"
-				},
-				{
-					"name": "startDate",
-					"kind": "storage",
-					"scope": "public",
-					"type": "date",
-					"simpleDate": true
-				},
-				{
-					"name": "endDate",
-					"kind": "storage",
-					"matchColumn": "ensDate",
-					"scope": "public",
-					"type": "date",
-					"simpleDate": true
-				},
-				{
-					"name": "sale",
-					"kind": "storage",
-					"scope": "public",
-					"type": "bool"
-				},
-				{
-					"name": "tradeOff",
-					"kind": "storage",
-					"scope": "public",
-					"type": "bool"
-				},
-				{
-					"name": "customer",
-					"kind": "relatedEntity",
-					"scope": "public",
-					"type": "Customer",
-					"path": "Customer"
-				},
-				{
-					"name": "remarks",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
-				},
-				{
-					"name": "classified",
-					"kind": "storage",
-					"scope": "public",
-					"type": "long",
-					"defaultValue": "0"
-				},
-				{
-					"name": "brand",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
-				},
-				{
-					"name": "model",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
-				},
-				{
-					"name": "year",
-					"kind": "storage",
-					"scope": "public",
-					"type": "word"
-				},
-				{
-					"name": "fuelType",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
-				},
-				{
-					"name": "numDays",
-					"kind": "storage",
-					"matchColumn": "weeks",
-					"scope": "public",
-					"type": "long"
-				},
-				{
-					"name": "approved",
-					"kind": "storage",
-					"matchColumn": "aproved",
-					"scope": "public",
-					"type": "bool"
-				},
-				{
-					"name": "offSale",
-					"kind": "storage",
-					"scope": "public",
-					"type": "bool"
-				},
-				{
-					"name": "professional",
-					"kind": "storage",
-					"scope": "public",
-					"type": "bool"
-				},
-				{
-					"name": "categoria",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string",
-					"indexKind": "auto"
-				},
-				{
-					"name": "publisher",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
-				},
-				{
-					"name": "km",
-					"scope": "public",
-					"type": "string",
-					"kind": "storage"
-				}
-			]
-		},
-		{
-			"name": "Settings",
-			"className": "Settings",
-			"collectionName": "Col",
-			"matchTable": "Ad",
-			"scope": "public",
-			"attributes": [
-				{
-					"name": "ID",
-					"kind": "storage",
-					"scope": "public",
-					"unique": true,
-					"autosequence": true,
-					"type": "long",
-					"indexKind": "btree",
-					"primKey": true
+					"name" : "addNum",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "long"
 				}
 			],
-			"methods": [
+			"key" : 
+			[
 				{
-					"name": "addUser",
-					"applyTo": "dataClass",
-					"scope": "public",
-					"from": "$mainModel.Settings.methods.addUser",
-					"userDefined": true
+					"name" : "ID"
+				}
+			]
+		},
+		{
+			"name" : "PriceList",
+			"className" : "PriceList",
+			"collectionName" : "PriceListCollection",
+			"matchTable" : "Price",
+			"scope" : "public",
+			"attributes" : 
+			[
+				{
+					"name" : "ID",
+					"kind" : "storage",
+					"scope" : "public",
+					"indexed" : true,
+					"unique" : true,
+					"autosequence" : true,
+					"type" : "long",
+					"indexKind" : "btree"
 				},
 				{
-					"name": "getCurrentUser",
-					"applyTo": "dataClass",
-					"scope": "publicOnServer",
-					"from": "$mainModel.Settings.methods.getCurrentUser",
-					"userDefined": true
+					"name" : "price",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "number"
+				},
+				{
+					"name" : "weeks",
+					"kind" : "storage",
+					"matchColumn" : "week",
+					"scope" : "public",
+					"type" : "long"
+				},
+				{
+					"name" : "discount",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "number"
+				},
+				{
+					"name" : "professional",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "bool"
+				},
+				{
+					"name" : "discountLesserThan",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "number"
+				},
+				{
+					"name" : "category",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				}
+			],
+			"key" : 
+			[
+				{
+					"name" : "ID"
+				}
+			]
+		},
+		{
+			"name" : "Product",
+			"className" : "Product",
+			"collectionName" : "Products",
+			"scope" : "public",
+			"attributes" : 
+			[
+				{
+					"name" : "ID",
+					"kind" : "storage",
+					"scope" : "public",
+					"indexed" : true,
+					"unique" : true,
+					"autosequence" : true,
+					"type" : "long",
+					"indexKind" : "btree"
+				},
+				{
+					"name" : "title",
+					"kind" : "storage",
+					"scope" : "public",
+					"not_null" : true,
+					"type" : "string"
+				},
+				{
+					"name" : "date",
+					"kind" : "storage",
+					"matchColumn" : "products",
+					"scope" : "public",
+					"type" : "date",
+					"simpleDate" : true
+				},
+				{
+					"name" : "price",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "number"
+				},
+				{
+					"name" : "category",
+					"kind" : "relatedEntity",
+					"matchColumn" : "category",
+					"scope" : "public",
+					"type" : "Category",
+					"path" : "Category"
+				},
+				{
+					"name" : "negociable",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "bool"
+				},
+				{
+					"name" : "condition",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "image1",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "image"
+				},
+				{
+					"name" : "image2",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "image"
+				},
+				{
+					"name" : "image3",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "image"
+				},
+				{
+					"name" : "image4",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "image"
+				},
+				{
+					"name" : "startDate",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "date",
+					"simpleDate" : true
+				},
+				{
+					"name" : "endDate",
+					"kind" : "storage",
+					"matchColumn" : "ensDate",
+					"scope" : "public",
+					"type" : "date",
+					"simpleDate" : true
+				},
+				{
+					"name" : "sale",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "bool"
+				},
+				{
+					"name" : "tradeOff",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "bool"
+				},
+				{
+					"name" : "customer",
+					"kind" : "relatedEntity",
+					"scope" : "public",
+					"type" : "Customer",
+					"path" : "Customer"
+				},
+				{
+					"name" : "remarks",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "classified",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "long",
+					"defaultValue" : "0"
+				},
+				{
+					"name" : "brand",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "model",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "year",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "word"
+				},
+				{
+					"name" : "fuelType",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "numDays",
+					"kind" : "storage",
+					"matchColumn" : "weeks",
+					"scope" : "public",
+					"type" : "long"
+				},
+				{
+					"name" : "approved",
+					"kind" : "storage",
+					"matchColumn" : "aproved",
+					"scope" : "public",
+					"type" : "bool"
+				},
+				{
+					"name" : "offSale",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "bool"
+				},
+				{
+					"name" : "professional",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "bool"
+				},
+				{
+					"name" : "categoria",
+					"kind" : "storage",
+					"scope" : "public",
+					"indexed" : true,
+					"type" : "string",
+					"indexKind" : "auto"
+				},
+				{
+					"name" : "publisher",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "km",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				}
+			],
+			"methods" : 
+			[
+				{
+					"name" : "deleteOffSale",
+					"applyTo" : "entityCollection",
+					"scope" : "publicOnServer",
+					"from" : "$mainModel.Product.collectionMethods.deleteOffSale",
+					"userDefined" : true
+				}
+			],
+			"key" : 
+			[
+				{
+					"name" : "ID"
+				}
+			]
+		},
+		{
+			"name" : "Settings",
+			"className" : "Settings",
+			"collectionName" : "Col",
+			"matchTable" : "Ad",
+			"scope" : "public",
+			"attributes" : 
+			[
+				{
+					"name" : "ID",
+					"kind" : "storage",
+					"scope" : "public",
+					"indexed" : true,
+					"unique" : true,
+					"autosequence" : true,
+					"type" : "long",
+					"indexKind" : "btree"
+				}
+			],
+			"methods" : 
+			[
+				{
+					"name" : "addUser",
+					"applyTo" : "dataClass",
+					"scope" : "public",
+					"from" : "$mainModel.Settings.methods.addUser",
+					"userDefined" : true
+				},
+				{
+					"name" : "getCurrentUser",
+					"applyTo" : "dataClass",
+					"scope" : "publicOnServer",
+					"from" : "$mainModel.Settings.methods.getCurrentUser",
+					"userDefined" : true
+				}
+			],
+			"key" : 
+			[
+				{
+					"name" : "ID"
 				}
 			]
 		}
-	],
-	"type": []
+	]
 }

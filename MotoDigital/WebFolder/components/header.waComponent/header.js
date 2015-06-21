@@ -29,9 +29,9 @@ function constructor (id) {
 	{// @endlock
 		var username = WAF.directory.currentUser();
 		if(username == null){
-			window.location = "/profile.waPage/indext.html";
+			window.location = "/profile.waPage/index.html";
 		}else {
-			alert("Não se pode registar, porque já está autenticado através de login");
+			alert("Já está autenticado através de login");
 		}
 	};// @lock
 
@@ -77,6 +77,12 @@ function constructor (id) {
 
 	imageButton5.click = function imageButton5_click (event)// @startlock
 	{// @endlock
+		//window.location = "/index.waPage/index.html";
+		$$('centeredFrame').setValue("/index.waPage/index.html");
+	};// @lock
+
+	login1.login = function login1_login (event)// @startlock
+	{// @endlock
 		window.location = "/index.waPage/index.html";
 	};// @lock
 
@@ -88,19 +94,15 @@ function constructor (id) {
 	imageButton6.click = function imageButton6_click (event)// @startlock
 	{// @endlock
 		var username = WAF.directory.currentUser();
-		if(username != null){
-			if(username.userName == "admin"){
-				window.location = "/controlPanel.waPage/index.html";
-			}else{
-				alert("Esta área é reservada aos Administradores!");
-		}
+		if(username == "admin"){
+			window.location = "/controlPanel.waPage/index.html";
 		}else{
-			alert("Faça Login como Administrador!");
+			alert("Esta área é reservada aos Administradores!");
 		}
-		
 	};// @lock
 
 	// @region eventManager// @startlock
+	WAF.addListener(this.id + "_login1", "login", login1.login, "WAF");
 	WAF.addListener(this.id + "_button2", "click", button2.click, "WAF");
 	WAF.addListener(this.id + "_button1", "click", button1.click, "WAF");
 	WAF.addListener(this.id + "_imageButton4", "click", imageButton4.click, "WAF");

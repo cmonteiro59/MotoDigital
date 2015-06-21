@@ -3,320 +3,343 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
-#autoForm5 {
+#label4 {
+	width: 31px;
+	height: 15px;
+	top: 214px;
+	left: 740px;
+	position: absolute;
 	z-index: 5;
-	width: 369px;
-	height: 372px;
-	top: 30px;
-	left: 410px;
-	position: absolute;
 }
 
-#htmlTag2 {
-	z-index: 0;
-	width: 0px;
-	height: 0px;
-	top: auto;
-	left: auto;
-	position: absolute;
-}
-
-#autoForm4 {
-	z-index: 2;
-	width: 485px;
-	height: 440px;
-	top: 19px;
-	left: 465px;
-	position: absolute;
-}
-
-#autoForm2 {
-	z-index: 3;
-	width: 575px;
-	height: 461px;
-	top: 9px;
-	left: 437px;
-	position: absolute;
-}
-
-#autoForm3 .waf-widget-body {
-	font-weight: normal;
-}
-
-#label1 {
-	z-index: 5;
+#label3 {
 	width: 54px;
 	height: 15px;
 	top: 240px;
 	left: 506px;
 	position: absolute;
+	z-index: 4;
 }
 
-#combobox1 {
+#calendar2 {
+	width: 180px;
+	height: 150px;
+	top: 146px;
+	left: 776px;
+	position: absolute;
 	z-index: 5;
-	width: 164px;
-	height: 24px;
-	top: 236px;
-	left: 565px;
-	position: absolute;
 }
 
-#component3 {
-	z-index: 9;
-	width: 1242px;
-	height: 200px;
-	top: 663px;
-	left: 79px;
+#button1 {
+	width: 198px;
+	height: 32px;
+	top: 434px;
+	left: 50px;
 	position: absolute;
+	font-size: 12px;
+	z-index: 4;
 }
 
-#autoForm3 {
-	z-index: 2;
-	width: 499px;
-	height: 451px;
-	top: 11px;
-	left: 376px;
+#autoForm10 {
+	width: 567px;
+	height: 447px;
+	top: 13px;
+	left: 383px;
 	position: absolute;
+	z-index: 3;
 }
 
-#dataGrid5 {
-	z-index: 1;
+#dataGrid10 {
 	width: 363px;
-	height: 453px;
+	height: 414px;
 	top: 10px;
 	left: 10px;
 	position: absolute;
+	z-index: 2;
 }
 
-#dataGrid4 {
-	z-index: 1;
+#container13 {
+	top: 23px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	position: absolute;
+	z-index: 6;
+}
+
+#autoForm9 {
+	width: 485px;
+	height: 440px;
+	top: 19px;
+	left: 465px;
+	position: absolute;
+	z-index: 2;
+}
+
+#dataGrid9 {
 	width: 440px;
 	height: 447px;
 	top: 21px;
 	left: 10px;
 	position: absolute;
+	z-index: 1;
 }
 
-#dataGrid1 {
-	z-index: 3;
+#container12 {
+	top: 23px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	position: absolute;
+	z-index: 5;
+}
+
+#combobox2 {
+	width: 164px;
+	height: 24px;
+	top: 236px;
+	left: 565px;
+	position: absolute;
+	z-index: 4;
+}
+
+#dataGrid8 {
 	width: 443px;
 	height: 398px;
 	top: 22px;
 	left: 9px;
 	position: absolute;
+	z-index: 3;
 }
 
-#autoForm1 {
-	z-index: 2;
+#autoForm8 {
 	width: 329px;
 	height: 389px;
 	top: 30px;
 	left: 504px;
 	position: absolute;
+	z-index: 2;
 }
 
-#container2 {
-	z-index: 1;
+#container11 {
 	width: 983px;
 	height: 491px;
 	top: 11px;
 	left: 10px;
 	position: absolute;
+	z-index: 1;
 }
 
-#container5 {
-	z-index: 12;
+#container10 {
 	top: 23px;
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
 	position: absolute;
+	z-index: 4;
 }
 
-#richText8 {
-	z-index: 1;
-	width: 66px;
-	height: 23px;
-	top: 0px;
-	left: 0px;
+#autoForm7 {
+	width: 369px;
+	height: 372px;
+	top: 30px;
+	left: 410px;
 	position: absolute;
-}
-
-#menuItem5 {
-	z-index: 9;
-	width: 66px;
-	height: 23px;
-	top: 0px;
-	left: 0px;
-	position: absolute;
-}
-
-#container3 {
-	z-index: 11;
-	top: 23px;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
-	position: absolute;
-}
-
-#richText6 {
-	z-index: 1;
-	width: 66px;
-	height: 23px;
-	top: 0px;
-	left: 0px;
-	position: absolute;
-}
-
-#menuItem3 {
-	z-index: 8;
-	width: 66px;
-	height: 23px;
-	top: 0px;
-	left: 0px;
-	position: absolute;
-}
-
-#menuItem6.waf-state-selected {
-	letter-spacing: normal;
-}
-
-#container6 {
-	z-index: 9;
-	top: 23px;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
-	position: absolute;
-}
-
-#richText7 {
-	z-index: 1;
-	width: 64px;
-	height: 22px;
-	top: 0px;
-	left: 0px;
-	position: absolute;
-}
-
-#menuItem6 {
-	z-index: 6;
-	width: 66px;
-	height: 23px;
-	top: 0px;
-	left: 0px;
-	position: absolute;
-}
-
-#dataGrid3 {
 	z-index: 2;
-	width: 419px;
-	height: 464px;
-	top: 8px;
-	left: 12px;
-	position: absolute;
 }
 
-#dataGrid2 {
-	z-index: 3;
+#dataGrid7 {
 	width: 364px;
 	height: 384px;
 	top: 20px;
 	left: 26px;
 	position: absolute;
+	z-index: 1;
 }
 
-#container4 {
-	z-index: 7;
+#container9 {
 	top: 23px;
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
 	position: absolute;
+	z-index: 3;
 }
 
-#richText5 {
-	z-index: 1;
-	width: 64px;
-	height: 22px;
-	top: 0px;
-	left: 0px;
+#autoForm3 {
+	width: 575px;
+	height: 461px;
+	top: 9px;
+	left: 437px;
 	position: absolute;
+	z-index: 2;
 }
 
-#menuItem4 {
-	z-index: 4;
+#dataGrid6 {
+	width: 419px;
+	height: 464px;
+	top: 8px;
+	left: 12px;
+	position: absolute;
+	z-index: 1;
+}
+
+#container8 {
+	top: 23px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	position: absolute;
+	z-index: 2;
+}
+
+#richText10 {
 	width: 66px;
 	height: 23px;
 	top: 0px;
 	left: 0px;
 	position: absolute;
+	z-index: 1;
+}
+
+#menuItem10 {
+	width: 66px;
+	height: 23px;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	z-index: 5;
+}
+
+#richText9 {
+	width: 66px;
+	height: 23px;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	z-index: 1;
+}
+
+#menuItem9 {
+	width: 66px;
+	height: 23px;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	z-index: 4;
+}
+
+#richText4 {
+	width: 64px;
+	height: 22px;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	z-index: 1;
+}
+
+#menuItem8 {
+	width: 66px;
+	height: 23px;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	z-index: 3;
+}
+
+#menuItem8.waf-state-selected {
+	letter-spacing: normal;
+}
+
+#richText3 {
+	width: 64px;
+	height: 22px;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	z-index: 1;
+}
+
+#menuItem7 {
+	width: 66px;
+	height: 23px;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	z-index: 2;
+}
+
+#richText2 {
+	width: 64px;
+	height: 22px;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	z-index: 1;
+}
+
+#menuItem2 {
+	width: 66px;
+	height: 23px;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	z-index: 1;
+}
+
+#menuBar2 {
+	width: 350px;
+	height: 23px;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	z-index: 1;
+}
+
+#menuBar2 > .waf-menuItem:not(.waf-menuItem-last) {
+	margin-right: 5px;
+}
+
+#menuBar2 > .waf-menuItem {
+	margin-bottom: 0px;
+}
+
+#tabView2 {
+	width: 974px;
+	height: 507px;
+	top: 21px;
+	left: 13px;
+	position: absolute;
+	z-index: 1;
+}
+
+#htmlTag2 {
+	position: absolute;
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
 }
 
 #waf-body {
 	background-color: rgb(255, 255, 255);
 }
 
-#container1 {
-	z-index: 4;
-	top: 23px;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
+#controlPanelContainer {
+	z-index: 10;
+	width: 1000px;
+	height: 556px;
+	top: 10px;
+	left: 10px;
 	position: absolute;
-}
-
-#richText1 {
-	z-index: 1;
-	width: 64px;
-	height: 22px;
-	top: 0px;
-	left: 0px;
-	position: absolute;
-}
-
-#menuItem1 {
-	z-index: 1;
-	width: 66px;
-	height: 23px;
-	top: 0px;
-	left: 0px;
-	position: absolute;
-}
-
-#menuBar1 > .waf-menuItem {
-	margin-bottom: 0px;
-}
-
-#menuBar1 > .waf-menuItem:not(.waf-menuItem-last) {
-	margin-right: 5px;
-}
-
-#menuBar1 {
-	z-index: 3;
-	width: 350px;
-	height: 23px;
-	top: 0px;
-	left: 0px;
-	position: absolute;
-}
-
-#tabView1 {
-	z-index: 2;
-	width: 974px;
-	height: 507px;
-	top: 137px;
-	left: 59px;
-	position: absolute;
-}
-
-#component1 {
-	z-index: 1;
-	width: 1332px;
-	height: 129px;
-	top: 0px;
-	left: 1px;
-	position: absolute;
+	border-top-style: none;
+	border-top-width: 0px;
+	border-left-style: none;
+	border-left-width: 0px;
+	border-right-style: none;
+	border-right-width: 0px;
+	border-bottom-style: none;
+	border-bottom-width: 0px;
 }
 

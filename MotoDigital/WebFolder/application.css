@@ -9,7 +9,7 @@ body {
 #centeredContainer {
    margin: 0px auto;
     min-width: 900px;
-    max-width: 900px;
+    max-width: 1500px;
     width: 100%;
     right: 0px;
 }
@@ -27,11 +27,47 @@ body {
 #centeredFrame {
    margin: 0px auto;
     min-width: 900px;
-    max-width: 900px;
+    max-width: 1400px;
     width: 100%;
     right: 0px;
 }
 
+#priceListContainer {
+   margin: 0px auto;
+    min-width: 900px;
+    max-width: 1000px;
+    width: 100%;
+    right: 0px;
+}
 
+#productContainer {
+   margin: 0px auto;
+    min-width: 840px;
+    max-width: 840px;
+    width: 100%;
+    right: 0px;
+}
 
+#profileContainer {
+   margin: 0px auto;
+    min-width: 680px;
+    max-width: 700px;
+    width: 100%;
+    right: 0px;
+}
 
+#myProductsContainer {
+   margin: 0px auto;
+    min-width: 680px;
+    max-width: 1000px;
+    width: 100%;
+    right: 0px;
+}
+
+#controlPanelContainer {
+   margin: 0px auto;
+    min-width: 680px;
+    max-width: 1000px;
+    width: 100%;
+    right: 0px;
+}

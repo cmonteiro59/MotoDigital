@@ -2,44 +2,18 @@
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
-	var userNameInput = {};	// @textField
+	var imageButton4 = {};	// @buttonImage
+	var textField6 = {};	// @textField
+	var textField4 = {};	// @textField
+	var textField1 = {};	// @textField
 	var customer1Event = {};	// @dataSource
-	var imageButton1 = {};	// @buttonImage
-	var passwordInput = {};	// @textField
-	var confirmPassword = {};	// @textField
 // @endregion// @endlock
 	var vDatasourceInit = false;
 	var okToSave = true;
 	var pro = true;
 // eventHandlers// @lock
 
-	userNameInput.change = function userNameInput_change (event)// @startlock
-	{// @endlock
-		var user = $$('userNameInput').getValue();
-		if (user == ""){
-			okToSave = false;
-		}else {
-			var exists = ds.Customer.findUser($$('userNameInput').getValue());
-			if(exists != null)
-			{
-				okToSave = false;
-				alert ("O email " + user + " já existe!!");
-				$$('userNameInput').setValue("");
-			}
-		}	
-	};// @lock
-
-	customer1Event.onCollectionChange = function customer1Event_onCollectionChange (event)// @startlock
-	{// @endlock
-		
-		if(vDatasourceInit == false){
-			sources.customer1.addNewElement();
-       	 	sources.customer1.serverRefresh(); //optional
-        	vDatasourceInit = true;
-        }
-	};// @lock
-
-	imageButton1.click = function imageButton1_click (event)// @startlock
+	imageButton4.click = function imageButton4_click (event)// @startlock
 	{// @endlock
 		
 		if($$('userNameInput').getValue() == "")
@@ -113,7 +87,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		}
 	};// @lock
 
-	passwordInput.change = function passwordInput_change (event)// @startlock
+	textField6.change = function textField6_change (event)// @startlock
 	{// @endlock
 		var pass1 = $$('passwordInput').getValue();
 		var pass2 = $$('confirmPassword').getValue();
@@ -124,7 +98,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			okToSave = false;
 	};// @lock
 
-	confirmPassword.change = function confirmPassword_change (event)// @startlock
+	textField4.change = function textField4_change (event)// @startlock
 	{// @endlock
 		// Add your code here
 		var pass1 = $$('passwordInput').getValue();
@@ -139,11 +113,37 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			okToSave = false;
 	};// @lock
 
+	textField1.change = function textField1_change (event)// @startlock
+	{// @endlock
+		var user = $$('userNameInput').getValue();
+		if (user == ""){
+			okToSave = false;
+		}else {
+			var exists = ds.Customer.findUser($$('userNameInput').getValue());
+			if(exists != null)
+			{
+				okToSave = false;
+				alert ("O email " + user + " já existe!!");
+				$$('userNameInput').setValue("");
+			}
+		}	
+	};// @lock
+
+	customer1Event.onCollectionChange = function customer1Event_onCollectionChange (event)// @startlock
+	{// @endlock
+		
+		if(vDatasourceInit == false){
+			sources.customer1.addNewElement();
+       	 	sources.customer1.serverRefresh(); //optional
+        	vDatasourceInit = true;
+        }
+	};// @lock
+
 // @region eventManager// @startlock
-	WAF.addListener("userNameInput", "change", userNameInput.change, "WAF");
+	WAF.addListener("imageButton4", "click", imageButton4.click, "WAF");
+	WAF.addListener("textField6", "change", textField6.change, "WAF");
+	WAF.addListener("textField4", "change", textField4.change, "WAF");
+	WAF.addListener("textField1", "change", textField1.change, "WAF");
 	WAF.addListener("customer1", "onCollectionChange", customer1Event.onCollectionChange, "WAF");
-	WAF.addListener("imageButton1", "click", imageButton1.click, "WAF");
-	WAF.addListener("passwordInput", "change", passwordInput.change, "WAF");
-	WAF.addListener("confirmPassword", "change", confirmPassword.change, "WAF");
 // @endregion
 };// @endlock

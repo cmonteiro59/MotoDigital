@@ -3,23 +3,68 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
+#htmlTag16 {
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
+	position: absolute;
+}
+
+#htmlTag14 {
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
+	position: absolute;
+}
+
+#htmlTag13 {
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
+	position: absolute;
+}
+
+#htmlTag11 {
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
+	position: absolute;
+}
+
+#htmlTag8 {
+	z-index: 0;
+	width: 0px;
+	height: 0px;
+	top: auto;
+	left: auto;
+	position: absolute;
+}
+
 #textField3 {
+	z-index: 30;
 	width: 130px;
 	height: 22px;
 	top: 210px;
 	left: 92px;
 	position: absolute;
-	z-index: 30;
 }
 
 #label22 {
+	z-index: 30;
 	width: 75px;
 	height: 15px;
 	top: 213px;
 	left: 12px;
 	position: absolute;
 	min-width: 75px;
-	z-index: 30;
 }
 
 #label10 {
@@ -78,33 +123,48 @@
 	z-index: 11;
 	width: 228px;
 	height: 20px;
-	top: 120px;
-	left: 817px;
+	top: 15px;
+	left: 605px;
 	position: absolute;
 	font-weight: bold;
 	color: rgb(127, 0, 0);
+	-webkit-box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px inset;
+	 -moz-box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px inset;
+	 box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px inset;
+	box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px inset;
+	font-size: 12px;
 }
 
 #richText7 {
 	z-index: 10;
 	width: 356px;
 	height: 20px;
-	top: 120px;
-	left: 463px;
+	top: 15px;
+	left: 251px;
 	position: absolute;
 	font-weight: bold;
 	color: rgb(127, 0, 0);
+	-webkit-box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px inset;
+	 -moz-box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px inset;
+	 box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px inset;
+	box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px inset;
+	font-size: 12px;
 }
 
 #richText5 {
 	z-index: 9;
 	width: 249px;
 	height: 20px;
-	top: 120px;
-	left: 229px;
+	top: 15px;
+	left: 17px;
 	position: absolute;
 	font-weight: bold;
 	color: rgb(127, 0, 0);
+	-webkit-box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px inset;
+	 -moz-box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px inset;
+	 box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px inset;
+	box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px inset;
+	font-size: 12px;
 }
 
 #htmlTag7 {
@@ -117,15 +177,6 @@
 }
 
 #htmlTag6 {
-	position: absolute;
-	z-index: 0;
-	width: 0px;
-	height: 0px;
-	top: auto;
-	left: auto;
-}
-
-#htmlTag5 {
 	position: absolute;
 	z-index: 0;
 	width: 0px;
@@ -161,15 +212,6 @@
 	left: auto;
 }
 
-#htmlTag15 {
-	position: absolute;
-	z-index: 0;
-	width: 0px;
-	height: 0px;
-	top: auto;
-	left: auto;
-}
-
 #htmlTag10 {
 	position: absolute;
 	z-index: 0;
@@ -179,40 +221,13 @@
 	left: auto;
 }
 
-#htmlTag16 {
-	position: absolute;
-	z-index: 0;
-	width: 0px;
-	height: 0px;
-	top: auto;
-	left: auto;
-}
-
 #label25 {
-	z-index: 8;
+	z-index: 7;
 	width: 54px;
 	height: 15px;
 	top: 185px;
 	left: 18px;
 	position: absolute;
-}
-
-#htmlTag14 {
-	position: absolute;
-	z-index: 0;
-	width: 0px;
-	height: 0px;
-	top: auto;
-	left: auto;
-}
-
-#htmlTag12 {
-	position: absolute;
-	z-index: 0;
-	width: 0px;
-	height: 0px;
-	top: auto;
-	left: auto;
 }
 
 #label23 {
@@ -251,9 +266,13 @@
 	z-index: 6;
 	width: 180px;
 	height: 150px;
-	top: 265px;
-	left: 975px;
+	top: 150px;
+	left: 753px;
 	position: absolute;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.199219) 2px 2px 6px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px inset;
+	 -moz-box-shadow: rgba(0, 0, 0, 0.199219) 2px 2px 6px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px inset;
+	 box-shadow: rgba(0, 0, 0, 0.199219) 2px 2px 6px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px inset;
+	box-shadow: rgba(0, 0, 0, 0.199219) 2px 2px 6px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px inset;
 }
 
 #richText10 {
@@ -343,7 +362,7 @@
 }
 
 #richText4 {
-	z-index: 3;
+	z-index: 2;
 	width: 265px;
 	height: 13px;
 	top: 34px;
@@ -389,8 +408,8 @@
 	z-index: 4;
 	width: 741px;
 	height: 570px;
-	top: 146px;
-	left: 229px;
+	top: 31px;
+	left: 7px;
 	position: absolute;
 	-webkit-box-shadow: rgba(0, 0, 0, 0.199219) 0px 0px 0px 0px;
 	 -moz-box-shadow: rgba(0, 0, 0, 0.199219) 0px 0px 0px 0px;
@@ -681,7 +700,7 @@
 }
 
 #container17 {
-	z-index: 2;
+	z-index: 3;
 	width: 660px;
 	height: 504px;
 	top: 45px;
@@ -738,8 +757,8 @@
 	z-index: 5;
 	width: 714px;
 	height: 549px;
-	top: 152px;
-	left: 322px;
+	top: 37px;
+	left: 100px;
 	position: absolute;
 	-webkit-box-shadow: rgba(0, 0, 0, 0.199219) 0px 0px 0px 0px;
 	 -moz-box-shadow: rgba(0, 0, 0, 0.199219) 0px 0px 0px 0px;
@@ -1076,24 +1095,6 @@
 	position: absolute;
 }
 
-#component4 {
-	z-index: 2;
-	width: 1300px;
-	height: 140px;
-	bottom: 1px;
-	left: 3px;
-	position: absolute;
-}
-
-#component3 {
-	z-index: 1;
-	width: 1300px;
-	height: 113px;
-	top: 1px;
-	left: 1px;
-	position: absolute;
-}
-
 #tiTitle {
 	z-index: 10;
 	width: 388px;
@@ -1117,10 +1118,10 @@
 
 #newProduct {
 	z-index: 3;
-	width: 598px;
+	width: 574px;
 	height: 534px;
-	top: 165px;
-	left: 308px;
+	top: 50px;
+	left: 132px;
 	position: absolute;
 	border-top-left-radius: 10px;
 	-moz-border-radius-topleft: 10px;
@@ -1150,7 +1151,7 @@
 }
 
 #container10 {
-	z-index: 6;
+	z-index: 8;
 	width: 714px;
 	height: 519px;
 	top: 36px;
@@ -1468,9 +1469,13 @@
 	z-index: 8;
 	width: 215px;
 	height: 198px;
-	top: 432px;
-	left: 973px;
+	top: 317px;
+	left: 751px;
 	position: absolute;
+	-webkit-box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px inset;
+	 -moz-box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px inset;
+	 box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px inset;
+	box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px inset;
 }
 
 #tbEmail {
@@ -1519,7 +1524,7 @@
 }
 
 #weeksComboBox {
-	z-index: 8;
+	z-index: 7;
 	width: 57px;
 	height: 24px;
 	top: 181px;
@@ -1555,14 +1560,18 @@
 	background-repeat: no-repeat;
 }
 
-#mainContainer {
+#productContainer {
 	z-index: 2;
-	width: 1465px;
-	height: 857px;
-	top: -1px;
-	left: -1px;
+	width: 840px;
+	height: 628px;
+	top: 1px;
+	left: 1px;
 	position: absolute;
 	background-color: transparent;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.199219) 0px 0px 0px 0px;
+	 -moz-box-shadow: rgba(0, 0, 0, 0.199219) 0px 0px 0px 0px;
+	 box-shadow: rgba(0, 0, 0, 0.199219) 0px 0px 0px 0px;
+	box-shadow: rgba(0, 0, 0, 0.199219) 0px 0px 0px 0px;
 	border-top-style: none;
 	border-top-width: 0px;
 	border-left-style: none;
@@ -1571,9 +1580,5 @@
 	border-right-width: 0px;
 	border-bottom-style: none;
 	border-bottom-width: 0px;
-	-webkit-box-shadow: rgba(0, 0, 0, 0.199219) 0px 0px 0px 0px;
-	 -moz-box-shadow: rgba(0, 0, 0, 0.199219) 0px 0px 0px 0px;
-	 box-shadow: rgba(0, 0, 0, 0.199219) 0px 0px 0px 0px;
-	box-shadow: rgba(0, 0, 0, 0.199219) 0px 0px 0px 0px;
 }
 

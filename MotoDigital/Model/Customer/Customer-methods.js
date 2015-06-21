@@ -5,3 +5,5 @@ model.Customer.methods.findUser = function(userEmail) {
 	return found;
 };
 model.Customer.methods.findUser.scope = 'public';
+
+
