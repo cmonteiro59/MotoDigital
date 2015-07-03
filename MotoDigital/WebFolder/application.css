@@ -55,7 +55,13 @@ body {
     width: 100%;
     right: 0px;
 }
-
+#myProfileContainer {
+   margin: 0px auto;
+    min-width: 680px;
+    max-width: 700px;
+    width: 100%;
+    right: 0px;
+}
 #myProductsContainer {
    margin: 0px auto;
     min-width: 680px;

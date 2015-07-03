@@ -97,7 +97,7 @@
 		{
 			"scriptMode" : "manual",
 			"workspaceLeft" : 0,
-			"workspaceTop" : 200,
+			"workspaceTop" : 400,
 			"lastScriptLocation" : 
 			{
 				"Settings" : 
@@ -638,6 +638,18 @@
 					"kind" : "storage",
 					"scope" : "public",
 					"type" : "string"
+				},
+				{
+					"name" : "website",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "zone",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
 				}
 			],
 			"methods" : 
@@ -688,7 +700,7 @@
 				{
 					"name" : "getCurrentUser",
 					"applyTo" : "dataClass",
-					"scope" : "publicOnServer",
+					"scope" : "public",
 					"from" : "$mainModel.Settings.methods.getCurrentUser",
 					"userDefined" : true
 				}

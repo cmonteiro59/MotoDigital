@@ -2,16 +2,22 @@
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
+	var imageButton2 = {};	// @buttonImage
 	var imageButton4 = {};	// @buttonImage
-	var textField6 = {};	// @textField
-	var textField4 = {};	// @textField
-	var textField1 = {};	// @textField
+	var passwordInput = {};	// @textField
+	var confirmPassword = {};	// @textField
+	var userNameInput = {};	// @textField
 	var customer1Event = {};	// @dataSource
 // @endregion// @endlock
 	var vDatasourceInit = false;
 	var okToSave = true;
 	var pro = true;
 // eventHandlers// @lock
+
+	imageButton2.click = function imageButton2_click (event)// @startlock
+	{// @endlock
+		window.location = "/mainPage.waPage/index.html";
+	};// @lock
 
 	imageButton4.click = function imageButton4_click (event)// @startlock
 	{// @endlock
@@ -28,7 +34,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		var n = str.length;
 		if(n != 9)
 		{
-			alert("Número de contribuinte inváildo")
+			alert("Número de contribuinte tem de ter 9 dígitos")
 			okToSave = false;
 		}
 		if($$('phone').getValue() == "")
@@ -50,7 +56,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			sources.customer1.save(
 			{
 	   			onSuccess: function(event) {
-					alert("Utilizador criado com sucesso. Faça Login com as suas credenciais!");
 					// send an email
 					var xhr=new XMLHttpRequest(); 
 				    //Create an empty FormData object
@@ -62,8 +67,9 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 				    
 				    xhr.open('POST','/sendMail',true); //call the sendMail handler
 				    xhr.send(formdata);
+					alert("Utilizador criado com sucesso. Faça Login com as suas credenciais!");
 	   				ds.Settings.addUser($$('userNameInput').getValue(), $$('passwordInput').getValue(), $$('fullNameInput').getValue());
-					
+					window.location = "/mainPage.waPage/index.html";
 	   			},
 	    		onError: function(error) {
 	            	alert("Ocurreu um erro ao gravar o registo. Contacte o departamento de suporte!");
@@ -87,7 +93,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		}
 	};// @lock
 
-	textField6.change = function textField6_change (event)// @startlock
+	passwordInput.change = function passwordInput_change (event)// @startlock
 	{// @endlock
 		var pass1 = $$('passwordInput').getValue();
 		var pass2 = $$('confirmPassword').getValue();
@@ -98,7 +104,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			okToSave = false;
 	};// @lock
 
-	textField4.change = function textField4_change (event)// @startlock
+	confirmPassword.change = function confirmPassword_change (event)// @startlock
 	{// @endlock
 		// Add your code here
 		var pass1 = $$('passwordInput').getValue();
@@ -113,7 +119,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			okToSave = false;
 	};// @lock
 
-	textField1.change = function textField1_change (event)// @startlock
+	userNameInput.change = function userNameInput_change (event)// @startlock
 	{// @endlock
 		var user = $$('userNameInput').getValue();
 		if (user == ""){
@@ -140,10 +146,11 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	};// @lock
 
 // @region eventManager// @startlock
+	WAF.addListener("imageButton2", "click", imageButton2.click, "WAF");
 	WAF.addListener("imageButton4", "click", imageButton4.click, "WAF");
-	WAF.addListener("textField6", "change", textField6.change, "WAF");
-	WAF.addListener("textField4", "change", textField4.change, "WAF");
-	WAF.addListener("textField1", "change", textField1.change, "WAF");
+	WAF.addListener("passwordInput", "change", passwordInput.change, "WAF");
+	WAF.addListener("confirmPassword", "change", confirmPassword.change, "WAF");
+	WAF.addListener("userNameInput", "change", userNameInput.change, "WAF");
 	WAF.addListener("customer1", "onCollectionChange", customer1Event.onCollectionChange, "WAF");
 // @endregion
 };// @endlock

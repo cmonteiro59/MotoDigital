@@ -10,7 +10,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 // @endregion// @endlock
 	var vDatasourceInit = false;
 	var okToSave = true;
-	var username = WAF.directory.currentUser();
+	var username = WAF.directory.currentUser().userName;
 // eventHandlers// @lock
 
 	imageButton6.click = function imageButton6_click (event)// @startlock
@@ -35,20 +35,20 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			alert("Todos os campos são de preenchimento obrigatório");
 			//event.preventDefault();
 		}else{
-				ds.Settings.addUser($$('userNameInput').getValue(), $$('passwordInput').getValue(), $$('fullNameInput').getValue(),
-				{
-					onSuccess: function(e){
-						if(!e.result.success){
-							okToSave = false;
-						}
-					}
-				});
+//				ds.Settings.addUser($$('userNameInput').getValue(), $$('passwordInput').getValue(), $$('fullNameInput').getValue(),
+//				{
+//					onSuccess: function(e){
+//						if(!e.result.success){
+//							okToSave = false;
+//						}
+//					}
+//				});
 		}
 		if(okToSave){
 			 sources.customer.save(
 			 {
        			onSuccess: function(event) {
-            		alert("Utilizador criado com sucesso.");
+            		alert("Utilizador alterado com sucesso.");
        			 },
         		onError: function(error) {
                 	alert("Ocurreu um erro.Tente de novo!");
@@ -62,11 +62,14 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	customerEvent.onCollectionChange = function customerEvent_onCollectionChange (event)// @startlock
 	{// @endlock
-		if(vDatasourceInit == false)
+		if(vDatasourceInit==false)
 		{
-			sources.customer.query('email == :1', username); // username cannot be null because header forces authentication
-			vDatasourceInit = true;
+			if(username != null){
+				sources.customer.query('email == :1', username);
+				vDatasourceInit = true;
+			}
 		}
+		
 	};// @lock
 
 	textField13.change = function textField13_change (event)// @startlock

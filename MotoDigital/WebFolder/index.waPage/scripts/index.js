@@ -2,18 +2,23 @@
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
+	var login1 = {};	// @login
 	var priceListImageButton = {};	// @buttonImage
 	var forgotPassButton = {};	// @button
 	var registerButton = {};	// @button
 	var homeimageButton = {};	// @buttonImage
 	var accountImageButton = {};	// @buttonImage
 	var newAdImageButton = {};	// @buttonImage
-	var login1 = {};	// @login
 	var myAdsImageButton = {};	// @buttonImage
 	var adminImageButton = {};	// @buttonImage
 // @endregion// @endlock
 
 // eventHandlers// @lock
+
+	login1.logout = function login1_logout (event)// @startlock
+	{// @endlock
+		$$('centeredFrame').setValue("/mainPage.waPage/index.html");
+	};// @lock
 
 	priceListImageButton.click = function priceListImageButton_click (event)// @startlock
 	{// @endlock
@@ -49,9 +54,10 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	accountImageButton.click = function accountImageButton_click (event)// @startlock
 	{// @endlock
+		//alert("A alteração de dados da conta de utilizador está em manutenção!!! Tente de novo amanhã. Pedimos desculpa pelo incómodo.");
 		var username = WAF.directory.currentUser();
 		if(username != null){
-			$$('centeredFrame').setValue("/profile.waPage/index.html");
+			$$('centeredFrame').setValue("/myProfile.waPage/index.html");
 		}else{
 			alert("Faça Login ou Registe-se por favor!");
 		}
@@ -65,16 +71,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		}else{
 			alert("Faça Login ou Registe-se por favor!");
 		}
-	};// @lock
-
-	login1.logout = function login1_logout (event)// @startlock
-	{// @endlock
-		$$('centeredFrame').setValue("/mainPage.waPage/index.html");      
-	};// @lock
-
-	login1.login = function login1_login (event)// @startlock
-	{// @endlock
-		$$('centeredFrame').setValue("/mainPage.waPage/index.html");
 	};// @lock
 
 	myAdsImageButton.click = function myAdsImageButton_click (event)// @startlock
@@ -98,14 +94,13 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	};// @lock
 
 // @region eventManager// @startlock
+	WAF.addListener("login1", "logout", login1.logout, "WAF");
 	WAF.addListener("priceListImageButton", "click", priceListImageButton.click, "WAF");
 	WAF.addListener("forgotPassButton", "click", forgotPassButton.click, "WAF");
 	WAF.addListener("registerButton", "click", registerButton.click, "WAF");
 	WAF.addListener("homeimageButton", "click", homeimageButton.click, "WAF");
 	WAF.addListener("accountImageButton", "click", accountImageButton.click, "WAF");
 	WAF.addListener("newAdImageButton", "click", newAdImageButton.click, "WAF");
-	WAF.addListener("login1", "logout", login1.logout, "WAF");
-	WAF.addListener("login1", "login", login1.login, "WAF");
 	WAF.addListener("myAdsImageButton", "click", myAdsImageButton.click, "WAF");
 	WAF.addListener("adminImageButton", "click", adminImageButton.click, "WAF");
 // @endregion

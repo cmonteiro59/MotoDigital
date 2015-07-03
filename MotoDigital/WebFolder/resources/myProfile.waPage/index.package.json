@@ -1,5 +1,5 @@
 {
-	"name": "MotoDigital/product.waPage/index.html",
+	"name": "MotoDigital/myProfile.waPage/index.html",
 	"version": "1.0.0",
 	"loadDependencies": [
 		{
@@ -16,14 +16,6 @@
 			"type": "widget"
 		},
 		{
-			"id": "Widget/buttonImage",
-			"type": "widget"
-		},
-		{
-			"id": "Widget/icon",
-			"type": "widget"
-		},
-		{
 			"id": "Widget/textField",
 			"type": "widget"
 		},
@@ -32,35 +24,11 @@
 			"type": "widget"
 		},
 		{
-			"id": "Widget/image",
+			"id": "Widget/buttonImage",
 			"type": "widget"
 		},
 		{
-			"id": "Widget/fileUpload",
-			"type": "widget"
-		},
-		{
-			"id": "Widget/button",
-			"type": "widget"
-		},
-		{
-			"id": "Widget/calendar",
-			"type": "widget"
-		},
-		{
-			"id": "Widget/errorDiv",
-			"type": "widget"
-		},
-		{
-			"id": "Widget/checkbox",
-			"type": "widget"
-		},
-		{
-			"id": "Widget/combobox",
-			"type": "widget"
-		},
-		{
-			"id": "Widget/frame",
+			"id": "Widget/icon",
 			"type": "widget"
 		},
 		{
@@ -78,7 +46,7 @@
 			"type": "theme"
 		},
 		{
-			"id": "product.waPage/styles/index.css",
+			"id": "myProfile.waPage/styles/index.css",
 			"path": "WEBFOLDER",
 			"type": "style"
 		},
@@ -88,7 +56,17 @@
 			"type": "style"
 		},
 		{
-			"id": "product.waPage/scripts/index.js",
+			"id": "resources/myProfile.waPage/styles/index.css",
+			"path": "WEBFOLDER",
+			"type": "style"
+		},
+		{
+			"id": "myProfile.waPage/scripts/index.js",
+			"path": "WEBFOLDER",
+			"type": "script"
+		},
+		{
+			"id": "resources/myProfile.waPage/scripts/index.js",
 			"path": "WEBFOLDER",
 			"type": "script"
 		}

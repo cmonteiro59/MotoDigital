@@ -2,9 +2,9 @@
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
-	var weekComboBox = {};	// @combobox
-	var ibtNext = {};	// @buttonImage
-	var documentEvent = {};	// @document
+	var weeksCombo = {};	// @combobox
+	var imageButton1 = {};	// @buttonImage
+	var imageButton3 = {};	// @buttonImage
 	var ibSave = {};	// @buttonImage
 	var btnFree = {};	// @buttonImage
 	var ibTransfer = {};	// @buttonImage
@@ -13,7 +13,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	var categoryComboBox = {};	// @combobox
 	var featuredComboBox = {};	// @combobox
 	var ibTransferFinal = {};	// @buttonImage
-	var clientComboBox = {};	// @combobox
 	var ibNext1 = {};	// @buttonImage
 	var productEvent = {};	// @dataSource
 // @endregion// @endlock
@@ -43,22 +42,21 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	
 	function calculatePrice()
 	{
-		
-		var visible = $$('weekComboBox').isVisible();
+		var cat = $$('categoryComboBox').getValue();
+		var visible = $$('weeksCombo').isVisible();
 		if(visible)
 		{
-			numWeeks = $$('weekComboBox').getValue();
+			numWeeks = $$('weeksCombo').getValue();
 		}else{
 			numWeeks = 1; // Means we dealing with an add "Destaque"
 		}
-		var cat = $$('categoryComboBox').getValue();
 		subTotal = 0;
 		total = 0;
 		discount = 0;
 		
 		switch(pro) 
 		{
-			case false : //Private
+			case false: //Private
 				if(cat == "Motos"){
 					subTotal += parMotosPrice; //motos
 					//discount = sources.priceList.discount;
@@ -120,7 +118,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		
 		$$('itDiscount').setValue(discount * 100);
 		subTotal = subTotal.toFixed(2);
-//		subTotal = 0; // unitl 1st of July
+		//subTotal = 0; // unitl 1st of July
 		sources.order.net = subTotal;
 		$$('itNet').setValue(sources.order.net);
 		total = subTotal * 1.23; //Tax 23 %
@@ -130,23 +128,24 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		sources.order.serverRefresh();	
 	};
 	
-	function weeks (prof,catType ) 
+	function weeks (custType,catType ) 
 	{
-		$$('weekComboBox').removeOption(3);
-		$$('weekComboBox').removeOption(2);
-		$$('weekComboBox').removeOption(1);
-		if(prof == true) { //Profissionais
-			$$('weekComboBox').addOption("2","2",true);
+	
+		$$('weeksCombo').removeOption(3);
+		$$('weeksCombo').removeOption(2);
+		$$('weeksCombo').removeOption(1);
+		if(custType == true) { //Profissionais
+			$$('weeksCombo').addOption("2","2",true);
 		
 		}else { // Particular
 			if(catType != "Motos"){
-				$$('weekComboBox').addOption("3","3",true);
-				$$('weekComboBox').addOption("6","6",false);
-				$$('weekComboBox').addOption("9","9",false);
+				$$('weeksCombo').addOption("3","3",true);
+				$$('weeksCombo').addOption("6","6",false);
+				$$('weeksCombo').addOption("9","9",false);
 			}else{
-				$$('weekComboBox').addOption("2","2",true);
-				$$('weekComboBox').addOption("4","4",false);
-				$$('weekComboBox').addOption("6","6",false);
+				$$('weeksCombo').addOption("2","2",true);
+				$$('weeksCombo').addOption("4","4",false);
+				$$('weeksCombo').addOption("6","6",false);
 			}
 		}
 	};
@@ -154,35 +153,23 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			
 // eventHandlers// @lock
 
-	weekComboBox.change = function weekComboBox_change (event)// @startlock
+	weeksCombo.change = function weeksCombo_change (event)// @startlock
 	{// @endlock
 		$$('ppFrame').hide();
+		var cat = $$('categoryComboBox').getValue();
+		weeks(pro, cat);
 		calculatePrice ();
 	};// @lock
 
-	ibtNext.click = function ibtNext_click (event)// @startlock
+	
+	imageButton1.click = function imageButton1_click (event)// @startlock
 	{// @endlock
-		$$('newProductContainer').hide();
-		$$('paymentContainer').show();
-		sources.customer.query('email == :1', username,{
-	        onSuccess: function(event) {
-				pro = sources.customer.professional;
-				var cat = $$('categoryComboBox').getValue();
-				weeks(pro, cat);
-		        calculatePrice();
-	        	
-	        },
-	        onError: function(error) {
-	                // displays error message in a DisplayError area
-	            alert("Erro ao pesquisar cliente.");
-	        }
-    	});
-		
+		window.location = "/mainPage.waPage/index.html";
 	};// @lock
 
-	documentEvent.onLoad = function documentEvent_onLoad (event)// @startlock
+	imageButton3.click = function imageButton3_click (event)// @startlock
 	{// @endlock
-		
+		window.location = "/mainPage.waPage/index.html";
 	};// @lock
 
 	ibSave.click = function ibSave_click (event)// @startlock
@@ -190,9 +177,9 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		var n = confirm("Deseja criar outro anúncio?");
         if(n)
         {
-			window.location = "/product.waPage/index.html";
+			window.location ="/product.waPage/index.html";
         }else{
-        	window.location = "/index.waPage/index.html";
+        	window.location ="/mainPage.waPage/index.html";
       	}
 		
 	};// @lock
@@ -262,6 +249,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 					    xhr.send(formdata); //Send the formdata object to the handler on the server
 					    //sources.order.serverRefresh();
 					    //alert("O número do seu pagamento é:  "+ order.ID+ " e o numero do seu anuncio é : "+ sources.product.ID )
+					    window.location ="/mainPage.waPage/index.html";
 					   
 		    	},
 			    onError: function(error) {
@@ -319,15 +307,14 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	featuredComboBox.change = function featuredComboBox_change (event)// @startlock
 	{// @endlock
-		$$('ppFrame').hide();
 		var opt = this.getValue();
 		if(opt != "0")
 		{
-			$$('weekComboBox').hide();
+			$$('weeksCombo').hide();
 		}else{
-			$$('weekComboBox').show();
+			$$('weeksCombo').show();
 		}
-		$$('weekComboBox').setValue();
+		$$('weeksCombo').setValue();
 		featured = this.getValue();
 		calculatePrice ();
 	};// @lock
@@ -380,9 +367,9 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		  var n = confirm("Deseja criar outro anuncio?");
           if(n)
           {
-    		window.location = "/product.waPage/index.html";
+    		$$('centeredFrame').setValue("/product.waPage/index.html");
           }else{
-            window.location = "/index.waPage/index.html";
+           $$('centeredFrame').setValue("/mainPage.waPage/index.html");
           }
           
     	},
@@ -395,14 +382,16 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		
 	};// @lock
 
-	clientComboBox.change = function clientComboBox_change (event)// @startlock
-	{// @endlock
-		
-	};// @lock
-
 	ibNext1.click = function ibNext1_click (event)// @startlock
 	{// @endlock
-		// Does not exist
+		
+   	 	sources.customer.query('email == :1', username );
+		$$('container8').show();
+		$$('newProduct').hide();
+   	 	pro = sources.customer.professional;
+   	 	var cat = $$('categoryComboBox').getValue();
+		weeks(pro, cat);
+		calculatePrice ();
 	};// @lock
 
 	productEvent.onCollectionChange = function productEvent_onCollectionChange (event)// @startlock
@@ -415,9 +404,9 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	};// @lock
 
 // @region eventManager// @startlock
-	WAF.addListener("weekComboBox", "change", weekComboBox.change, "WAF");
-	WAF.addListener("ibtNext", "click", ibtNext.click, "WAF");
-	WAF.addListener("document", "onLoad", documentEvent.onLoad, "WAF");
+	WAF.addListener("weeksCombo", "change", weeksCombo.change, "WAF");
+	WAF.addListener("imageButton1", "click", imageButton1.click, "WAF");
+	WAF.addListener("imageButton3", "click", imageButton3.click, "WAF");
 	WAF.addListener("ibSave", "click", ibSave.click, "WAF");
 	WAF.addListener("btnFree", "click", btnFree.click, "WAF");
 	WAF.addListener("ibTransfer", "click", ibTransfer.click, "WAF");
@@ -426,7 +415,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	WAF.addListener("categoryComboBox", "change", categoryComboBox.change, "WAF");
 	WAF.addListener("featuredComboBox", "change", featuredComboBox.change, "WAF");
 	WAF.addListener("ibTransferFinal", "click", ibTransferFinal.click, "WAF");
-	WAF.addListener("clientComboBox", "change", clientComboBox.change, "WAF");
 	WAF.addListener("ibNext1", "click", ibNext1.click, "WAF");
 	WAF.addListener("product", "onCollectionChange", productEvent.onCollectionChange, "WAF");
 // @endregion

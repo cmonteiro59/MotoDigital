@@ -13,5 +13,5 @@ model.Settings.methods.getCurrentUser = function(){
     var result = directory.currentUser();
     return result.fullName;
 };
-model.Settings.methods.addUser.scope = 'public';
+model.Settings.methods.getCurrentUser.scope = 'public';
 

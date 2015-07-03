@@ -4,6 +4,7 @@
 */
 
 #label15 {
+	z-index: 2;
 	width: 44px;
 	height: 16px;
 	top: 6px;
@@ -14,80 +15,80 @@
 	font-size: 14px;
 	text-shadow: rgb(255, 255, 255) 0px 0px 0px;
 	font-weight: normal;
-	z-index: 2;
 }
 
 #label4 {
+	z-index: 15;
 	width: 75px;
 	height: 15px;
 	top: 169px;
 	left: 15px;
 	position: absolute;
 	min-width: 75px;
-	z-index: 15;
 }
 
 #label14 {
+	z-index: 14;
 	width: 75px;
 	height: 15px;
 	top: 61px;
 	left: 14px;
 	position: absolute;
 	min-width: 75px;
-	z-index: 14;
 }
 
 #label13 {
+	z-index: 13;
 	width: 75px;
 	height: 15px;
 	top: 284px;
 	left: 15px;
 	position: absolute;
 	min-width: 75px;
-	z-index: 13;
 }
 
 #label11 {
+	z-index: 12;
 	width: 75px;
 	height: 15px;
 	top: 98px;
 	left: 15px;
 	position: absolute;
 	min-width: 75px;
-	z-index: 12;
 }
 
 #label5 {
+	z-index: 11;
 	width: 75px;
 	height: 15px;
 	top: 204px;
 	left: 14px;
 	position: absolute;
 	min-width: 75px;
-	z-index: 11;
 }
 
 #label10 {
+	z-index: 10;
 	width: 75px;
 	height: 15px;
 	top: 245px;
 	left: 13px;
 	position: absolute;
 	min-width: 75px;
-	z-index: 10;
 }
 
 #label9 {
+	z-index: 9;
 	width: 75px;
 	height: 15px;
 	top: 25px;
 	left: 15px;
 	position: absolute;
 	min-width: 75px;
-	z-index: 9;
 }
 
 #label2 {
+	z-index: 2;
 	width: 75px;
 	height: 16px;
 	top: 7px;
@@ -99,10 +100,10 @@
 	text-shadow: rgb(255, 255, 255) 0px 0px 0px;
 	font-weight: normal;
 	min-width: 75px;
-	z-index: 2;
 }
 
 #richText8 {
+	z-index: 1;
 	width: 103px;
 	height: 16px;
 	top: 7px;
@@ -110,10 +111,10 @@
 	position: absolute;
 	color: rgb(255, 255, 255);
 	font-size: 14px;
-	z-index: 1;
 }
 
 #container6 {
+	z-index: 2;
 	width: 665px;
 	height: 32px;
 	top: 6px;
@@ -132,38 +133,38 @@
 	border-bottom-right-radius: 6px;
 	-moz-border-radius-bottomright: 6px;
 	background-color: rgb(102, 102, 102);
-	z-index: 2;
 }
 
 #richText7 {
+	z-index: 19;
 	width: 218px;
 	height: 96px;
 	top: 116px;
 	left: 425px;
 	position: absolute;
 	text-align: left;
-	z-index: 19;
 }
 
 #richText6 {
+	z-index: 18;
 	width: 105px;
 	height: 15px;
 	top: 25px;
 	left: 420px;
 	position: absolute;
-	z-index: 18;
 }
 
 #icon4 {
+	z-index: 2;
 	width: 24px;
 	height: 24px;
 	top: 2px;
 	left: 28px;
 	position: absolute;
-	z-index: 2;
 }
 
 #imageButton4 {
+	z-index: 17;
 	width: 130px;
 	height: 29px;
 	top: 378px;
@@ -191,7 +192,6 @@
 	 -moz-box-shadow: rgba(0, 0, 0, 0.148438) 0px 0px 0px 0px;
 	 box-shadow: rgba(0, 0, 0, 0.148438) 0px 0px 0px 0px;
 	box-shadow: rgba(0, 0, 0, 0.148438) 0px 0px 0px 0px;
-	z-index: 17;
 	background-repeat: no-repeat;
 }
 
@@ -201,6 +201,7 @@
 }
 
 #richText5 {
+	z-index: 16;
 	width: 170px;
 	height: 41px;
 	top: 63px;
@@ -210,82 +211,19 @@
 	font-size: 12px;
 	font-weight: bold;
 	text-align: left;
-	z-index: 16;
-}
-
-#textField7 {
-	width: 288px;
-	height: 22px;
-	top: 166px;
-	left: 95px;
-	position: absolute;
-	z-index: 15;
-}
-
-#textField6 {
-	width: 174px;
-	height: 22px;
-	top: 58px;
-	left: 94px;
-	position: absolute;
-	z-index: 14;
-}
-
-#textField5 {
-	width: 286px;
-	height: 78px;
-	top: 284px;
-	left: 95px;
-	position: absolute;
-	z-index: 13;
-}
-
-#textField4 {
-	width: 172px;
-	height: 22px;
-	top: 95px;
-	left: 95px;
-	position: absolute;
-	z-index: 12;
-}
-
-#textField3 {
-	width: 288px;
-	height: 22px;
-	top: 201px;
-	left: 94px;
-	position: absolute;
-	z-index: 11;
-}
-
-#textField2 {
-	width: 288px;
-	height: 22px;
-	top: 242px;
-	left: 93px;
-	position: absolute;
-	z-index: 10;
-}
-
-#textField1 {
-	width: 286px;
-	height: 22px;
-	top: 22px;
-	left: 95px;
-	position: absolute;
-	z-index: 9;
 }
 
 #icon2 {
+	z-index: 2;
 	width: 24px;
 	height: 24px;
 	top: 3px;
 	left: 13px;
 	position: absolute;
-	z-index: 2;
 }
 
 #imageButton2 {
+	z-index: 8;
 	width: 130px;
 	height: 30px;
 	top: 379px;
@@ -309,17 +247,16 @@
 	-moz-border-radius-bottomright: 10px;
 	background-image: none;
 	background-color: rgb(127, 127, 127);
-	z-index: 8;
 	background-repeat: no-repeat;
 }
 
 #container4 {
+	z-index: 1;
 	width: 662px;
 	height: 430px;
 	top: 37px;
 	left: 6px;
 	position: absolute;
-	z-index: 1;
 }
 
 #waf-body {
@@ -327,6 +264,7 @@
 }
 
 #profileContainer {
+	z-index: 2;
 	width: 684px;
 	height: 474px;
 	top: 2px;
@@ -357,6 +295,68 @@
 	 box-shadow: rgba(0, 0, 0, 0.199219) 0px 0px 0px 0px;
 	box-shadow: rgba(0, 0, 0, 0.199219) 0px 0px 0px 0px;
 	background-color: transparent;
-	z-index: 2;
+}
+
+#userNameInput {
+	z-index: 9;
+	width: 286px;
+	height: 22px;
+	top: 22px;
+	left: 95px;
+	position: absolute;
+}
+
+#passwordInput {
+	z-index: 14;
+	width: 174px;
+	height: 22px;
+	top: 58px;
+	left: 94px;
+	position: absolute;
+}
+
+#confirmPassword {
+	z-index: 12;
+	width: 172px;
+	height: 22px;
+	top: 95px;
+	left: 95px;
+	position: absolute;
+}
+
+#fullNameInput {
+	z-index: 15;
+	width: 288px;
+	height: 22px;
+	top: 166px;
+	left: 95px;
+	position: absolute;
+}
+
+#nif {
+	z-index: 11;
+	width: 288px;
+	height: 22px;
+	top: 201px;
+	left: 94px;
+	position: absolute;
+}
+
+#phone {
+	z-index: 10;
+	width: 288px;
+	height: 22px;
+	top: 242px;
+	left: 93px;
+	position: absolute;
+}
+
+#address {
+	z-index: 13;
+	width: 286px;
+	height: 78px;
+	top: 284px;
+	left: 95px;
+	position: absolute;
 }
 
